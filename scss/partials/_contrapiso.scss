@@ -1,0 +1,123 @@
+// Contrapiso
+#contrapiso{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    box-shadow: 5px 5px 15px 5px #000000;
+    background-color:#9db1b3 ;
+    border-radius: 10px;
+    position: absolute;
+    top: 23%;
+    left: 25%;
+    @media only screen and (max-width: 680px) {
+        width: 80%;
+        position: absolute;
+        top: 23%;
+        left: 9vw;
+    }
+    .titulotrabajo{
+        font-size: 2em;
+        color: #27333a;
+        text-align: center;
+        font-weight: bold;
+        background-color: rgba(245, 245, 245, 0.35);
+        width: 100%;
+        padding: 3vh 0vw;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    #metroscuadrados{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 7px solid #ffffff59;
+        p{
+            font-size: 1.3em;
+            color: white;
+            font-weight: bold;
+            text-align: left;
+            padding: 1vh 1vw;
+        }
+        .cantidadmetros{
+            margin: 3vh 0 3vh 9vw;
+            label{
+                font-size: 1em;
+                color: #27333a;
+                text-align: center;
+                padding: 1vh 2vw;
+                margin: 3vh auto;
+                font-weight: bold;
+                input{
+                    width: 20%;
+                    color: white;
+                    font-weight: bold;
+                    background-color: #636e6f;
+                    box-shadow: 5px 5px 15px 5px #000000;
+                    border-radius: 10px;
+                    height: 4vh;
+                    margin-left: 2vw;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    #espesorcapa{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-bottom: 7px solid #ffffff59;
+        p{
+            font-size: 1.3em;
+            color: white;
+            font-weight: bold;
+            text-align: left;
+            padding: 1vh 1vw;
+        }
+        .espesorcapacm{
+            margin: 3vh 0 3vh 9vw;
+            label{
+                font-size: 1em;
+                color: #27333a;
+                text-align: center;
+                padding: 1vh 2vw;
+                margin: 3vh auto;
+                font-weight: bold;
+                input{
+                    width: 20%;
+                    color: white;
+                    font-weight: bold;
+                    background-color: #636e6f;
+                    box-shadow: 5px 5px 15px 5px #000000;
+                    border-radius: 10px;
+                    height: 4vh;
+                    margin-left: 2vw;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    #botoncalcular{
+        width: 30%;
+        margin: 4vh 0 4vh 5vw;
+        label input{
+            box-shadow: 5px 5px 15px 5px #000000;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.3em;
+            padding: 1vh 1vw;
+            background-color: #27333a;
+            &:hover{
+                opacity: 90%;
+                background-color: #455964;
+            }
+        }
+    }
+}

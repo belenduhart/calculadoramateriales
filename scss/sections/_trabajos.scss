@@ -1,0 +1,18 @@
+//Trabajos
+#trabajos{
+    width: 70%;
+    height: 81vh;
+    border-radius: 10px;
+    background-image: url(../imagenes/constru.jpeg);
+    object-fit: contain;
+    margin: 0vh auto;
+        p{
+        background-color: rgba(245, 245, 245, 0.282);
+        font-size: 3em;
+        color: #2F3E46;
+        text-align: center;
+        @media only screen and (max-width:680px){
+            font-size: 2em;
+        }
+    }
+}

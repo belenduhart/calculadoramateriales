@@ -1,0 +1,1216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: none;
+}
+
+body {
+  background-color: #cad2c5;
+  font-family: "Barlow", sans-serif;
+}
+
+#headerindex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 17vh;
+  background-color: #52796F;
+  border-bottom: 7px solid #cad2c582;
+}
+@media only screen and (max-width: 680px) {
+  #headerindex {
+    flex-wrap: wrap;
+  }
+  #headerindex #tituloindex {
+    order: -1;
+  }
+}
+#headerindex #menudesplegable {
+  width: 12%;
+}
+@media only screen and (max-width: 680px) {
+  #headerindex #menudesplegable {
+    width: 40%;
+  }
+}
+#headerindex #menudesplegable select {
+  background-color: #9db1b3;
+  box-shadow: 5px 5px 15px 5px #000000;
+  width: 100%;
+  border-radius: 10px;
+  margin: 5vh 2vw;
+  border: 1px solid black;
+  padding: 1vh 0vw;
+}
+#headerindex #menudesplegable select:hover {
+  opacity: 85%;
+}
+@media only screen and (max-width: 680px) {
+  #headerindex #menudesplegable select {
+    margin: 2vh 0vw;
+  }
+}
+#headerindex #menudesplegable select option {
+  color: black;
+}
+#headerindex #menudesplegable select optgroup {
+  color: #2F3E46;
+}
+#headerindex #tituloindex {
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 1vh 1vw;
+  margin: 7vh auto;
+  margin-top: 2%;
+  text-decoration: overline;
+}
+@media only screen and (min-width: 680px) and (max-width: 900px) {
+  #headerindex #tituloindex {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 680px) {
+  #headerindex #tituloindex {
+    font-size: 1em;
+    width: 100%;
+    margin: 1vh auto;
+  }
+}
+#headerindex #carrito {
+  color: #2F3E46;
+  font-size: 2em;
+  text-align: center;
+  padding: 1vh 1vw;
+  border: 3px solid white;
+  border-radius: 10px;
+  background-color: #ffffff54;
+  height: 7vh;
+  width: 5vw;
+  margin: 3vh 5vh;
+}
+#headerindex #carrito:hover {
+  color: #9db1b3;
+}
+@media only screen and (max-width: 680px) {
+  #headerindex #carrito {
+    font-size: 1.5em;
+    background-color: #52796F;
+    border: none;
+    height: 0;
+    margin: 1vh 0vw;
+  }
+}
+
+#trabajos {
+  width: 70%;
+  height: 81vh;
+  border-radius: 10px;
+  background-image: url(../imagenes/constru.jpeg);
+  object-fit: contain;
+  margin: 0vh auto;
+}
+#trabajos p {
+  background-color: rgba(245, 245, 245, 0.282);
+  font-size: 3em;
+  color: #2F3E46;
+  text-align: center;
+}
+@media only screen and (max-width: 680px) {
+  #trabajos p {
+    font-size: 2em;
+  }
+}
+
+#cimientos {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: #9db1b3;
+  border-radius: 10px;
+  margin: 4vh auto;
+  position: absolute;
+  top: 23%;
+  left: 25%;
+}
+@media only screen and (max-width: 680px) {
+  #cimientos {
+    width: 80%;
+    position: absolute;
+    top: 23%;
+    left: 9vw;
+  }
+}
+#cimientos .titulotrabajo {
+  font-size: 2em;
+  color: #27333a;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, 0.35);
+  width: 100%;
+  padding: 3vh 0vw;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#cimientos #hormigon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#cimientos #hormigon p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#cimientos #hormigon .tipohormigon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 3vh 0 3vh 0;
+}
+#cimientos #hormigon label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: left;
+  padding: 1vh 2vw;
+  font-weight: bold;
+}
+#cimientos #ladrillos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#cimientos #ladrillos p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#cimientos #ladrillos .tipoladrillo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 3vh 0 4vh 5vw;
+}
+#cimientos #ladrillos .tipoladrillo label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: left;
+  margin-top: 1vh;
+  font-weight: bold;
+  width: 45%;
+}
+#cimientos #paredes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#cimientos #paredes p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#cimientos #paredes .anchopared {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 3vh 0 4vh 18vw;
+}
+@media only screen and (max-width: 480px) {
+  #cimientos #paredes .anchopared {
+    margin: 3vh auto;
+  }
+}
+#cimientos #paredes .anchopared label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: left;
+  margin-top: 1vh;
+  font-weight: bold;
+  width: 45%;
+}
+#cimientos #metroscuadrados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#cimientos #metroscuadrados p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#cimientos #metroscuadrados .cantidadmetros {
+  margin: 3vh 0 3vh 9vw;
+}
+#cimientos #metroscuadrados .cantidadmetros label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: center;
+  padding: 1vh 2vw;
+  margin: 3vh auto;
+  font-weight: bold;
+}
+#cimientos #metroscuadrados .cantidadmetros label input {
+  width: 20%;
+  color: white;
+  font-weight: bold;
+  background-color: #636e6f;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  height: 4vh;
+  margin-left: 2vw;
+  text-align: center;
+}
+#cimientos #botoncalcular {
+  width: 30%;
+  margin: 4vh 0 4vh 5vw;
+}
+@media only screen and (max-width: 680px) {
+  #cimientos #botoncalcular {
+    width: 38%;
+  }
+}
+#cimientos #botoncalcular label input {
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 1vh 1vw;
+  background-color: #27333a;
+}
+#cimientos #botoncalcular label input:hover {
+  opacity: 90%;
+  background-color: #455964;
+}
+
+#capavertical {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: #9db1b3;
+  border-radius: 10px;
+  position: absolute;
+  top: 23%;
+  left: 25%;
+}
+@media only screen and (max-width: 680px) {
+  #capavertical {
+    width: 80%;
+    position: absolute;
+    top: 23%;
+    left: 9vw;
+  }
+}
+#capavertical .titulotrabajo {
+  font-size: 2em;
+  color: #27333a;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, 0.35);
+  width: 100%;
+  padding: 3vh 0vw;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#capavertical #metroscuadrados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#capavertical #metroscuadrados p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#capavertical #metroscuadrados .cantidadmetros {
+  margin: 3vh 0 3vh 9vw;
+}
+#capavertical #metroscuadrados .cantidadmetros label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: center;
+  padding: 1vh 2vw;
+  margin: 3vh auto;
+  font-weight: bold;
+}
+#capavertical #metroscuadrados .cantidadmetros label input {
+  width: 20%;
+  color: white;
+  font-weight: bold;
+  background-color: #636e6f;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  height: 4vh;
+  margin-left: 2vw;
+  text-align: center;
+}
+#capavertical #altocapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#capavertical #altocapa p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#capavertical #altocapa .altocapacm {
+  margin: 3vh 0 3vh 9vw;
+}
+#capavertical #altocapa .altocapacm label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: center;
+  padding: 1vh 2vw;
+  margin: 3vh auto;
+  font-weight: bold;
+}
+#capavertical #altocapa .altocapacm label input {
+  width: 20%;
+  color: white;
+  font-weight: bold;
+  background-color: #636e6f;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  height: 4vh;
+  margin-left: 2vw;
+  text-align: center;
+}
+#capavertical #botoncalcular {
+  width: 30%;
+  margin: 4vh 0 4vh 5vw;
+}
+#capavertical #botoncalcular label input {
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 1vh 1vw;
+  background-color: #27333a;
+}
+#capavertical #botoncalcular label input:hover {
+  opacity: 90%;
+  background-color: #455964;
+}
+
+#capahorizontal {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: #9db1b3;
+  border-radius: 10px;
+  position: absolute;
+  top: 23%;
+  left: 25%;
+}
+@media only screen and (max-width: 680px) {
+  #capahorizontal {
+    width: 80%;
+    position: absolute;
+    top: 23%;
+    left: 9vw;
+  }
+}
+#capahorizontal .titulotrabajo {
+  font-size: 2em;
+  color: #27333a;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, 0.35);
+  width: 100%;
+  padding: 3vh 0vw;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#capahorizontal #metroscuadrados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#capahorizontal #metroscuadrados p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#capahorizontal #metroscuadrados .cantidadmetros {
+  margin: 3vh 0 3vh 9vw;
+}
+#capahorizontal #metroscuadrados .cantidadmetros label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: center;
+  padding: 1vh 2vw;
+  margin: 3vh auto;
+  font-weight: bold;
+}
+#capahorizontal #metroscuadrados .cantidadmetros label input {
+  width: 20%;
+  color: white;
+  font-weight: bold;
+  background-color: #636e6f;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  height: 4vh;
+  margin-left: 2vw;
+  text-align: center;
+}
+#capahorizontal #paredes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#capahorizontal #paredes p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#capahorizontal #paredes .anchopared {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 3vh 0 4vh 18vw;
+}
+@media only screen and (max-width: 680px) {
+  #capahorizontal #paredes .anchopared {
+    margin-left: 7vw;
+  }
+}
+#capahorizontal #paredes .anchopared label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: left;
+  margin-top: 1vh;
+  font-weight: bold;
+  width: 45%;
+}
+#capahorizontal #botoncalcular {
+  width: 30%;
+  margin: 4vh 0 4vh 5vw;
+}
+@media only screen and (max-width: 680px) {
+  #capahorizontal #botoncalcular {
+    width: 38%;
+  }
+}
+#capahorizontal #botoncalcular label input {
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 1vh 1vw;
+  background-color: #27333a;
+}
+#capahorizontal #botoncalcular label input:hover {
+  opacity: 90%;
+  background-color: #455964;
+}
+
+#mamposteria {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: #9db1b3;
+  border-radius: 10px;
+  position: absolute;
+  top: 23%;
+  left: 25%;
+}
+@media only screen and (max-width: 680px) {
+  #mamposteria {
+    width: 80%;
+    position: absolute;
+    top: 23%;
+    left: 9vw;
+  }
+}
+#mamposteria .titulotrabajo {
+  font-size: 2em;
+  color: #27333a;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, 0.35);
+  width: 100%;
+  padding: 3vh 0vw;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#mamposteria #ladrillos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#mamposteria #ladrillos p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#mamposteria #ladrillos .tipoladrillo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 3vh 0 4vh 5vw;
+}
+#mamposteria #ladrillos .tipoladrillo label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: left;
+  margin-top: 1vh;
+  font-weight: bold;
+  width: 45%;
+}
+#mamposteria #paredes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#mamposteria #paredes p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#mamposteria #paredes .anchopared {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 3vh 0 4vh 18vw;
+}
+@media only screen and (max-width: 480px) {
+  #mamposteria #paredes .anchopared {
+    margin: 3vh auto;
+  }
+}
+#mamposteria #paredes .anchopared label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: left;
+  margin-top: 1vh;
+  font-weight: bold;
+  width: 45%;
+}
+#mamposteria #encadenado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#mamposteria #encadenado p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#mamposteria #encadenado .tipoencadenado {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 3vh 0 4vh 18vw;
+}
+@media only screen and (max-width: 480px) {
+  #mamposteria #encadenado .tipoencadenado {
+    margin: 3vh auto;
+  }
+}
+#mamposteria #encadenado .tipoencadenado label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: left;
+  margin-top: 1vh;
+  font-weight: bold;
+  width: 45%;
+}
+#mamposteria #metroscuadrados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#mamposteria #metroscuadrados p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#mamposteria #metroscuadrados .cantidadmetros {
+  margin: 3vh 0 3vh 9vw;
+}
+#mamposteria #metroscuadrados .cantidadmetros label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: center;
+  padding: 1vh 2vw;
+  margin: 3vh auto;
+  font-weight: bold;
+}
+#mamposteria #metroscuadrados .cantidadmetros label input {
+  width: 20%;
+  color: white;
+  font-weight: bold;
+  background-color: #636e6f;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  height: 4vh;
+  margin-left: 2vw;
+  text-align: center;
+}
+#mamposteria #botoncalcular {
+  width: 30%;
+  margin: 4vh 0 4vh 5vw;
+}
+@media only screen and (max-width: 680px) {
+  #mamposteria #botoncalcular {
+    width: 38%;
+  }
+}
+#mamposteria #botoncalcular label input {
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 1vh 1vw;
+  background-color: #27333a;
+}
+#mamposteria #botoncalcular label input:hover {
+  opacity: 90%;
+  background-color: #455964;
+}
+
+#revoqueexterior {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: #9db1b3;
+  border-radius: 10px;
+  position: absolute;
+  top: 23%;
+  left: 25%;
+}
+@media only screen and (max-width: 680px) {
+  #revoqueexterior {
+    width: 80%;
+    position: absolute;
+    top: 23%;
+    left: 9vw;
+  }
+}
+#revoqueexterior .titulotrabajo {
+  font-size: 2em;
+  color: #27333a;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, 0.35);
+  width: 100%;
+  padding: 3vh 0vw;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#revoqueexterior #revoque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#revoqueexterior #revoque p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#revoqueexterior #revoque .tiporevoque {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 3vh 0 4vh 18vw;
+}
+#revoqueexterior #revoque .tiporevoque label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: left;
+  margin-top: 1vh;
+  font-weight: bold;
+  width: 45%;
+}
+#revoqueexterior #metroscuadrados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#revoqueexterior #metroscuadrados p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#revoqueexterior #metroscuadrados .cantidadmetros {
+  margin: 3vh 0 3vh 9vw;
+}
+#revoqueexterior #metroscuadrados .cantidadmetros label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: center;
+  padding: 1vh 2vw;
+  margin: 3vh auto;
+  font-weight: bold;
+}
+#revoqueexterior #metroscuadrados .cantidadmetros label input {
+  width: 20%;
+  color: white;
+  font-weight: bold;
+  background-color: #636e6f;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  height: 4vh;
+  margin-left: 2vw;
+  text-align: center;
+}
+#revoqueexterior #botoncalcular {
+  width: 30%;
+  margin: 4vh 0 4vh 5vw;
+}
+#revoqueexterior #botoncalcular label input {
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 1vh 1vw;
+  background-color: #27333a;
+}
+#revoqueexterior #botoncalcular label input:hover {
+  opacity: 90%;
+  background-color: #455964;
+}
+
+#revoqueinterior {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: #9db1b3;
+  border-radius: 10px;
+  position: absolute;
+  top: 23%;
+  left: 25%;
+}
+@media only screen and (max-width: 680px) {
+  #revoqueinterior {
+    width: 80%;
+    position: absolute;
+    top: 23%;
+    left: 9vw;
+  }
+}
+#revoqueinterior .titulotrabajo {
+  font-size: 2em;
+  color: #27333a;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, 0.35);
+  width: 100%;
+  padding: 3vh 0vw;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#revoqueinterior #revoque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#revoqueinterior #revoque p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#revoqueinterior #revoque .tiporevoque {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 3vh 0 4vh 18vw;
+}
+@media only screen and (max-width: 680px) {
+  #revoqueinterior #revoque .tiporevoque {
+    margin: 3vh auto;
+  }
+}
+#revoqueinterior #revoque .tiporevoque label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: left;
+  margin-top: 1vh;
+  font-weight: bold;
+  width: 45%;
+}
+#revoqueinterior #metroscuadrados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#revoqueinterior #metroscuadrados p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#revoqueinterior #metroscuadrados .cantidadmetros {
+  margin: 3vh 0 3vh 9vw;
+}
+#revoqueinterior #metroscuadrados .cantidadmetros label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: center;
+  padding: 1vh 2vw;
+  margin: 3vh auto;
+  font-weight: bold;
+}
+#revoqueinterior #metroscuadrados .cantidadmetros label input {
+  width: 20%;
+  color: white;
+  font-weight: bold;
+  background-color: #636e6f;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  height: 4vh;
+  margin-left: 2vw;
+  text-align: center;
+}
+#revoqueinterior #botoncalcular {
+  width: 30%;
+  margin: 4vh 0 4vh 5vw;
+}
+#revoqueinterior #botoncalcular label input {
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 1vh 1vw;
+  background-color: #27333a;
+}
+#revoqueinterior #botoncalcular label input:hover {
+  opacity: 90%;
+  background-color: #455964;
+}
+
+#contrapiso {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: #9db1b3;
+  border-radius: 10px;
+  position: absolute;
+  top: 23%;
+  left: 25%;
+}
+@media only screen and (max-width: 680px) {
+  #contrapiso {
+    width: 80%;
+    position: absolute;
+    top: 23%;
+    left: 9vw;
+  }
+}
+#contrapiso .titulotrabajo {
+  font-size: 2em;
+  color: #27333a;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, 0.35);
+  width: 100%;
+  padding: 3vh 0vw;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#contrapiso #metroscuadrados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#contrapiso #metroscuadrados p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#contrapiso #metroscuadrados .cantidadmetros {
+  margin: 3vh 0 3vh 9vw;
+}
+#contrapiso #metroscuadrados .cantidadmetros label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: center;
+  padding: 1vh 2vw;
+  margin: 3vh auto;
+  font-weight: bold;
+}
+#contrapiso #metroscuadrados .cantidadmetros label input {
+  width: 20%;
+  color: white;
+  font-weight: bold;
+  background-color: #636e6f;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  height: 4vh;
+  margin-left: 2vw;
+  text-align: center;
+}
+#contrapiso #espesorcapa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#contrapiso #espesorcapa p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#contrapiso #espesorcapa .espesorcapacm {
+  margin: 3vh 0 3vh 9vw;
+}
+#contrapiso #espesorcapa .espesorcapacm label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: center;
+  padding: 1vh 2vw;
+  margin: 3vh auto;
+  font-weight: bold;
+}
+#contrapiso #espesorcapa .espesorcapacm label input {
+  width: 20%;
+  color: white;
+  font-weight: bold;
+  background-color: #636e6f;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  height: 4vh;
+  margin-left: 2vw;
+  text-align: center;
+}
+#contrapiso #botoncalcular {
+  width: 30%;
+  margin: 4vh 0 4vh 5vw;
+}
+#contrapiso #botoncalcular label input {
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 1vh 1vw;
+  background-color: #27333a;
+}
+#contrapiso #botoncalcular label input:hover {
+  opacity: 90%;
+  background-color: #455964;
+}
+
+#carpeta {
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: #9db1b3;
+  border-radius: 10px;
+  position: absolute;
+  top: 23%;
+  left: 25%;
+}
+@media only screen and (max-width: 680px) {
+  #carpeta {
+    width: 80%;
+    position: absolute;
+    top: 23%;
+    left: 9vw;
+  }
+}
+#carpeta .titulotrabajo {
+  font-size: 2em;
+  color: #27333a;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(245, 245, 245, 0.35);
+  width: 100%;
+  padding: 3vh 0vw;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+#carpeta #metroscuadrados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 7px solid #ffffff59;
+}
+#carpeta #metroscuadrados p {
+  font-size: 1.3em;
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 1vh 1vw;
+}
+#carpeta #metroscuadrados .cantidadmetros {
+  margin: 3vh 0 3vh 9vw;
+}
+#carpeta #metroscuadrados .cantidadmetros label {
+  font-size: 1em;
+  color: #27333a;
+  text-align: center;
+  padding: 1vh 2vw;
+  margin: 3vh auto;
+  font-weight: bold;
+}
+#carpeta #metroscuadrados .cantidadmetros label input {
+  width: 20%;
+  color: white;
+  font-weight: bold;
+  background-color: #636e6f;
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  height: 4vh;
+  margin-left: 2vw;
+  text-align: center;
+}
+#carpeta #botoncalcular {
+  width: 30%;
+  margin: 4vh 0 4vh 5vw;
+}
+#carpeta #botoncalcular label input {
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  padding: 1vh 1vw;
+  background-color: #27333a;
+}
+#carpeta #botoncalcular label input:hover {
+  opacity: 90%;
+  background-color: #455964;
+}
+
+/*# sourceMappingURL=style.css.map */
