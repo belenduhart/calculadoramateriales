@@ -4,7 +4,8 @@
 <head>
     <!-- Titulo pestaña -->
     <title>Calculadora de materiales de construccion 2021</title>
-    <meta name="description" content="Calculadora de materiales de construccion online, para todo tipo de trabajos en obras.">
+    <meta name="description"
+        content="Calculadora de materiales de construccion online, para todo tipo de trabajos en obras.">
     <meta name="keywords" content="materiales, construccion, obra, calculadora, trabajos, ladrillos, cimientos, paredes, capa aisladora, mamposteria,
     revoque fino, revoque grueso, contrapiso, carpeta">
     <meta name="author" content="Maribel developing">
@@ -17,7 +18,8 @@
     <meta property="og:author" content="Maribel developing">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
-    <meta property="og:description" content="Calculadora de materiales de construccion online, para todo tipo de trabajos en obras.">
+    <meta property="og:description"
+        content="Calculadora de materiales de construccion online, para todo tipo de trabajos en obras.">
     <!-- FACEBOOK Y SMS -->
     <meta property="og:tittle" content="Calculadora de materiales 2021">
     <meta property="og:image:url" content="../imagenes/constru.jpeg">
@@ -50,6 +52,7 @@
     <script src="selectorheader.js"></script>
 
 </head>
+
 <body>
     <header id="headerindex">
         <div id="menudesplegable">
@@ -95,13 +98,61 @@
         <div id="carrito">
             <i class="fas fa-shopping-cart"> </i>
         </div>
+
     </header>
+        <section id="menusecundario">
+            <div class="contenedornavbarindex">
+                <ul class="navbarindex">
+                    <li class="menu1">
+                        <a href="index.html">
+                            ︁ CALCULADORA <i class="fas fa-calculator"></i>
+                        </a>
+                    </li>
+                    <li class="menu1">
+                        <a href="carrito.html">
+                            ︁ CARRITO <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                    <li class="menu1">
+                        <a href="materiales.html">
+                            MATERIALES <i class="fas fa-tools"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <nav class="menumobile">
+                <label for="menu-toggle">
+                    <div class="botonmenu">
+                        <span class="fas fa-bars"></span>
+                    </div>
+                </label>
+                <input type="checkbox" id="menu-toggle">
+                <ul id="desplegarmenu">
+                    <li>
+                        <a href="index.html">
+                            ︁ CALCULADORA <i class="fas fa-calculator"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="carrito.html">
+                            ︁ CARRITO <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materiales.html">
+                            MATERIALES <i class="fas fa-tools"></i>
+                        </a>
+                    </li>
+    
+                </ul>
+            </nav>
+        </section>
     <main>
         <section id="trabajos">
-                <p>
-                    PARA COMENZAR A CALCULAR LOS MATERIALES,<br>
-                    SELECCIONA EL TIPO DE TRABAJO QUE VAS A REALIZAR
-                </p>
+            <p>
+                PARA COMENZAR A CALCULAR LOS MATERIALES,<br>
+                SELECCIONA EL TIPO DE TRABAJO QUE VAS A REALIZAR
+            </p>
         </section>
         <section id="cimientos">
             <div class="titulotrabajo">
@@ -180,8 +231,9 @@
                 </div>
             </div>
             <div id="botoncalcular">
-                <label>
+                <label><a href="cimientos.html">
                     <input type="button" value="CALCULAR">
+                </a>
                 </label>
             </div>
         </section>
@@ -208,8 +260,9 @@
                 </div>
             </div>
             <div id="botoncalcular">
-                <label>
+                <label><a href="capavertical.html">
                     <input type="button" value="CALCULAR">
+                </a>
                 </label>
             </div>
         </section>
@@ -248,8 +301,9 @@
                 </div>
             </div>
             <div id="botoncalcular">
-                <label>
+                <label><a href="capahorizontal.html">
                     <input type="button" value="CALCULAR">
+                </a>
                 </label>
             </div>
         </section>
@@ -334,8 +388,9 @@
                 </div>
             </div>
             <div id="botoncalcular">
-                <label>
+                <label><a href="mamposteria.html">
                     <input type="button" value="CALCULAR">
+                </a>
                 </label>
             </div>
         </section>
@@ -371,7 +426,9 @@
             </div>
             <div id="botoncalcular">
                 <label>
+                    <a href="revoqueexterior.html">
                     <input type="button" value="CALCULAR">
+                </a>
                 </label>
             </div>
         </section>
@@ -403,7 +460,9 @@
             </div>
             <div id="botoncalcular">
                 <label>
+                    <a href="revoqueinterior.html">
                     <input type="button" value="CALCULAR">
+                </a>
                 </label>
             </div>
         </section>
@@ -431,7 +490,9 @@
             </div>
             <div id="botoncalcular">
                 <label>
+                    <a href="contrapiso.html">
                     <input type="button" value="CALCULAR">
+                </a>
                 </label>
             </div>
         </section>
@@ -450,10 +511,13 @@
             </div>
             <div id="botoncalcular">
                 <label>
+                    <a href="carpeta.html">
                     <input type="button" value="CALCULAR">
+                </a>
                 </label>
             </div>
         </section>
     </main>
 </body>
+
 </html>

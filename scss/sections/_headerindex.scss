@@ -12,6 +12,9 @@
             order: -1;
         }
     }
+    @media only screen and (max-width: 480px) {
+        height: 20vh;
+    }
     #menudesplegable{
         width: 12%;
         @media only screen and (max-width:680px){
@@ -81,4 +84,10 @@
 
         }
     }
-}
+
+} 
+    #menusecundario{
+        width: 100%;        
+        @import "../partials/menumobile";
+        @import "../partials/menudesktop";
+    }

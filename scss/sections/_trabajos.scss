@@ -5,12 +5,14 @@
     border-radius: 10px;
     background-image: url(../imagenes/constru.jpeg);
     object-fit: contain;
-    margin: 0vh auto;
+    margin: 1vh auto;
         p{
         background-color: rgba(245, 245, 245, 0.282);
         font-size: 3em;
         color: #2F3E46;
         text-align: center;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
         @media only screen and (max-width:680px){
             font-size: 2em;
         }

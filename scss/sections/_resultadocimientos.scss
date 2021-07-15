@@ -1,0 +1,125 @@
+//Resultado en cimientos
+#resultadocimientos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 3vh auto;
+    @media only screen and (max-width: 1080px) {
+        flex-direction: column;
+        width: 90%;
+    }
+    .tituloresultado0{
+        font-size: 1.5em;
+        color: black;
+        font-weight: bold;
+        width: 100%;
+    }
+    .zapatacorrida{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #52796F;
+        box-shadow: 5px 5px 15px 5px #000000;
+        border-radius: 10px;
+        width: 40%;
+        margin: 2% 2%;
+        @media only screen and (max-width: 970px) {
+            width: 100%;
+            margin-top: 1vh;
+        }
+        #tituloresultado{
+            font-size: 1.3em;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            width: 100%;
+        }
+        #tablaresultados{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            width: 100%;
+            #material{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+                div{
+                    width: 100%;
+                    font-size: 1.1em ;
+                    color: #36504a;
+                    font-weight: bold;
+                    text-align: center;
+                    background-color: rgba(255, 255, 255, 0.083);
+                }
+                p{
+                    font-size: 1em;
+                    color: white;
+                    text-align: center;
+                    padding: 1vh 1vw;
+                    &:hover a{
+                        color: rgba(255, 255, 255, 0.501);
+                    }
+                    a{
+                        &:visited{
+                            color: white;
+                        }
+                    }
+                }
+            }
+            #cantidad{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                div{
+                    width: 100%;
+                    font-size: 1.1em ;
+                    color: #36504a;
+                    font-weight: bold;
+                    text-align: center;
+                    background-color: rgba(255, 255, 255, 0.083);
+                }
+                p{
+                    font-size: 1em;
+                    color: white;
+                    text-align: center;
+                    padding: 1vh 1vw;
+                }
+            }
+            #compra{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                div{
+                    width: 100%;
+                    font-size: 1.1em ;
+                    color: #36504a;
+                    font-weight: bold;
+                    text-align: center;
+                    background-color: rgba(255, 255, 255, 0.083);
+                }
+                p{
+                    font-size: 1em;
+                    color: white;
+                    text-align: center;
+                    padding: 1vh 1vw;
+                }
+            }
+        }
+    }
+}

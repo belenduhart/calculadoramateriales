@@ -1,0 +1,39 @@
+//Header secundario
+#headersecundario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #52796F;
+    border-bottom: 7px solid #cad2c582;
+    #menusecundario{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        //Menu Desktop
+        @import "../partials/menudesktop";
+    
+    #titulosecundario{
+        font-size: 2em;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+        padding: 1vh 1vw;
+        margin: 4vh auto;
+        margin-top: 2%;
+        text-decoration: overline;
+        @media only screen and (max-width: 540px) {
+            font-size: 1.5em;
+        }
+        @media only screen and (max-width: 480px) {
+            font-size: 1em;
+            margin-top: 5vh;
+        }
+    }
+    //Menu Mobile
+        @import "../partials/menumobile";
+    }
+}
+
+
+
