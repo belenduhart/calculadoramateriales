@@ -1,4 +1,4 @@
-//Resultado en cimientos
+//Resultados
 #resultadocimientos{
     display: flex;
     flex-direction: row;
@@ -72,6 +72,7 @@
                         color: rgba(255, 255, 255, 0.501);
                     }
                     a{
+                        color: white;
                         &:visited{
                             color: white;
                         }
