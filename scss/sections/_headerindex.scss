@@ -83,6 +83,13 @@
             margin: 1vh 0vw;
 
         }
+        a{
+            text-decoration: none;
+            color: #2F3E46;
+            &:visited{
+                color: #2F3E46;
+            }
+        }
     }
 
 } 

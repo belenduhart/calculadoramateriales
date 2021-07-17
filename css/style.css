@@ -108,6 +108,13 @@ body {
     margin: 1vh 0vw;
   }
 }
+#headerindex #carrito a {
+  text-decoration: none;
+  color: #2F3E46;
+}
+#headerindex #carrito a:visited {
+  color: #2F3E46;
+}
 
 #menusecundario {
   width: 100%;
@@ -1914,6 +1921,110 @@ body {
 }
 .lateralderecho .todaslasmarcas a .botoncomprar:hover {
   background-color: #17242144;
+}
+
+main #producto1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 65%;
+  margin: 4vh auto;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: white;
+}
+main #producto1 .parteA {
+  width: 35vw;
+  margin: 1vh auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px double black;
+}
+main #producto1 .parteA .imagenproducto {
+  margin: 2vh auto;
+}
+main #producto1 .parteA .imagenproducto img {
+  border-radius: 10px;
+  width: 20vw;
+  height: auto;
+  margin: 1vh 5%;
+}
+main #producto1 .parteA .descripcionproducto {
+  margin: 2vh auto;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+main #producto1 .parteA .descripcionproducto .descriptitulo {
+  font-size: 1em;
+  font-weight: bold;
+  text-align: left;
+}
+main #producto1 .parteA .descripcionproducto p {
+  font-size: 0.8em;
+}
+main #producto1 .parteB {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 1vh auto;
+}
+main #producto1 .parteB .tituloproducto {
+  margin: 1vh auto;
+}
+main #producto1 .parteB .tituloproducto h1 {
+  font-weight: bold;
+  text-align: left;
+}
+main #producto1 .parteB .precioproducto {
+  margin: 2vh auto;
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+}
+main #producto1 .parteB .precioproducto p {
+  font-size: 0.6em;
+}
+main #producto1 .parteB .agregaralcarro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-top: 11vh;
+}
+main #producto1 .parteB .agregaralcarro .cantidadproductos {
+  border-radius: 10px;
+  background-color: white;
+  width: 15%;
+  height: 5vh;
+  color: black;
+  margin: 1vh 4vw;
+  text-align: center;
+}
+main #producto1 .parteB .agregaralcarro .botoncarro {
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 5px #000000;
+  width: 50%;
+  height: 8vh;
+  font-size: 1.4em;
+  margin-top: 3vh;
+}
+main #producto1 .parteB .agregaralcarro .botoncarro:hover {
+  background-color: rgba(255, 0, 0, 0.624);
 }
 
 /*# sourceMappingURL=style.css.map */

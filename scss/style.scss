@@ -4,5 +4,7 @@
 @import "pages/index";
 //Resultado Calculos
 @import "pages/resultadocalculos";
-//Pagina general materiales
+//Pagina general materiales, donde se muestran todas las marcas que hay y sus precios
 @import "pages/generalmateriales";
+//Pagina de cada producto con su marca, precio y boton de carrito
+@import "pages/productoparacomprar";
