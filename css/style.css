@@ -1934,6 +1934,16 @@ main #producto1 {
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: white;
 }
+@media only screen and (max-width: 680px) {
+  main #producto1 {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  main #producto1 {
+    flex-direction: column;
+  }
+}
 main #producto1 .parteA {
   width: 35vw;
   margin: 1vh auto;
@@ -1945,6 +1955,17 @@ main #producto1 .parteA {
   align-items: center;
   border-right: 1px double black;
 }
+@media only screen and (max-width: 680px) {
+  main #producto1 .parteA {
+    width: 50vw;
+  }
+}
+@media only screen and (max-width: 480px) {
+  main #producto1 .parteA {
+    width: 100%;
+    border-right: none;
+  }
+}
 main #producto1 .parteA .imagenproducto {
   margin: 2vh auto;
 }
@@ -1954,11 +1975,21 @@ main #producto1 .parteA .imagenproducto img {
   height: auto;
   margin: 1vh 5%;
 }
+@media only screen and (min-width: 480px) and (max-width: 1080px) {
+  main #producto1 .parteA .imagenproducto img {
+    width: 12vw;
+  }
+}
 main #producto1 .parteA .descripcionproducto {
   margin: 2vh auto;
   text-align: center;
   font-size: 1.4em;
   font-weight: bold;
+}
+@media only screen and (min-width: 480px) and (max-width: 1080px) {
+  main #producto1 .parteA .descripcionproducto {
+    font-size: 1em;
+  }
 }
 main #producto1 .parteA .descripcionproducto .descriptitulo {
   font-size: 1em;
@@ -1977,12 +2008,22 @@ main #producto1 .parteB {
   align-items: center;
   margin: 1vh auto;
 }
+@media only screen and (max-width: 480px) {
+  main #producto1 .parteB {
+    width: 100%;
+  }
+}
 main #producto1 .parteB .tituloproducto {
   margin: 1vh auto;
 }
 main #producto1 .parteB .tituloproducto h1 {
   font-weight: bold;
   text-align: left;
+}
+@media only screen and (min-width: 480px) and (max-width: 1080px) {
+  main #producto1 .parteB .tituloproducto h1 {
+    font-size: 1em;
+  }
 }
 main #producto1 .parteB .precioproducto {
   margin: 2vh auto;
@@ -2003,6 +2044,11 @@ main #producto1 .parteB .agregaralcarro {
   flex-wrap: wrap;
   width: 90%;
   margin-top: 11vh;
+}
+@media only screen and (max-width: 480px) {
+  main #producto1 .parteB .agregaralcarro {
+    margin-top: 0vh;
+  }
 }
 main #producto1 .parteB .agregaralcarro .cantidadproductos {
   border-radius: 10px;
@@ -2025,6 +2071,16 @@ main #producto1 .parteB .agregaralcarro .botoncarro {
 }
 main #producto1 .parteB .agregaralcarro .botoncarro:hover {
   background-color: rgba(255, 0, 0, 0.624);
+}
+@media only screen and (max-width: 1080px) {
+  main #producto1 .parteB .agregaralcarro .botoncarro {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 680px) {
+  main #producto1 .parteB .agregaralcarro .botoncarro {
+    width: 58%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
