@@ -23,6 +23,18 @@ const listadoProductos = [ {nombre: "ARENA", precio: 1950, id:"arenacarro", stoc
 {nombre: "PINTURA ASFALTICA DESSUTOL", precio: 600, id:"dessutol" , stock: 10000,} ,
 ]
 
+let listadoProductosOrdenado= listadoProductos.sort((a, b) => {
+    return a.precio - b.precio
+    // if (a.name > b.name) {
+    //     return -1;}
+    //     else if (a.name < b.name) {
+    //         return 1;
+    //       }
+    //       return 0;
+        });
+;
+console.log(listadoProductosOrdenado);
+
 
 class ProductoAñadido {
     constructor(producto, cantidad) {
