@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Titulo pestaña -->
     <title>Calculadora de materiales de construccion 2021</title>
@@ -47,10 +48,82 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&display=swap" rel="stylesheet">
     <!-- Link de font-awesome -->
     <script src="https://kit.fontawesome.com/e6eec834c7.js" crossorigin="anonymous"></script>
-    <!-- Link JS -->
-    <script src="../js/carrito.js"></script>
 </head>
 <body>
-<img src="../imagenes/underconstruction.jpg" alt="" style="width: 67%; margin-left: 17%;">
+    <header id="headerindex">
+        <div id="tituloindex">
+            <i class="fas fa-shopping-cart"></i> FINALIZAR SU COMPRA <i class="fas fa-shopping-cart"></i>
+        </div>
+    </header>
+<section id="menusecundario">
+    <div class="contenedornavbarindex">
+        <ul class="navbarindex">
+            <li class="menu1">
+                <a href="../index.html">
+                    ︁ CALCULADORA <i class="fas fa-calculator"></i>
+                </a>
+            </li>
+            <li class="menu1">
+                <a href="../productos html/cemento.html">
+                    MATERIALES <i class="fas fa-tools"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <nav class="menumobile">
+        <label for="menu-toggle">
+            <div class="botonmenu">
+                <span class="fas fa-bars"></span>
+            </div>
+        </label>
+        <input type="checkbox" id="menu-toggle">
+        <ul id="desplegarmenu">
+            <li>
+                <a href="index.html">
+                    ︁ CALCULADORA <i class="fas fa-calculator"></i>
+                </a>
+            </li>
+            <li>
+                <a href="../productos html/cemento.html">
+                    MATERIALES <i class="fas fa-tools"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</section>
+<section class="sectionproductos">
+    <div class="contenedorproductos">
+        <div class="descripciones">
+            <p>Producto</p>
+            <p>Precio</p> 
+            <p>Cantidad</p>
+            <p>Subtotal</p>
+        </div>
+        <div class="div2">
+        <div id="elementoAComprar" >
+            <!-- <div>
+                <img src="../imagenes/cal1.jpg" alt="">
+                <p class="nombrep"> ${p.nombre}</p>
+            </div>
+            <p> ${cantidadIngresada}</p>
+            <p> $ ${p.precio}</p>
+            <p>$ ${totalCarrito}</p>
+            <i class="far fa-trash-alt"></i> 
+            <input type="submit" name="" value="Eliminar" class="botonEliminar" onclick="eliminarDelCarrito()" return=false> -->
+        </div> 
+    </div>
+</div>
+    <div class="div1">
+        <div id="totalCarrito">
+            <!-- <p class="resumencompra">Resumen de la compra</p>
+            <p id="subtotal">Subtotal: $ </p>
+            <p id="total"> Total a pagar: $ </p> -->
+        </div>
+        <!-- <input type="submit" name="" value="Comprar" class="botonComprar"> -->
+    </div>
+</section>
+    <!-- Link JS -->
+    <script defer src="../js/carrito.js"></script>
 </body>
+
 </html>

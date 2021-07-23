@@ -48,10 +48,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&display=swap" rel="stylesheet">
     <!-- Link de font-awesome -->
     <script src="https://kit.fontawesome.com/e6eec834c7.js" crossorigin="anonymous"></script>
-    <!-- Link JS -->
-    <script src="js/selectorheader.js"></script>
-    <script src="js/calculos.js"></script>
-    <!-- <script src="js/resultadocalculos.js"></script> -->
 </head>
 
 <body>
@@ -97,64 +93,66 @@
             <i class="fas fa-tools"></i> CALCULADORA DE MATERIALES <i class="fas fa-tools"></i>
         </div>
         <div id="carrito">
-            <a href="carrito html/carrito.html" >
-            <i class="fas fa-shopping-cart"> </i></a>
+            <a href="carrito html/carrito.html">
+                <i class="fas fa-shopping-cart"> </i></a>
         </div>
 
     </header>
-        <section id="menusecundario">
-            <div class="contenedornavbarindex">
-                <ul class="navbarindex">
-                    <li class="menu1">
-                        <a href="index.html">
-                            ︁ CALCULADORA <i class="fas fa-calculator"></i>
-                        </a>
-                    </li>
-                    <li class="menu1">
-                        <a href="carrito html/carrito.html">
-                            ︁ CARRITO <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </li>
-                    <li class="menu1">
-                        <a href="productos html/cemento.html">
-                            MATERIALES <i class="fas fa-tools"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <nav class="menumobile">
-                <label for="menu-toggle">
-                    <div class="botonmenu">
-                        <span class="fas fa-bars"></span>
-                    </div>
-                </label>
-                <input type="checkbox" id="menu-toggle">
-                <ul id="desplegarmenu">
-                    <li>
-                        <a href="index.html">
-                            ︁ CALCULADORA <i class="fas fa-calculator"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="carrito html/carrito.html">
-                            ︁ CARRITO <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="productos html/cemento.html">
-                            MATERIALES <i class="fas fa-tools"></i>
-                        </a>
-                    </li>
-    
-                </ul>
-            </nav>
-        </section>
+    <section id="menusecundario">
+        <div class="contenedornavbarindex">
+            <ul class="navbarindex">
+                <li class="menu1">
+                    <a href="index.html">
+                        ︁ CALCULADORA <i class="fas fa-calculator"></i>
+                    </a>
+                </li>
+                <li class="menu1">
+                    <a href="carrito html/carrito.html">
+                        ︁ CARRITO <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="menu1">
+                    <a href="productos html/cemento.html">
+                        MATERIALES <i class="fas fa-tools"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav class="menumobile">
+            <label for="menu-toggle">
+                <div class="botonmenu">
+                    <span class="fas fa-bars"></span>
+                </div>
+            </label>
+            <input type="checkbox" id="menu-toggle">
+            <ul id="desplegarmenu">
+                <li>
+                    <a href="index.html">
+                        ︁ CALCULADORA <i class="fas fa-calculator"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="carrito html/carrito.html">
+                        ︁ CARRITO <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="productos html/cemento.html">
+                        MATERIALES <i class="fas fa-tools"></i>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </section>
     <main>
         <section id="trabajos">
+            <div id="error" ></div>
             <p>
                 PARA COMENZAR A CALCULAR LOS MATERIALES,<br>
                 SELECCIONA EL TIPO DE TRABAJO QUE VAS A REALIZAR
             </p>
+          
         </section>
         <section id="cimientos">
             <div class="titulotrabajo">
@@ -234,8 +232,8 @@
             </div>
             <div id="botoncalcular">
                 <label><a href="cimientos.html">
-                    <input type="button" value="CALCULAR">
-                </a>
+                        <input type="button" value="CALCULAR">
+                    </a>
                 </label>
             </div>
         </section>
@@ -263,8 +261,8 @@
             </div>
             <div id="botoncalcular">
                 <label><a href="capavertical.html">
-                    <input type="button" value="CALCULAR">
-                </a>
+                        <input type="button" value="CALCULAR">
+                    </a>
                 </label>
             </div>
         </section>
@@ -302,10 +300,11 @@
                     </label>
                 </div>
             </div>
+            <div id="error"></div>
             <div id="botoncalcular">
                 <label><a href="capahorizontal.html">
-                    <input type="button" value="CALCULAR">
-                </a>
+                        <input type="button" value="CALCULAR">
+                    </a>
                 </label>
             </div>
         </section>
@@ -374,8 +373,8 @@
             </div>
             <div id="botoncalcular">
                 <label><a href="mamposteria.html">
-                    <input type="button" value="CALCULAR">
-                </a>
+                        <input type="button" value="CALCULAR">
+                    </a>
                 </label>
             </div>
         </section>
@@ -412,8 +411,8 @@
             <div id="botoncalcular">
                 <label>
                     <a href="revoqueexterior.html">
-                    <input type="button" value="CALCULAR">
-                </a>
+                        <input type="button" value="CALCULAR">
+                    </a>
                 </label>
             </div>
         </section>
@@ -446,8 +445,8 @@
             <div id="botoncalcular">
                 <label>
                     <a href="revoqueinterior.html">
-                    <input type="button" value="CALCULAR">
-                </a>
+                        <input type="button" value="CALCULAR">
+                    </a>
                 </label>
             </div>
         </section>
@@ -476,8 +475,8 @@
             <div id="botoncalcular">
                 <label>
                     <a href="contrapiso.html">
-                    <input type="button" value="CALCULAR">
-                </a>
+                        <input type="button" value="CALCULAR">
+                    </a>
                 </label>
             </div>
         </section>
@@ -497,12 +496,16 @@
             <div id="botoncalcular">
                 <label>
                     <a href="carpeta.html">
-                    <input type="button" value="CALCULAR">
-                </a>
+                        <input type="button" value="CALCULAR">
+                    </a>
                 </label>
             </div>
         </section>
     </main>
+
+    <!-- Link JS -->
+    <script defer src="js/selectorheader.js"></script>
+    <script defer src="js/calculos.js"></script>
 </body>
 
 </html>

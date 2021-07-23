@@ -48,7 +48,9 @@ let valorCemento;
 let valorCal;
 let valorArena;
 let valorLadrillo;
+let error = document.querySelector ("#error");
 
+//Luego se le agrega el evento onclick para que todo esto se calcule al hacer click en el boton de Calcular
 function valorMaterialParaCalculo (){
     if (valorEnArrayLadrillo === arrayLadrillos[0]){
         if (valorEnArrayPared === arrayPared[1]){
@@ -62,7 +64,8 @@ function valorMaterialParaCalculo (){
             valorArena= parseFloat(0.11);
             valorLadrillo= parseInt(120);
         } else if (valorEnArrayPared == arrayPared[2] || (valorEnArrayPared == arrayPared[0])){
-            alert("Solo se pueden hacer paredes de 15cm y 30cm con ese tipo de ladrillo");
+            error.innerHTML= ` <p> ¡Solo se pueden hacer paredes de 15cm y 30cm con ese tipo de ladrillo! </p> `;
+            // alert("Solo se pueden hacer paredes de 15cm y 30cm con ese tipo de ladrillo");
             seleccionLadrilloUsuario();
         }
     } else if (valorEnArrayLadrillo === arrayLadrillos[1]){
@@ -72,7 +75,8 @@ function valorMaterialParaCalculo (){
             valorArena= parseFloat(0.04);
             valorLadrillo= parseInt(52);
         }else{
-            alert("Solo se pueden hacer paredes de 15cm con ese tipo de ladrillo")
+            error.innerHTML= ` <p> ¡Solo se pueden hacer paredes de 15cm con ese tipo de ladrillo! </p> `;
+            // alert("Solo se pueden hacer paredes de 15cm con ese tipo de ladrillo")
             seleccionLadrilloUsuario();
         }
     } else if (valorEnArrayLadrillo === arrayLadrillos[2]){
@@ -82,7 +86,8 @@ function valorMaterialParaCalculo (){
             valorArena= parseFloat(0.04);
             valorLadrillo= parseInt(15);
         }else{
-            alert("Solo se pueden hacer paredes de 20cm con ese tipo de ladrillo");
+            error.innerHTML= ` <p> ¡Solo se pueden hacer paredes de 20cm con ese tipo de ladrillo! </p> `;
+            // alert("Solo se pueden hacer paredes de 20cm con ese tipo de ladrillo");
             seleccionLadrilloUsuario();
         }
     }else if (valorEnArrayLadrillo === arrayLadrillos[3]){
@@ -97,7 +102,8 @@ function valorMaterialParaCalculo (){
             valorArena= parseFloat(0.03);
             valorLadrillo= parseInt(34);
         }else{
-            alert("Solo se pueden hacer paredes de 10cm y 20cm con este tipo de ladrillo");
+            error.innerHTML= ` <p> ¡Solo se pueden hacer paredes de 10cm y 20cm con ese tipo de ladrillo! </p> `;
+            // alert("Solo se pueden hacer paredes de 10cm y 20cm con este tipo de ladrillo");
             seleccionLadrilloUsuario();
         }
     }else if (valorEnArrayLadrillo === arrayLadrillos[4]){
@@ -107,7 +113,8 @@ function valorMaterialParaCalculo (){
             valorArena= parseFloat(0.03);
             valorLadrillo= parseInt(17);
         }else{
-            alert("Solo se pueden hacer paredes de 15cm con ese tipo de ladrillo");
+            error.innerHTML= ` <p> ¡Solo se pueden hacer paredes de 15cm con ese tipo de ladrillo! </p> `;
+            // alert("Solo se pueden hacer paredes de 15cm con ese tipo de ladrillo");
             seleccionLadrilloUsuario();
         }
     }else if (valorEnArrayLadrillo === arrayLadrillos[5]){
@@ -117,7 +124,8 @@ function valorMaterialParaCalculo (){
             valorArena= parseFloat(0.03);
             valorLadrillo= parseInt(17);
         }else {
-            alert ("Solo se pueden hacer paredes de 20cm con ese tipo de ladrillos");
+            error.innerHTML= ` <p> ¡Solo se pueden hacer paredes de 20cm con ese tipo de ladrillo! </p> `;
+            // alert ("Solo se pueden hacer paredes de 20cm con ese tipo de ladrillos");
             seleccionLadrilloUsuario();
         }
     }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Titulo pestaña -->
     <title>Calculadora de materiales de construccion 2021</title>
@@ -49,91 +50,96 @@
     <script src="https://kit.fontawesome.com/e6eec834c7.js" crossorigin="anonymous"></script>
     <!-- Link JS -->
 </head>
+
 <body>
     <header id="headerindex">
         <div id="tituloindex">
-            <i class="fas fa-tools"></i> CALCULADORA DE MATERIALES <i class="fas fa-tools"></i>
+            <i class="fas fa-tools"></i> LADRILLOS <i class="fas fa-tools"></i>
         </div>
         <div id="carrito">
             <a href="carrito.html">
-            <i class="fas fa-shopping-cart"> </i></a>
+                <i class="fas fa-shopping-cart"> </i></a>
         </div>
     </header>
-        <section id="menusecundario">
-            <div class="contenedornavbarindex">
-                <ul class="navbarindex">
-                    <li class="menu1">
-                        <a href="../index.html">
-                            ︁ CALCULADORA <i class="fas fa-calculator"></i>
-                        </a>
-                    </li>
-                    <li class="menu1">
-                        <a href="carrito.html">
-                            ︁ CARRITO <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </li>
-                    <li class="menu1">
-                        <a href="../productos html/cemento.html">
-                            MATERIALES <i class="fas fa-tools"></i>
-                        </a>
-                    </li>
-                </ul>
+    <section id="menusecundario">
+        <div class="contenedornavbarindex">
+            <ul class="navbarindex">
+                <li class="menu1">
+                    <a href="../index.html">
+                        ︁ CALCULADORA <i class="fas fa-calculator"></i>
+                    </a>
+                </li>
+                <li class="menu1">
+                    <a href="carrito.html">
+                        ︁ CARRITO <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li class="menu1">
+                    <a href="../productos html/cemento.html">
+                        MATERIALES <i class="fas fa-tools"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav class="menumobile">
+            <label for="menu-toggle">
+                <div class="botonmenu">
+                    <span class="fas fa-bars"></span>
+                </div>
+            </label>
+            <input type="checkbox" id="menu-toggle">
+            <ul id="desplegarmenu">
+                <li>
+                    <a href="../index.html">
+                        ︁ CALCULADORA <i class="fas fa-calculator"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="carrito.html">
+                        ︁ CARRITO <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="../productos html/cemento.html">
+                        MATERIALES <i class="fas fa-tools"></i>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+    </section>
+    <main>
+        <section id="producto1">
+            <div class="parteA">
+                <div class="imagenproducto">
+                    <img src="../imagenes/cementovibrado.jpg" alt="Foto ladrillo bloque de cemento vibrado">
+                </div>
+                <div class="descripcionproducto">
+                    <p class="descriptitulo">Descripcion del producto</p>
+                    <p> Bloque de cemento vibrado</p>
+                </div>
             </div>
-            <nav class="menumobile">
-                <label for="menu-toggle">
-                    <div class="botonmenu">
-                        <span class="fas fa-bars"></span>
-                    </div>
-                </label>
-                <input type="checkbox" id="menu-toggle">
-                <ul id="desplegarmenu">
-                    <li>
-                        <a href="../index.html">
-                            ︁ CALCULADORA <i class="fas fa-calculator"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="carrito.html">
-                            ︁ CARRITO <i class="fas fa-shopping-cart"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../productos html/cemento.html">
-                            MATERIALES <i class="fas fa-tools"></i>
-                        </a>
-                    </li>
-    
-                </ul>
-            </nav>
+            <div class="parteB">
+                <div class="tituloproducto">
+                    <h1>Bloque vibrado.
+
+                    </h1>
+                </div>
+                <div class="precioproducto">
+                    $55.- <p> incluye +IVA <br> Precio Regular</p>
+                </div>
+                <div class="agregaralcarro">
+                    <!-- Al hacer click sobre el boton se agrega el elemento al carro de compras, y se suma 1 al total del i del encabezado -->
+                    Cantidad:
+                    <input type="text" class="cantidadproductos" required>
+                    <input type="submit" name="" value="Agregar al carrito" class="botoncarro">
+                    <div id="error"></div>
+                </div>
+            </div>
         </section>
-        <main>
-            <section id="producto1">
-                <div class="parteA">
-                    <div class="imagenproducto">
-                        <img src="../imagenes/cementovibrado.jpg" alt="Foto ladrillo bloque de cemento vibrado">
-                    </div>
-                    <div class="descripcionproducto">
-                        <p class="descriptitulo">Descripcion del producto</p>
-                        <p> Bloque de cemento vibrado</p>
-                    </div>
-                </div>
-                <div class="parteB">
-                    <div class="tituloproducto">
-                        <h1>Bloque vibrado.
-                            
-                        </h1>
-                    </div>
-                    <div class="precioproducto">
-                        $55.- <p> incluye +IVA <br> Precio Regular</p>
-                    </div>
-                    <div class="agregaralcarro">
-                        <!-- Al hacer click sobre el boton se agrega el elemento al carro de compras, y se suma 1 al total del i del encabezado -->
-                        Cantidad:
-                        <input type="text" class="cantidadproductos" required>
-                        <input type="submit" name="" value="Agregar al carrito" class="botoncarro">
-                    </div>
-                </div>
-            </section>
-        </main>
+    </main>
+    <!-- Link JS -->
+    <script defer src="../js/carrito.js"></script>
 </body>
+
 </html>
