@@ -1,12 +1,12 @@
 //CIMIENTOS
 //1eroA elegir tipo de trabajo
 // var trabajoSeleccionado = prompt("Elegir el tipo de trabajo a realizar: CIMIENTOS, MAMPOSTERIA, CAPA HORIZONTAL, CAPA VERTICAL, REVOQUE INTERIOR, REVOQUE EXTERIOR, CONTRAPISO, CARPETA");
-var trabajoSeleccionado = document.getElementById("selecciontrabajo").value
+// getSelectValue = document.getElementById("selecciontrabajo").value;
 
 //1roB que se cumpla la condicion de que elijan cimientos
-while (trabajoSeleccionado === "cimientos"){
-    procesoTotalCimientos();
-}
+// if (getSelectValue === "cimientos"){
+    // procesoTotalCimientos();
+// }
 
 //2do materiales usados para cimientos
 class Cimientos {
@@ -17,36 +17,84 @@ class Cimientos {
         this.totalLadrilloCimientos = totalLadrilloCimientos;
     }
     resultadocalculosCimientos(){
-        alert("Usted necesita comprar " + this.totalCementoCimientos + "kg de cemento, " + this.totalCalCimientos + "kg de Cal " + this.totalArenaCimientos + "m3 de Arena y " + this.totalLadrilloCimientos + " unidades de ladrillos.");
+        // alert("Usted necesita comprar " + this.totalCementoCimientos + "kg de cemento, " + this.totalCalCimientos + "kg de Cal " + this.totalArenaCimientos + "m3 de Arena y " + this.totalLadrilloCimientos + " unidades de ladrillos.");
+        //Mostrar en html cuantos kg de cemento necesita
+        let mostrarCementoCimientos= document.getElementById("mostrarCementoCimientos");
+        mostrarCementoCimientos.innerHTML =` ${this.totalCementoCimientos} kg`;
+        //Mostrar en html cuantos kg de cal necesita
+        let mostrarCalCimientos= document.getElementById("mostrarCalCimientos");
+        mostrarCalCimientos.innerHTML =`  ${this.totalCalCimientos} kg `;
+        //Mostrar en html cuantos m3 de arena necesita
+        let mostrarArenaCimientos= document.getElementById("mostrarArenaCimientos");
+        mostrarArenaCimientos.innerHTML =`  ${this.totalArenaCimientos} m3 `;
+        //Mostrar en html cuantas unidades de ladrillos necesita
+        let mostrarLadrillosCimientos= document.getElementById("mostrarLadrillosCimientos");
+        mostrarLadrillosCimientos.innerHTML =` ${this.totalLadrilloCimientos} U`;
     }
 }
 
 //3ero lista de las variables que hay en el trabajo seleccionado, con su respectivo valor.
 // const arrayLadrillos =["COMUN" , "LADRILLON", "HUECO8", "HUECO12", "HUECO18", "VIBRADO" ];
-const arrayLadrillosCimientos = [value="LadrilloComun", value="LadrilloHueco8", value="LadrilloHueco12", value="LadrilloHueco18", value="Ladrillon", value="LadrilloVibrado"];
+const arrayLadrillosCimientos = ["LadrilloComun", "LadrilloHueco8", "LadrilloHueco12", "LadrilloHueco18", "Ladrillon", "LadrilloVibrado"];
 //const arrayPared = [10, 15, 20, 30];
-const arrayParedCimientos =[value=10, value=15, value=20, value=30];
+const arrayParedCimientos =[10, 15, 20, 30];
 
 //4to pedir que el usuario seleccione cada variable y asignarle su valor con metodo find
 let valorEnArrayLadrilloCimientos;
 function seleccionLadrilloUsuarioCimientos(){
     // let ladrilloUsuarioCimientos = prompt("¿Con que tipo de ladrillo quiere realizar el trabajo? Ladrillo comun, Ladrillon, Ladrillo Hueco8, Ladrillo Hueco12, Ladrillo Hueco18 o Bloque Vibrado");
-    let ladrilloUsuarioCimientos = document.querySelector("ladrilloCimientos").value;
+    let ladrilloUsuarioCimientos ="";
+    let ladrilloCimientos0 = document.getElementById("ladrilloCimientos0");
+    let ladrilloCimientos1 = document.getElementById("ladrilloCimientos1");
+    let ladrilloCimientos2 = document.getElementById("ladrilloCimientos2");
+    let ladrilloCimientos3 = document.getElementById("ladrilloCimientos3");
+    let ladrilloCimientos4 = document.getElementById("ladrilloCimientos4");
+    let ladrilloCimientos5 = document.getElementById("ladrilloCimientos5");
+    if ((ladrilloCimientos0).checked){
+        ladrilloUsuarioCimientos = ladrilloCimientos0.value;
+    }else if (ladrilloCimientos1.checked){
+       ladrilloUsuarioCimientos = ladrilloCimientos1.value;
+    }else if (ladrilloCimientos2.checked){
+        ladrilloUsuarioCimientos = ladrilloCimientos2.value;
+    }else if (ladrilloCimientos3.checked){
+        ladrilloUsuarioCimientos = ladrilloCimientos3.value;
+    }else if (ladrilloCimientos4.checked){
+            ladrilloUsuarioCimientos = ladrilloCimientos4.value;
+    }else if (ladrilloCimientos5.checked){
+            ladrilloUsuarioCimientos = ladrilloCimientos5.value;
+    }
     valorEnArrayLadrilloCimientos = arrayLadrillosCimientos.find((i)=> i === ladrilloUsuarioCimientos);
+    console.log(ladrilloUsuarioCimientos);
 }
+
+
 let valorEnArrayParedCimientos;
 function seleccionParedUsuarioCimientos (){
     // let paredUsuarioCimientos = parseInt(prompt("¿Cual será el ancho de la pared a construir en cm? 10 , 15, 20, 30"));
-    let paredUsuarioCimientos= document.querySelector("paredCimientos").value;
+    let paredUsuarioCimientos= "";
+    let paredCimientos0= document.getElementById("paredCimientos0");
+    let paredCimientos1= document.getElementById("paredCimientos1");
+    let paredCimientos2= document.getElementById("paredCimientos2");
+    let paredCimientos3= document.getElementById("paredCimientos3");
+    if(paredCimientos0.checked){
+        paredUsuarioCimientos= paredCimientos0.value;
+    }else if(paredCimientos1.checked){
+        paredUsuarioCimientos= paredCimientos1.value;
+    }else if(paredCimientos2.checked){
+        paredUsuarioCimientos= paredCimientos2.value;
+    }else if(paredCimientos3.checked){
+        paredUsuarioCimientos= paredCimientos3.value;
+    }
     valorEnArrayParedCimientos = arrayParedCimientos.find((i)=> i === paredUsuarioCimientos);
+    console.log(paredUsuarioCimientos);
 }
 
 
 //5to asignar valores para los calculos
-let valorCemento;
-let valorCal;
-let valorArena;
-let valorLadrillo;
+let valorCementoCimientos;
+let valorCalCimientos;
+let valorArenaCimientos;
+let valorLadrilloCimientos;
 let error = document.querySelector ("#error");
 
 //Luego se le agrega el evento onclick para que todo esto se calcule al hacer click en el boton de Calcular
@@ -134,8 +182,19 @@ function valorMaterialParaCalculoCimientos (){
 let metros ;
 function pedirMetrosCimientos(){
     // metros = parseInt(prompt("Ingresar cantidad de metros cuadrados a construir"));
-    metros= parseInt(document.querySelector("metrosCimientos").value);
+    metros= parseInt(document.querySelector("#metrosCimientos").value);
 }
+//Checkear que sean números los ingresados
+// metros.addEventListener("onkeypress", checkNumber());
+// function checkNumber(){
+//     if (metros != 0){
+//         //valores de los numeros segun ASCII
+//         if (metros < 49 || metros > 57){
+//             // e.preventDefault();
+//              alert("Ingrese un valor válido en los metros que desea construir")
+//         }
+//     }
+// }
 
 //7mo calcular cantidad de material
 let cementoFinalCimientos;
@@ -158,10 +217,20 @@ function procesoTotalCimientos(){
     valorMaterialParaCalculoCimientos();
     pedirMetrosCimientos();
     calcularMaterialesCimientos();
-    const Cimientos1= new Cimientos(cementoFinalCimientos, calFinalCimientos, arenaFinalCimientos, ladrillosFinalCimientos);
-    Cimientos1.resultadocalculosCimientos();
+    if (e.botonCalcular == true){
+        respuestaClickCimientos()
+    }
 }
 
+//9no Funcion para el boton de calcular
+let botonCalcular = document.querySelector("#calcularCimientos");
+botonCalcular.onclick = respuestaClickCimientos;
+function respuestaClickCimientos(){
+    procesoTotalCimientos();
+    const Cimientos1= new Cimientos(cementoFinalCimientos, calFinalCimientos, arenaFinalCimientos, ladrillosFinalCimientos);
+    Cimientos1.resultadocalculosCimientos();
+    document.getElementById("sectionResultadosCimientos").style.display = "block";
+    document.getElementById("sectionCimientos").style.display = "none";
+}
 
 //Llamar a funciones.- llamadas al principio al declarar trabajoSeleccionado
-

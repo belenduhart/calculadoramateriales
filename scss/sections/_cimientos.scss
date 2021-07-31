@@ -1,6 +1,8 @@
 // Cimientos
+#sectionCimientos{
+    display: none;
+}
 #cimientos{
-    visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,14 +12,14 @@
     background-color:#9db1b3 ;
     border-radius: 10px;
     margin: 4vh auto;
-    position: absolute;
-    top: 24%;
-    left: 25%;
+    // position: absolute;
+    // top: 24%;
+    // left: 25%;
     @media only screen and (max-width: 680px) {
         width: 80%;
-        position: absolute;
-        top: 24%;
-        left: 9vw;
+        // position: absolute;
+        // top: 24%;
+        // left: 9vw;
     }
     .titulotrabajo{
         font-size: 2em;
@@ -75,7 +77,7 @@
             text-align: left;
             padding: 1vh 1vw;
         }
-        .tipoladrillo{
+            .divdelformladrillos{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -88,6 +90,7 @@
                 margin-top: 1vh;
                 font-weight: bold;
                 width: 45%;
+                margin: 1vh 0vw;
             }
         }
     }
@@ -105,7 +108,7 @@
             text-align: left;
             padding: 1vh 1vw;
         }
-        .anchopared{
+        .divdelformpared{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -114,13 +117,18 @@
             @media only screen and (max-width: 480px) {
                 margin: 3vh auto;
             }
-            label{
-                font-size: 1em;
-                color: #27333a;
-                text-align: left;
-                margin-top: 1vh;
-                font-weight: bold;
-                width: 45%;
+            .anchopared{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                label{
+                    font-size: 1em;
+                    color: #27333a;
+                    text-align: left;
+                    margin-top: 1vh;
+                    font-weight: bold;
+                    width: 45%;
+                }
             }
         }
     }
@@ -147,7 +155,7 @@
                 padding: 1vh 2vw;
                 margin: 3vh auto;
                 font-weight: bold;
-                input{
+                #metrosCimientos{
                     width: 20%;
                     color: white;
                     font-weight: bold;

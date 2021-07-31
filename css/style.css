@@ -269,8 +269,11 @@ body {
   }
 }
 
+#sectionCimientos {
+  display: none;
+}
+
 #cimientos {
-  visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -280,16 +283,10 @@ body {
   background-color: #9db1b3;
   border-radius: 10px;
   margin: 4vh auto;
-  position: absolute;
-  top: 24%;
-  left: 25%;
 }
 @media only screen and (max-width: 680px) {
   #cimientos {
     width: 80%;
-    position: absolute;
-    top: 24%;
-    left: 9vw;
   }
 }
 #cimientos .titulotrabajo {
@@ -348,20 +345,21 @@ body {
   text-align: left;
   padding: 1vh 1vw;
 }
-#cimientos #ladrillos .tipoladrillo {
+#cimientos #ladrillos .divdelformladrillos {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
   margin: 3vh 0 4vh 5vw;
 }
-#cimientos #ladrillos .tipoladrillo label {
+#cimientos #ladrillos .divdelformladrillos label {
   font-size: 1em;
   color: #27333a;
   text-align: left;
   margin-top: 1vh;
   font-weight: bold;
   width: 45%;
+  margin: 1vh 0vw;
 }
 #cimientos #paredes {
   display: flex;
@@ -378,7 +376,7 @@ body {
   text-align: left;
   padding: 1vh 1vw;
 }
-#cimientos #paredes .anchopared {
+#cimientos #paredes .divdelformpared {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -386,11 +384,16 @@ body {
   margin: 3vh 0 4vh 18vw;
 }
 @media only screen and (max-width: 480px) {
-  #cimientos #paredes .anchopared {
+  #cimientos #paredes .divdelformpared {
     margin: 3vh auto;
   }
 }
-#cimientos #paredes .anchopared label {
+#cimientos #paredes .divdelformpared .anchopared {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#cimientos #paredes .divdelformpared .anchopared label {
   font-size: 1em;
   color: #27333a;
   text-align: left;
@@ -424,7 +427,7 @@ body {
   margin: 3vh auto;
   font-weight: bold;
 }
-#cimientos #metroscuadrados .cantidadmetros label input {
+#cimientos #metroscuadrados .cantidadmetros label #metrosCimientos {
   width: 20%;
   color: white;
   font-weight: bold;
@@ -458,8 +461,11 @@ body {
   background-color: #455964;
 }
 
+#sectionCapavertical {
+  display: none;
+}
+
 #capavertical {
-  visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -468,16 +474,11 @@ body {
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: #9db1b3;
   border-radius: 10px;
-  position: absolute;
-  top: 28%;
-  left: 25%;
+  margin: 3vh auto;
 }
 @media only screen and (max-width: 680px) {
   #capavertical {
     width: 80%;
-    position: absolute;
-    top: 28%;
-    left: 9vw;
   }
 }
 #capavertical .titulotrabajo {
@@ -583,8 +584,11 @@ body {
   background-color: #455964;
 }
 
+#sectionCapahorizontal {
+  display: none;
+}
+
 #capahorizontal {
-  visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -593,16 +597,11 @@ body {
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: #9db1b3;
   border-radius: 10px;
-  position: absolute;
-  top: 28%;
-  left: 25%;
+  margin: 3vh auto;
 }
 @media only screen and (max-width: 680px) {
   #capahorizontal {
     width: 80%;
-    position: absolute;
-    top: 28%;
-    left: 9vw;
   }
 }
 #capahorizontal .titulotrabajo {
@@ -711,8 +710,11 @@ body {
   background-color: #455964;
 }
 
+#sectionMamposteria {
+  display: none;
+}
+
 #mamposteria {
-  visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -721,16 +723,11 @@ body {
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: #9db1b3;
   border-radius: 10px;
-  position: absolute;
-  top: 28%;
-  left: 25%;
+  margin: 3vh auto;
 }
 @media only screen and (max-width: 680px) {
   #mamposteria {
     width: 80%;
-    position: absolute;
-    top: 28%;
-    left: 9vw;
   }
 }
 #mamposteria .titulotrabajo {
@@ -869,8 +866,11 @@ body {
   background-color: #455964;
 }
 
+#sectionRevoqueexterior {
+  display: none;
+}
+
 #revoqueexterior {
-  visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -879,16 +879,11 @@ body {
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: #9db1b3;
   border-radius: 10px;
-  position: absolute;
-  top: 28%;
-  left: 25%;
+  margin: 3vh auto;
 }
 @media only screen and (max-width: 680px) {
   #revoqueexterior {
     width: 80%;
-    position: absolute;
-    top: 28%;
-    left: 9vw;
   }
 }
 #revoqueexterior .titulotrabajo {
@@ -987,8 +982,11 @@ body {
   background-color: #455964;
 }
 
+#sectionRevoqueinterior {
+  display: none;
+}
+
 #revoqueinterior {
-  visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -997,16 +995,11 @@ body {
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: #9db1b3;
   border-radius: 10px;
-  position: absolute;
-  top: 28%;
-  left: 25%;
+  margin: 3vh auto;
 }
 @media only screen and (max-width: 680px) {
   #revoqueinterior {
     width: 80%;
-    position: absolute;
-    top: 28%;
-    left: 9vw;
   }
 }
 #revoqueinterior .titulotrabajo {
@@ -1110,8 +1103,11 @@ body {
   background-color: #455964;
 }
 
+#sectionContrapiso {
+  display: none;
+}
+
 #contrapiso {
-  visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1120,16 +1116,11 @@ body {
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: #9db1b3;
   border-radius: 10px;
-  position: absolute;
-  top: 28%;
-  left: 25%;
+  margin: 3vh auto;
 }
 @media only screen and (max-width: 680px) {
   #contrapiso {
     width: 80%;
-    position: absolute;
-    top: 28%;
-    left: 9vw;
   }
 }
 #contrapiso .titulotrabajo {
@@ -1235,8 +1226,11 @@ body {
   background-color: #455964;
 }
 
+#sectionCarpeta {
+  display: none;
+}
+
 #carpeta {
-  visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1245,16 +1239,11 @@ body {
   box-shadow: 5px 5px 15px 5px #000000;
   background-color: #9db1b3;
   border-radius: 10px;
-  position: absolute;
-  top: 28%;
-  left: 25%;
+  margin: 3vh auto;
 }
 @media only screen and (max-width: 680px) {
   #carpeta {
     width: 80%;
-    position: absolute;
-    top: 28%;
-    left: 9vw;
   }
 }
 #carpeta .titulotrabajo {
@@ -1491,6 +1480,10 @@ body {
     height: 100%;
     opacity: 100%;
   }
+}
+
+#sectionResultadosCimientos {
+  display: none;
 }
 
 #resultadocimientos {

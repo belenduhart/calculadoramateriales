@@ -146,361 +146,464 @@
         </nav>
     </section>
     <main>
+        <div id="error"></div>
+        <!-- Vista ppal del index , valor 0-->
         <section id="trabajos">
-            <div id="error" ></div>
+
             <p>
                 PARA COMENZAR A CALCULAR LOS MATERIALES,<br>
                 SELECCIONA EL TIPO DE TRABAJO QUE VAS A REALIZAR
             </p>
-          
+
         </section>
-        <section id="cimientos">
-            <div class="titulotrabajo">
-                CIMIENTOS
-            </div>
-            <div id="hormigon">
-                <p> Tipo de hormigon:</p>
-                <div class="tipohormigon">
+        <!-- CIMIENTOS -->
+        <!-- Formulario Cimientos -->
+        <form name= "sectionCimientos" id="sectionCimientos">
+            <div id="cimientos">
+                <div class="titulotrabajo">
+                    CIMIENTOS
+                </div>
+                <div id="hormigon">
+                    <p> Tipo de hormigon:</p>
+                    <div class="tipohormigon">
+                        <label>
+                            <input type="radio" name="hormigon" value="HormigonPobre">
+                            Hormigon pobre
+                        </label>
+                        <label>
+                            <input type="radio" name="hormigon" value="HormigonArmado">
+                            Hormigon armado
+                        </label>
+                    </div>
+                </div>
+                <div id="ladrillos">
+                    <p> Tipo de ladrillo:</p>
+                    <div class="divdelformladrillos">
+                    <form class="tipoladrillo">
+                        <label>
+                            <input type="radio" name="ladrillo" value="LadrilloComun" id="ladrilloCimientos0">
+                            Ladrillo Comun 5x11.5x24.5(cm)
+                        </label>
+                        <label>
+                            <input type="radio" name="ladrillo" value="LadrilloHueco8" id="ladrilloCimientos1">
+                            Ladrillo Ceramico Hueco 8x18x33(cm)
+                        </label>
+                        <label>
+                            <input type="radio" name="ladrillo" value="LadrilloHueco12" id="ladrilloCimientos2">
+                            Ladrillo Ceramico Hueco 12x18x33(cm)
+                        </label>
+                        <label>
+                            <input type="radio" name="ladrillo" value="LadrilloHueco18" id="ladrilloCimientos3">
+                            Ladrillo Ceramico Hueco 18x18x33(cm)
+                        </label>
+                        <label>
+                            <input type="radio" name="ladrillo" value="Ladrillon" id="ladrilloCimientos4">
+                            Ladrillon 6x15x26(cm)
+                        </label>
+                        <label>
+                            <input type="radio" name="ladrillo" value="LadrilloVibrado" id="ladrilloCimientos5">
+                            Bloque de Cemento Vibrado 19x19x39(cm)
+                        </label>
+                    </form>
+                </div>
+                </div>
+                <div id="paredes">
+                    <p>Ancho de pared:</p>
+                    <div class="divdelformpared">
+                    <form class="anchopared">
+                        <label>
+                            <input type="radio" name="pared" value="10" id="paredCimientos0">
+                            10 cm de ancho
+                        </label>
+                        <label>
+                            <input type="radio" name="pared" value="15" id="paredCimientos1">
+                            15 cm de ancho
+                        </label>
+                        <label>
+                            <input type="radio" name="pared" value="20" id="paredCimientos2">
+                            20 cm de ancho
+                        </label>
+                        <label>
+                            <input type="radio" name="pared" value="30" id="paredCimientos3">
+                            30 cm de ancho
+                        </label>
+                    </form>
+                </div>
+                </div>
+                <div id="metroscuadrados">
+                    <p>Ingrese los metros cuadrados a construir:</p>
+                    <div class="cantidadmetros">
+                        <label>
+                            Metros cuadrados:
+                            <input type="text" id="metrosCimientos">
+                        </label>
+                    </div>
+                </div>
+                <div id="botoncalcular">
                     <label>
-                        <input type="radio" name="hormigon" value="HormigonPobre">
-                        Hormigon pobre
-                    </label>
-                    <label>
-                        <input type="radio" name="hormigon" value="HormigonArmado">
-                        Hormigon armado
+                            <input type="button" value="CALCULAR" id="calcularCimientos" 
+                            onclick="respuestaClickCimientos(); return false" >
                     </label>
                 </div>
             </div>
-            <div id="ladrillos">
-                <p> Tipo de ladrillo:</p>
-                <div class="tipoladrillo">
-                    <label>
-                        <input type="radio" name="ladrillo" value="LadrilloComun" id="ladrilloCimientos">
-                        Ladrillo Comun 5x11.5x24.5(cm)
-                    </label>
-                    <label>
-                        <input type="radio" name="ladrillo" value="LadrilloHueco8" id="ladrilloCimientos">
-                        Ladrillo Ceramico Hueco 8x18x33(cm)
-                    </label>
-                    <label>
-                        <input type="radio" name="ladrillo" value="LadrilloHueco12" id="ladrilloCimientos">
-                        Ladrillo Ceramico Hueco 12x18x33(cm)
-                    </label>
-                    <label>
-                        <input type="radio" name="ladrillo" value="LadrilloHueco18" id="ladrilloCimientos">
-                        Ladrillo Ceramico Hueco 18x18x33(cm)
-                    </label>
-                    <label>
-                        <input type="radio" name="ladrillo" value="Ladrillon" id="ladrilloCimientos">
-                        Ladrillon 6x15x26(cm)
-                    </label>
-                    <label>
-                        <input type="radio" name="ladrillo" value="LadrilloVibrado" id="ladrilloCimientos">
-                        Bloque de Cemento Vibrado 19x19x39(cm)
-                    </label>
-                </div>
-            </div>
-            <div id="paredes">
-                <p>Ancho de pared:</p>
-                <div class="anchopared">
-                    <label>
-                        <input type="radio" name="pared" value="Pared10" id="paredCimientos">
-                        10 cm de ancho
-                    </label>
-                    <label>
-                        <input type="radio" name="pared" value="Pared15" id="paredCimientos">
-                        15 cm de ancho
-                    </label>
-                    <label>
-                        <input type="radio" name="pared" value="Pared20" id="paredCimientos">
-                        20 cm de ancho
-                    </label>
-                    <label>
-                        <input type="radio" name="pared" value="Pared30" id="paredCimientos">
-                        30 cm de ancho
-                    </label>
-                </div>
-            </div>
-            <div id="metroscuadrados">
-                <p>Ingrese los metros cuadrados a construir:</p>
-                <div class="cantidadmetros">
-                    <label>
-                        Metros cuadrados:
-                        <input type="text" id="metrosCimientos">
-                    </label>
-                </div>
-            </div>
-            <div id="botoncalcular">
-                <label><a href="cimientos.html">
-                        <input type="button" value="CALCULAR" id="calucularCimientos">
+        </form>
+        <!-- Resultado calculos -->
+        <section id=sectionResultadosCimientos>
+            <section id="resultadocimientos">
+                <p class="tituloresultado0">Resultados de los calculos:</p>
+            <div class="zapatacorrida">
+                <div id="tituloresultado">MAMPOSTERIA EN CIMIENTOS</div>
+                <div id="tablaresultados">
+                <div id="material">
+                    <div>MATERIAL</div>
+                    <p><a href="productos html/cemento.html" target="_blank">
+                        Cemento
                     </a>
-                </label>
-            </div>
-        </section>
-        <section id="capavertical">
-            <div class="titulotrabajo">
-                CAPA AISLADORA VERTICAL
-            </div>
-            <div id="metroscuadrados">
-                <p>Ingrese la cantidad de metros lineales a construir:</p>
-                <div class="cantidadmetros">
-                    <label>
-                        Metros lineales:
-                        <input type="text">
-                    </label>
-                </div>
-            </div>
-            <div id="altocapa">
-                <p>Ingrese el alto de la capa aisladora a construir:</p>
-                <div class="altocapacm">
-                    <label>
-                        Alto (cm):
-                        <input type="text">
-                    </label>
-                </div>
-            </div>
-            <div id="botoncalcular">
-                <label><a href="capavertical.html">
-                        <input type="button" value="CALCULAR">
+                    </p>
+                    <p><a href="productos html/cal.html" target="_blank">
+                        Cal Hidráulica
                     </a>
-                </label>
-            </div>
-        </section>
-        <section id="capahorizontal">
-            <div class="titulotrabajo">
-                CAPA AISLADORA HORIZONTAL
-            </div>
-            <div id="metroscuadrados">
-                <p>Ingrese la cantidad de metros lineales a construir:</p>
-                <div class="cantidadmetros">
-                    <label>
-                        Metros lineales:
-                        <input type="text">
-                    </label>
-                </div>
-            </div>
-            <div id="paredes">
-                <p>Ancho de pared:</p>
-                <div class="anchopared">
-                    <label>
-                        <input type="radio" name="pared" value="Pared10">
-                        10 cm de ancho
-                    </label>
-                    <label>
-                        <input type="radio" name="pared" value="Pared15">
-                        15 cm de ancho
-                    </label>
-                    <label>
-                        <input type="radio" name="pared" value="Pared20">
-                        20 cm de ancho
-                    </label>
-                    <label>
-                        <input type="radio" name="pared" value="Pared30">
-                        30 cm de ancho
-                    </label>
-                </div>
-            </div>
-            <div id="error"></div>
-            <div id="botoncalcular">
-                <label><a href="capahorizontal.html">
-                        <input type="button" value="CALCULAR">
+                    </p>
+                    <p><a href="productos html/arena.html" target="_blank">
+                        Arena
                     </a>
-                </label>
-            </div>
-        </section>
-        <section id="mamposteria">
-            <div class="titulotrabajo">
-                MAMPOSTERIA
-            </div>
-            <div id="ladrillos">
-                <p> Tipo de ladrillo:</p>
-                <div class="tipoladrillo">
-                    <label>
-                        <input type="radio" name="ladrillo" value="LadrilloComun">
-                        Ladrillo Comun 5x11.5x24.5(cm)
-                    </label>
-                    <label>
-                        <input type="radio" name="ladrillo" value="LadrilloHueco8">
-                        Ladrillo Ceramico Hueco 8x18x33(cm)
-                    </label>
-                    <label>
-                        <input type="radio" name="ladrillo" value="LadrilloHueco12">
-                        Ladrillo Ceramico Hueco 12x18x33(cm)
-                    </label>
-                    <label>
-                        <input type="radio" name="ladrillo" value="LadrilloHueco18">
-                        Ladrillo Ceramico Hueco 12x18x33(cm)
-                    </label>
-                    <label>
-                        <input type="radio" name="ladrillo" value="Ladrillon">
-                        Ladrillon 6x15x26(cm)
-                    </label>
-                    <label>
-                        <input type="radio" name="ladrillo" value="LadrilloVibrado">
-                        Bloque de Cemento Vibrado 19x19x39(cm)
-                    </label>
-                </div>
-            </div>
-            <div id="paredes">
-                <p>Ancho de pared:</p>
-                <div class="anchopared">
-                    <label>
-                        <input type="radio" name="pared" value="Pared10">
-                        10 cm de ancho
-                    </label>
-                    <label>
-                        <input type="radio" name="pared" value="Pared15">
-                        15 cm de ancho
-                    </label>
-                    <label>
-                        <input type="radio" name="pared" value="Pared20">
-                        20 cm de ancho
-                    </label>
-                    <label>
-                        <input type="radio" name="pared" value="Pared30">
-                        30 cm de ancho
-                    </label>
-                </div>
-            </div>
-            <div id="metroscuadrados">
-                <p>Ingrese los metros cuadrados a construir:</p>
-                <div class="cantidadmetros">
-                    <label>
-                        Metros cuadrados:
-                        <input type="text">
-                    </label>
-                </div>
-            </div>
-            <div id="botoncalcular">
-                <label><a href="mamposteria.html">
-                        <input type="button" value="CALCULAR">
+                    </p>
+                    <p><a href="productos html/ladrillos.html" target="_blank">
+                        Ladrillos
                     </a>
-                </label>
+                    </p>
+                </div>
+                <div id="cantidad">
+                    <div>CANTIDAD</div>
+                    <p id="mostrarCementoCimientos">
+                        
+                    </p>
+                    <p id="mostrarCalCimientos">
+                        
+                    </p>
+                    <p id="mostrarArenaCimientos">
+                        
+                    </p>
+                    <p id="mostrarLadrillosCimientos">
+                        
+                    </p>
+                </div>
+                <!-- <div id="compra">
+                    <div>COMPRA</div>
+                    <p id="mostrarBolsaCementoCimientos">
+                        
+                    </p>
+                    <p id="mostrarBolsaCalCimientos">
+                        
+                    </p>
+                    <p id="mostrarBolsaArenaCimientos">
+                        
+                    </p>
+                    <p id="mostrarBolsaLadrillosCimientos">
+                        
+                    </p>
+                </div> -->
             </div>
+        </div>
+            </section>
+            <section id="hacerclick">
+                <div>Si queres cotizar y/o comprar los productos que necesitas para construir <br> 
+                    ¡hace click sobre su nombre!
+                </div>
+            </section>
         </section>
-        <section id="revoqueexterior">
-            <div class="titulotrabajo">
-                REVOQUE EXTERIOR
-            </div>
-            <div id="revoque">
-                <p>Tipo de revoque a construir:</p>
-                <div class="tiporevoque">
-                    <label>
-                        <input type="radio" name="revoque" value="azotadohidrofugo">
-                        Azotado Hidrofugo
-                    </label>
-                    <label>
-                        <input type="radio" name="revoque" value="revoquefino">
-                        Revoque fino
-                    </label>
-                    <label>
-                        <input type="radio" name="revoque" value="revoquegrueso">
-                        Revoque grueso
+        <!-- CAPA VERTICAL -->
+        <!-- Formulario Capa Vertical -->
+        <form id="sectionCapavertical">
+            <div id="capavertical">
+                <div class="titulotrabajo">
+                    CAPA AISLADORA VERTICAL
+                </div>
+                <div id="metroscuadrados">
+                    <p>Ingrese la cantidad de metros lineales a construir:</p>
+                    <div class="cantidadmetros">
+                        <label>
+                            Metros lineales:
+                            <input type="text">
+                        </label>
+                    </div>
+                </div>
+                <div id="altocapa">
+                    <p>Ingrese el alto de la capa aisladora a construir:</p>
+                    <div class="altocapacm">
+                        <label>
+                            Alto (cm):
+                            <input type="text">
+                        </label>
+                    </div>
+                </div>
+                <div id="botoncalcular">
+                    <label><a href="capavertical.html">
+                            <input type="button" value="CALCULAR">
+                        </a>
                     </label>
                 </div>
             </div>
-            <div id="metroscuadrados">
-                <p>Ingrese los metros cuadrados a construir:</p>
-                <div class="cantidadmetros">
-                    <label>
-                        Metros cuadrados:
-                        <input type="text">
+        </form>
+        <!-- CAPA HORIZONTAL -->
+        <!-- Formulario Capa Horizontal -->
+        <form id="sectionCapahorizontal">
+            <div id="capahorizontal">
+                <div class="titulotrabajo">
+                    CAPA AISLADORA HORIZONTAL
+                </div>
+                <div id="metroscuadrados">
+                    <p>Ingrese la cantidad de metros lineales a construir:</p>
+                    <div class="cantidadmetros">
+                        <label>
+                            Metros lineales:
+                            <input class="inputMetros" type="text">
+                        </label>
+                    </div>
+                </div>
+                <div id="paredes">
+                    <p>Ancho de pared:</p>
+                    <div class="anchopared">
+                        <label>
+                            <input type="radio" name="pared" value="Pared10">
+                            10 cm de ancho
+                        </label>
+                        <label>
+                            <input type="radio" name="pared" value="Pared15">
+                            15 cm de ancho
+                        </label>
+                        <label>
+                            <input type="radio" name="pared" value="Pared20">
+                            20 cm de ancho
+                        </label>
+                        <label>
+                            <input type="radio" name="pared" value="Pared30">
+                            30 cm de ancho
+                        </label>
+                    </div>
+                </div>
+                <div id="error"></div>
+                <div id="botoncalcular">
+                    <label><a href="capahorizontal.html">
+                            <input type="button" value="CALCULAR">
+                        </a>
                     </label>
                 </div>
             </div>
-            <div id="botoncalcular">
-                <label>
-                    <a href="revoqueexterior.html">
-                        <input type="button" value="CALCULAR">
-                    </a>
-                </label>
-            </div>
-        </section>
-        <section id="revoqueinterior">
-            <div class="titulotrabajo">
-                REVOQUE INTERIOR
-            </div>
-            <div id="revoque">
-                <p>Tipo de revoque a construir:</p>
-                <div class="tiporevoque">
-                    <label>
-                        <input type="radio" name="revoque" value="revoquefino">
-                        Revoque fino
-                    </label>
-                    <label>
-                        <input type="radio" name="revoque" value="revoquegrueso">
-                        Revoque grueso
+        </form>
+        <!-- MAMPOSTERIA -->
+        <!-- Formulario Mamposteria -->
+        <form id="sectionMamposteria">
+            <div id="mamposteria">
+                <div class="titulotrabajo">
+                    MAMPOSTERIA
+                </div>
+                <div id="ladrillos">
+                    <p> Tipo de ladrillo:</p>
+                    <div class="tipoladrillo">
+                        <label>
+                            <input type="radio" name="ladrillo" value="LadrilloComun">
+                            Ladrillo Comun 5x11.5x24.5(cm)
+                        </label>
+                        <label>
+                            <input type="radio" name="ladrillo" value="LadrilloHueco8">
+                            Ladrillo Ceramico Hueco 8x18x33(cm)
+                        </label>
+                        <label>
+                            <input type="radio" name="ladrillo" value="LadrilloHueco12">
+                            Ladrillo Ceramico Hueco 12x18x33(cm)
+                        </label>
+                        <label>
+                            <input type="radio" name="ladrillo" value="LadrilloHueco18">
+                            Ladrillo Ceramico Hueco 12x18x33(cm)
+                        </label>
+                        <label>
+                            <input type="radio" name="ladrillo" value="Ladrillon">
+                            Ladrillon 6x15x26(cm)
+                        </label>
+                        <label>
+                            <input type="radio" name="ladrillo" value="LadrilloVibrado">
+                            Bloque de Cemento Vibrado 19x19x39(cm)
+                        </label>
+                    </div>
+                </div>
+                <div id="paredes">
+                    <p>Ancho de pared:</p>
+                    <div class="anchopared">
+                        <label>
+                            <input type="radio" name="pared" value="Pared10">
+                            10 cm de ancho
+                        </label>
+                        <label>
+                            <input type="radio" name="pared" value="Pared15">
+                            15 cm de ancho
+                        </label>
+                        <label>
+                            <input type="radio" name="pared" value="Pared20">
+                            20 cm de ancho
+                        </label>
+                        <label>
+                            <input type="radio" name="pared" value="Pared30">
+                            30 cm de ancho
+                        </label>
+                    </div>
+                </div>
+                <div id="metroscuadrados">
+                    <p>Ingrese los metros cuadrados a construir:</p>
+                    <div class="cantidadmetros">
+                        <label>
+                            Metros cuadrados:
+                            <input type="text">
+                        </label>
+                    </div>
+                </div>
+                <div id="botoncalcular">
+                    <label><a href="mamposteria.html">
+                            <input type="button" value="CALCULAR">
+                        </a>
                     </label>
                 </div>
             </div>
-            <div id="metroscuadrados">
-                <p>Ingrese los metros cuadrados a construir:</p>
-                <div class="cantidadmetros">
+        </form>
+        <!-- REVOQUE EXTERIOR -->
+        <!-- Formulario Revoque Exterior -->
+        <form id="sectionRevoqueexterior">
+            <div id="revoqueexterior">
+                <div class="titulotrabajo">
+                    REVOQUE EXTERIOR
+                </div>
+                <div id="revoque">
+                    <p>Tipo de revoque a construir:</p>
+                    <div class="tiporevoque">
+                        <label>
+                            <input type="radio" name="revoque" value="azotadohidrofugo">
+                            Azotado Hidrofugo
+                        </label>
+                        <label>
+                            <input type="radio" name="revoque" value="revoquefino">
+                            Revoque fino
+                        </label>
+                        <label>
+                            <input type="radio" name="revoque" value="revoquegrueso">
+                            Revoque grueso
+                        </label>
+                    </div>
+                </div>
+                <div id="metroscuadrados">
+                    <p>Ingrese los metros cuadrados a construir:</p>
+                    <div class="cantidadmetros">
+                        <label>
+                            Metros cuadrados:
+                            <input type="text">
+                        </label>
+                    </div>
+                </div>
+                <div id="botoncalcular">
                     <label>
-                        Metros cuadrados:
-                        <input type="text">
+                        <a href="revoqueexterior.html">
+                            <input type="button" value="CALCULAR">
+                        </a>
                     </label>
                 </div>
             </div>
-            <div id="botoncalcular">
-                <label>
-                    <a href="revoqueinterior.html">
-                        <input type="button" value="CALCULAR">
-                    </a>
-                </label>
-            </div>
-        </section>
-        <section id="contrapiso">
-            <div class="titulotrabajo">
-                CONTRAPISO
-            </div>
-            <div id="metroscuadrados">
-                <p>Ingrese la cantidad de metros lineales a construir:</p>
-                <div class="cantidadmetros">
+        </form>
+        <!-- REVOQUE INTERIOR -->
+        <!-- Formulario Revoque Interior -->
+        <form id="sectionRevoqueinterior">
+            <div id="revoqueinterior">
+                <div class="titulotrabajo">
+                    REVOQUE INTERIOR
+                </div>
+                <div id="revoque">
+                    <p>Tipo de revoque a construir:</p>
+                    <div class="tiporevoque">
+                        <label>
+                            <input type="radio" name="revoque" value="revoquefino">
+                            Revoque fino
+                        </label>
+                        <label>
+                            <input type="radio" name="revoque" value="revoquegrueso">
+                            Revoque grueso
+                        </label>
+                    </div>
+                </div>
+                <div id="metroscuadrados">
+                    <p>Ingrese los metros cuadrados a construir:</p>
+                    <div class="cantidadmetros">
+                        <label>
+                            Metros cuadrados:
+                            <input type="text">
+                        </label>
+                    </div>
+                </div>
+                <div id="botoncalcular">
                     <label>
-                        Metros lineales:
-                        <input type="text">
+                        <a href="revoqueinterior.html">
+                            <input type="button" value="CALCULAR">
+                        </a>
                     </label>
                 </div>
             </div>
-            <div id="espesorcapa">
-                <p>Ingrese el alto de la capa aisladora a construir:</p>
-                <div class="espesorcapacm">
+        </form>
+        <!-- CONTRAPISO -->
+        <!-- Formulario Contrapiso -->
+        <form id="sectionContrapiso">
+            <div id="contrapiso">
+                <div class="titulotrabajo">
+                    CONTRAPISO
+                </div>
+                <div id="metroscuadrados">
+                    <p>Ingrese la cantidad de metros lineales a construir:</p>
+                    <div class="cantidadmetros">
+                        <label>
+                            Metros lineales:
+                            <input type="text">
+                        </label>
+                    </div>
+                </div>
+                <div id="espesorcapa">
+                    <p>Ingrese el alto de la capa aisladora a construir:</p>
+                    <div class="espesorcapacm">
+                        <label>
+                            Espesor (cm):
+                            <input type="text">
+                        </label>
+                    </div>
+                </div>
+                <div id="botoncalcular">
                     <label>
-                        Espesor (cm):
-                        <input type="text">
+                        <a href="contrapiso.html">
+                            <input type="button" value="CALCULAR">
+                        </a>
                     </label>
                 </div>
             </div>
-            <div id="botoncalcular">
-                <label>
-                    <a href="contrapiso.html">
-                        <input type="button" value="CALCULAR">
-                    </a>
-                </label>
-            </div>
-        </section>
-        <section id="carpeta">
-            <div class="titulotrabajo">
-                CARPETA
-            </div>
-            <div id="metroscuadrados">
-                <p>Ingrese la cantidad de metros cuadrados a construir:</p>
-                <div class="cantidadmetros">
+        </form>
+        <!-- CARPETA -->
+        <!-- Formulario Carpeta -->
+        <form id="sectionCarpeta">
+            <div id="carpeta">
+                <div class="titulotrabajo">
+                    CARPETA
+                </div>
+                <div id="metroscuadrados">
+                    <p>Ingrese la cantidad de metros cuadrados a construir:</p>
+                    <div class="cantidadmetros">
+                        <label>
+                            Metros cuadrados:
+                            <input type="text">
+                        </label>
+                    </div>
+                </div>
+                <div id="botoncalcular">
                     <label>
-                        Metros cuadrados:
-                        <input type="text">
+                        <a href="carpeta.html">
+                            <input type="button" value="CALCULAR">
+                        </a>
                     </label>
                 </div>
             </div>
-            <div id="botoncalcular">
-                <label>
-                    <a href="carpeta.html">
-                        <input type="button" value="CALCULAR">
-                    </a>
-                </label>
-            </div>
-        </section>
+        </form>
     </main>
 
     <!-- Link JS -->
