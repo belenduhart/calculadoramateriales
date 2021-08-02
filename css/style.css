@@ -1313,16 +1313,14 @@ body {
 }
 
 #error {
-  font-size: 2em;
-  color: red;
-  text-align: center;
-  background-color: rgba(201, 154, 154, 0.412);
-  margin: 8vh auto;
-  width: 50%;
-  box-shadow: 5px 5px 15px 5px #000000;
-  border: 2px solid white;
   display: none;
-  padding: 1vh 1vw;
+  background: rgba(33, 41, 52, 0.85);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: 999;
 }
 #error #goBackCimientos {
   box-shadow: 5px 5px 15px 5px #000000;
@@ -1333,6 +1331,10 @@ body {
   padding: 1vh 1vw;
   margin: 4vh auto;
   background-color: #27333a;
+  position: absolute;
+  top: 60%;
+  left: 43%;
+  width: 15%;
 }
 #error #goBackCimientos:hover {
   opacity: 90%;
