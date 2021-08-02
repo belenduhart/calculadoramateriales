@@ -1317,7 +1317,38 @@ body {
   color: red;
   text-align: center;
   background-color: rgba(201, 154, 154, 0.412);
+  margin: 8vh auto;
+  width: 50%;
+  box-shadow: 5px 5px 15px 5px #000000;
   border: 2px solid white;
+  display: none;
+  padding: 1vh 1vw;
+}
+#error #goBackCimientos {
+  box-shadow: 5px 5px 15px 5px #000000;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 1vh 1vw;
+  margin: 4vh auto;
+  background-color: #27333a;
+}
+#error #goBackCimientos:hover {
+  opacity: 90%;
+  background-color: #455964;
+}
+
+#errorNumero {
+  display: none;
+  background: rgba(33, 41, 52, 0.85);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  position: fixed;
+  z-index: 999;
 }
 
 #headersecundario {

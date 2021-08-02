@@ -10,6 +10,8 @@ function mostrar(){
       document.getElementById("sectionRevoqueinterior").style.display = "none";
       document.getElementById("sectionContrapiso").style.display = "none";
       document.getElementById("sectionCarpeta").style.display = "none";
+      document.getElementById("error").style.display= "none";
+      document.getElementById("errorNumero").style.display= "none";
     }else if(getSelectValue=="capavertical"){
       document.getElementById("trabajos").style.display = "none";
       document.getElementById("sectionCimientos").style.display = "none";
@@ -21,6 +23,7 @@ function mostrar(){
       document.getElementById("sectionRevoqueinterior").style.display = "none";
       document.getElementById("sectionContrapiso").style.display = "none";
       document.getElementById("sectionCarpeta").style.display = "none";
+      document.getElementById("error").style.display= "none";
     }else if(getSelectValue=="capahorizontal"){
         document.getElementById("trabajos").style.display = "none";
         document.getElementById("sectionCimientos").style.display = "none";
@@ -32,6 +35,7 @@ function mostrar(){
         document.getElementById("sectionRevoqueinterior").style.display = "none";
         document.getElementById("sectionContrapiso").style.display = "none";
         document.getElementById("sectionCarpeta").style.display = "none";
+        document.getElementById("error").style.display= "none";
     }else if(getSelectValue=="mamposteria"){
         document.getElementById("trabajos").style.display = "none";
         document.getElementById("sectionCimientos").style.display = "none";
@@ -43,6 +47,7 @@ function mostrar(){
         document.getElementById("sectionRevoqueinterior").style.display = "none";
         document.getElementById("sectionContrapiso").style.display = "none";
         document.getElementById("sectionCarpeta").style.display = "none";
+        document.getElementById("error").style.display= "none";
     }else if(getSelectValue=="revoqueexterior"){
         document.getElementById("trabajos").style.display = "none";
         document.getElementById("sectionCimientos").style.display = "none";
@@ -54,6 +59,7 @@ function mostrar(){
         document.getElementById("sectionRevoqueinterior").style.display = "none";
         document.getElementById("sectionContrapiso").style.display = "none";
         document.getElementById("sectionCarpeta").style.display = "none";
+        document.getElementById("error").style.display= "none";
     }else if(getSelectValue=="revoqueinterior"){
         document.getElementById("trabajos").style.display = "none";
         document.getElementById("sectionCimientos").style.display = "none";
@@ -65,6 +71,7 @@ function mostrar(){
         document.getElementById("sectionRevoqueinterior").style.display = "block";
         document.getElementById("sectionContrapiso").style.display = "none";
         document.getElementById("sectionCarpeta").style.display = "none";
+        document.getElementById("error").style.display= "none";
     }else if(getSelectValue=="contrapiso"){
         document.getElementById("trabajos").style.display = "none";
         document.getElementById("sectionCimientos").style.display = "none";
@@ -76,6 +83,7 @@ function mostrar(){
         document.getElementById("sectionRevoqueinterior").style.display = "none";
         document.getElementById("sectionContrapiso").style.display = "block";
         document.getElementById("sectionCarpeta").style.display = "none";
+        document.getElementById("error").style.display= "none";
     }else if(getSelectValue=="carpeta"){
         document.getElementById("trabajos").style.display = "none";
         document.getElementById("sectionCimientos").style.display = "none";
@@ -87,6 +95,7 @@ function mostrar(){
         document.getElementById("sectionRevoqueinterior").style.display = "none";
         document.getElementById("sectionContrapiso").style.display = "none";
         document.getElementById("sectionCarpeta").style.display = "block";
+        document.getElementById("error").style.display= "none";
     }else if(getSelectValue=="0"){
         document.getElementById("trabajos").style.display = "block";
         document.getElementById("sectionCimientos").style.display = "none";
@@ -98,5 +107,6 @@ function mostrar(){
         document.getElementById("sectionRevoqueinterior").style.display = "none";
         document.getElementById("sectionContrapiso").style.display = "none";
         document.getElementById("sectionCarpeta").style.display = "none";
+        document.getElementById("error").style.display= "none";
     }
   }

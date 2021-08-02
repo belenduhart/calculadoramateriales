@@ -235,10 +235,11 @@
                     <div class="cantidadmetros">
                         <label>
                             Metros cuadrados:
-                            <input type="text" id="metrosCimientos">
+                            <input type="text" id="metrosCimientos" onkeydown="return checkNumber(event)">
                         </label>
                     </div>
                 </div>
+                <div id="errorNumero"></div>
                 <div id="botoncalcular">
                     <label>
                             <input type="button" value="CALCULAR" id="calcularCimientos" 

@@ -1,12 +1,11 @@
 //CIMIENTOS
 //1eroA elegir tipo de trabajo
 // var trabajoSeleccionado = prompt("Elegir el tipo de trabajo a realizar: CIMIENTOS, MAMPOSTERIA, CAPA HORIZONTAL, CAPA VERTICAL, REVOQUE INTERIOR, REVOQUE EXTERIOR, CONTRAPISO, CARPETA");
-// getSelectValue = document.getElementById("selecciontrabajo").value;
+getSelectValue = document.getElementById("selecciontrabajo").value;
+if(getSelectValue=="cimientos"){
+    procesoTotalCimientos()
+}
 
-//1roB que se cumpla la condicion de que elijan cimientos
-// if (getSelectValue === "cimientos"){
-    // procesoTotalCimientos();
-// }
 
 //2do materiales usados para cimientos
 class Cimientos {
@@ -37,19 +36,19 @@ class Cimientos {
 // const arrayLadrillos =["COMUN" , "LADRILLON", "HUECO8", "HUECO12", "HUECO18", "VIBRADO" ];
 const arrayLadrillosCimientos = ["LadrilloComun", "LadrilloHueco8", "LadrilloHueco12", "LadrilloHueco18", "Ladrillon", "LadrilloVibrado"];
 //const arrayPared = [10, 15, 20, 30];
-const arrayParedCimientos =[10, 15, 20, 30];
+const arrayParedCimientos =["10", "15", "20", "30"];
 
 //4to pedir que el usuario seleccione cada variable y asignarle su valor con metodo find
-let valorEnArrayLadrilloCimientos;
+let valorEnArrayLadrilloCimientos;    
+let ladrilloUsuarioCimientos ="";
+let ladrilloCimientos0 = document.getElementById("ladrilloCimientos0");
+let ladrilloCimientos1 = document.getElementById("ladrilloCimientos1");
+let ladrilloCimientos2 = document.getElementById("ladrilloCimientos2");
+let ladrilloCimientos3 = document.getElementById("ladrilloCimientos3");
+let ladrilloCimientos4 = document.getElementById("ladrilloCimientos4");
+let ladrilloCimientos5 = document.getElementById("ladrilloCimientos5");
 function seleccionLadrilloUsuarioCimientos(){
     // let ladrilloUsuarioCimientos = prompt("¿Con que tipo de ladrillo quiere realizar el trabajo? Ladrillo comun, Ladrillon, Ladrillo Hueco8, Ladrillo Hueco12, Ladrillo Hueco18 o Bloque Vibrado");
-    let ladrilloUsuarioCimientos ="";
-    let ladrilloCimientos0 = document.getElementById("ladrilloCimientos0");
-    let ladrilloCimientos1 = document.getElementById("ladrilloCimientos1");
-    let ladrilloCimientos2 = document.getElementById("ladrilloCimientos2");
-    let ladrilloCimientos3 = document.getElementById("ladrilloCimientos3");
-    let ladrilloCimientos4 = document.getElementById("ladrilloCimientos4");
-    let ladrilloCimientos5 = document.getElementById("ladrilloCimientos5");
     if ((ladrilloCimientos0).checked){
         ladrilloUsuarioCimientos = ladrilloCimientos0.value;
     }else if (ladrilloCimientos1.checked){
@@ -68,14 +67,14 @@ function seleccionLadrilloUsuarioCimientos(){
 }
 
 
-let valorEnArrayParedCimientos;
+let valorEnArrayParedCimientos; 
+let paredUsuarioCimientos= "";
+let paredCimientos0= document.getElementById("paredCimientos0");
+let paredCimientos1= document.getElementById("paredCimientos1");
+let paredCimientos2= document.getElementById("paredCimientos2");
+let paredCimientos3= document.getElementById("paredCimientos3");
 function seleccionParedUsuarioCimientos (){
     // let paredUsuarioCimientos = parseInt(prompt("¿Cual será el ancho de la pared a construir en cm? 10 , 15, 20, 30"));
-    let paredUsuarioCimientos= "";
-    let paredCimientos0= document.getElementById("paredCimientos0");
-    let paredCimientos1= document.getElementById("paredCimientos1");
-    let paredCimientos2= document.getElementById("paredCimientos2");
-    let paredCimientos3= document.getElementById("paredCimientos3");
     if(paredCimientos0.checked){
         paredUsuarioCimientos= paredCimientos0.value;
     }else if(paredCimientos1.checked){
@@ -86,9 +85,70 @@ function seleccionParedUsuarioCimientos (){
         paredUsuarioCimientos= paredCimientos3.value;
     }
     valorEnArrayParedCimientos = arrayParedCimientos.find((i)=> i === paredUsuarioCimientos);
-    console.log(paredUsuarioCimientos);
+    console.log(paredUsuarioCimientos + "" + valorEnArrayParedCimientos);
 }
 
+//4.1 Checkear compatibilidad de selecciones anteriores
+function checkearCompatibilidad(){
+    if (ladrilloCimientos0.checked && (paredCimientos0.checked || paredCimientos2.checked)){
+        document.getElementById("sectionResultadosCimientos").style.display = "none";
+        error.innerHTML =  `Solo se pueden construir paredes de 15cm y 30cm con los ladrillos comunes <br>
+        <input type="button" value="Volver" id="goBackCimientos" 
+        onclick="goBackCimientos(); return false" >  `
+        botonBackTrue();
+        document.getElementById("error").style.display= "block";
+    }else if (ladrilloCimientos1.checked &&  (paredCimientos1.checked == false)){
+        document.getElementById("sectionResultadosCimientos").style.display = "none";
+        error.innerHTML =  `Solo se pueden construir paredes de 15cm con los ladrillos huecos de 8cm <br>
+        <input type="button" value="Volver" id="goBackCimientos" 
+        onclick="goBackCimientos(); return false" >`
+        botonBackTrue();
+        document.getElementById("error").style.display= "block";
+    }else if (ladrilloCimientos2.checked &&  (paredCimientos2.checked == false)){
+        document.getElementById("sectionResultadosCimientos").style.display = "none";
+        error.innerHTML =  `Solo se pueden construir paredes de 20cm con los ladrillos huecos de 12cm <br>
+        <input type="button" value="Volver" id="goBackCimientos" 
+        onclick="goBackCimientos(); return false" >`
+        botonBackTrue();
+        document.getElementById("error").style.display= "block";
+    }else if (ladrilloCimientos3.checked && (paredCimientos1.checked || paredCimientos3.checked)){
+        document.getElementById("sectionResultadosCimientos").style.display = "none";
+        error.innerHTML =  `Solo se pueden construir paredes de 10cm y 20cm con los ladrillos huecos de 18cm <br>
+        <input type="button" value="Volver" id="goBackCimientos" 
+        onclick="goBackCimientos(); return false" > `
+        botonBackTrue();
+        document.getElementById("error").style.display= "block";
+    }else if (ladrilloCimientos4.checked &&  (paredCimientos1.checked == false)){
+        document.getElementById("sectionResultadosCimientos").style.display = "none";
+        error.innerHTML =  `Solo se pueden construir paredes de 15cm con los ladrillones <br>
+        <input type="button" value="Volver" id="goBackCimientos" 
+        onclick="goBackCimientos(); return false" >`
+        botonBackTrue();
+        document.getElementById("error").style.display= "block";
+    }else if (ladrilloCimientos5.checked &&  (paredCimientos2.checked == false)){
+        document.getElementById("sectionResultadosCimientos").style.display = "none";
+        error.innerHTML =  `Solo se pueden construir paredes de 20cm con los bloques vibrados <br>
+        <input type="button" value="Volver" id="goBackCimientos" 
+        onclick="goBackCimientos(); return false" >`
+        botonBackTrue();
+        document.getElementById("error").style.display= "block";
+    }else {
+        document.getElementById("sectionResultadosCimientos").style.display = "block";
+    }
+
+//Funcion para el boton volver    
+        function botonBackTrue(){
+            let botonBackCimientos= document.getElementById("goBackCimientos");
+                botonBackCimientos.onclick = goBackCimientos;
+                function goBackCimientos(){
+                    document.getElementById("sectionCimientos").style.display = "block";
+                    document.getElementById("error").style.display = "none";
+                }
+                if (botonBackCimientos == true){
+                    procesoTotalCimientos()
+                }
+        }
+}
 
 //5to asignar valores para los calculos
 let valorCementoCimientos;
@@ -110,10 +170,6 @@ function valorMaterialParaCalculoCimientos (){
             valorCalCimientos= parseInt(22);
             valorArenaCimientos= parseFloat(0.11);
             valorLadrilloCimientos= parseInt(120);
-        } else if (valorEnArrayParedCimientos == arrayParedCimientos[2] || (valorEnArrayParedCimientos == arrayParedCimientos[0])){
-            error.innerHTML= ` <p> ¡Solo se pueden hacer paredes de 15cm y 30cm con ese tipo de ladrillo! </p> `;
-            // alert("Solo se pueden hacer paredes de 15cm y 30cm con ese tipo de ladrillo");
-            seleccionLadrilloUsuarioCimientos();
         }
     } else if (valorEnArrayLadrilloCimientos === arrayLadrillosCimientos[1]){
         if (valorEnArrayParedCimientos === arrayParedCimientos[1]){
@@ -121,10 +177,6 @@ function valorMaterialParaCalculoCimientos (){
             valorCalCimientos= parseInt(9);
             valorArenaCimientos= parseFloat(0.04);
             valorLadrilloCimientos= parseInt(52);
-        }else{
-            error.innerHTML= ` <p> ¡Solo se pueden hacer paredes de 15cm con ese tipo de ladrillo! </p> `;
-            // alert("Solo se pueden hacer paredes de 15cm con ese tipo de ladrillo")
-            seleccionLadrilloUsuarioCimientos();
         }
     } else if (valorEnArrayLadrilloCimientos === arrayLadrillosCimientos[2]){
         if (valorEnArrayParedCimientos === arrayParedCimientos[2]){
@@ -132,10 +184,6 @@ function valorMaterialParaCalculoCimientos (){
             valorCalCimientos= parseInt(6);
             valorArenaCimientos= parseFloat(0.04);
             valorLadrilloCimientos= parseInt(15);
-        }else{
-            error.innerHTML= ` <p> ¡Solo se pueden hacer paredes de 20cm con ese tipo de ladrillo! </p> `;
-            // alert("Solo se pueden hacer paredes de 20cm con ese tipo de ladrillo");
-            seleccionLadrilloUsuarioCimientos();
         }
     }else if (valorEnArrayLadrilloCimientos === arrayLadrillosCimientos[3]){
         if (valorEnArrayParedCimientos === arrayParedCimientos[0]){
@@ -148,10 +196,6 @@ function valorMaterialParaCalculoCimientos (){
             valorCalCimientos= parseInt(6);
             valorArenaCimientos= parseFloat(0.03);
             valorLadrilloCimientos= parseInt(34);
-        }else{
-            error.innerHTML= ` <p> ¡Solo se pueden hacer paredes de 10cm y 20cm con ese tipo de ladrillo! </p> `;
-            // alert("Solo se pueden hacer paredes de 10cm y 20cm con este tipo de ladrillo");
-            seleccionLadrilloUsuarioCimientos();
         }
     }else if (valorEnArrayLadrilloCimientos === arrayLadrillosCimientos[4]){
         if (valorEnArrayParedCimientos === arrayParedCimientos[1]){
@@ -159,10 +203,6 @@ function valorMaterialParaCalculoCimientos (){
             valorCalCimientos= parseInt(6);
             valorArenaCimientos= parseFloat(0.03);
             valorLadrilloCimientos= parseInt(17);
-        }else{
-            error.innerHTML= ` <p> ¡Solo se pueden hacer paredes de 15cm con ese tipo de ladrillo! </p> `;
-            // alert("Solo se pueden hacer paredes de 15cm con ese tipo de ladrillo");
-            seleccionLadrilloUsuarioCimientos();
         }
     }else if (valorEnArrayLadrilloCimientos === arrayLadrillosCimientos[5]){
         if(valorEnArrayParedCimientos === arrayParedCimientos[2]){
@@ -170,10 +210,6 @@ function valorMaterialParaCalculoCimientos (){
             valorCalCimientos= parseInt(6);
             valorArenaCimientos= parseFloat(0.03);
             valorLadrilloCimientos= parseInt(17);
-        }else {
-            error.innerHTML= ` <p> ¡Solo se pueden hacer paredes de 20cm con ese tipo de ladrillo! </p> `;
-            // alert ("Solo se pueden hacer paredes de 20cm con ese tipo de ladrillos");
-            seleccionLadrilloUsuarioCimientos();
         }
     }
 }
@@ -185,16 +221,21 @@ function pedirMetrosCimientos(){
     metros= parseInt(document.querySelector("#metrosCimientos").value);
 }
 //Checkear que sean números los ingresados
-// metros.addEventListener("onkeypress", checkNumber());
-// function checkNumber(){
-//     if (metros != 0){
-//         //valores de los numeros segun ASCII
-//         if (metros < 49 || metros > 57){
-//             // e.preventDefault();
-//              alert("Ingrese un valor válido en los metros que desea construir")
-//         }
-//     }
-// }
+//Codigo ASCII 8=backspace , nros del 48 al 57
+function checkNumber(evt){
+    var code = (evt.which) ? evt.which : evt.keyCode;
+    if(code==8) { //backspace
+      return true;
+    } else if(code>=48 && code<=57) { //es numero
+      return true;
+    } else{ //otros
+        let errorNumero = document.getElementById("errorNumero");
+        errorNumero.innerHTML = ` <p style="color: white; background-color: blue; font-weight: bold; text-align: center; margin: 50vh auto; padding: 1vh 1vw; width:50%;">ERROR </p>`
+        document.getElementById("errorNumero").style.display= "block";
+      return false;
+      
+    }
+}
 
 //7mo calcular cantidad de material
 let cementoFinalCimientos;
@@ -214,23 +255,24 @@ function procesoTotalCimientos(){
     seleccionLadrilloUsuarioCimientos();
     seleccionParedUsuarioCimientos();
     console.log (valorEnArrayLadrilloCimientos + " " + valorEnArrayParedCimientos);
+    checkearCompatibilidad();
     valorMaterialParaCalculoCimientos();
     pedirMetrosCimientos();
     calcularMaterialesCimientos();
-    if (e.botonCalcular == true){
+    const Cimientos1= new Cimientos(cementoFinalCimientos, calFinalCimientos, arenaFinalCimientos, ladrillosFinalCimientos);
+    Cimientos1.resultadocalculosCimientos();
+     if (botonCalcular == true){
         respuestaClickCimientos()
-    }
+     }
 }
-
+    
 //9no Funcion para el boton de calcular
 let botonCalcular = document.querySelector("#calcularCimientos");
 botonCalcular.onclick = respuestaClickCimientos;
 function respuestaClickCimientos(){
     procesoTotalCimientos();
-    const Cimientos1= new Cimientos(cementoFinalCimientos, calFinalCimientos, arenaFinalCimientos, ladrillosFinalCimientos);
-    Cimientos1.resultadocalculosCimientos();
-    document.getElementById("sectionResultadosCimientos").style.display = "block";
-    document.getElementById("sectionCimientos").style.display = "none";
+        document.getElementById("sectionCimientos").style.display = "none";
 }
 
-//Llamar a funciones.- llamadas al principio al declarar trabajoSeleccionado
+//Llamar a funciones.(llamadas al principio con el selector de trabajo)
+
