@@ -209,4 +209,19 @@ main #producto1{
         margin: auto;
         height: 30%;
     }
-}
+
+} 
+.contadorCarrito{
+    width: 2%;
+    border: 0px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    color: red;
+    padding: 1vh 0w;
+    font-size: 0.6em;
+    position: absolute;
+    font-weight: bold;
+    top: 2%;
+    right: 2%;
+    }

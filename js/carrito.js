@@ -63,6 +63,9 @@ function botonAgregarFuncion(id){
     carritoTemporal = carritoCompras;
     //Guardar en localStorage
     localStorage.setItem("carritoTemporal", JSON.stringify(carritoCompras));
+    //Carrito superior se agrega la cantidad
+    carritoSuperior.innerHTML = ` ${cantidad} `;
+    carritoSuperior.style.display= "none"; 
  } 
 
 
@@ -96,6 +99,9 @@ function botonSacarFuncion(id){
     carritoTemporal = carritoCompras;
     //Guardar en localStorage
     localStorage.setItem("carritoTemporal", JSON.stringify(carritoCompras));
+    //Carrito superior se agrega la cantidad
+    carritoSuperior.innerHTML = ` ${cantidad} `;
+    carritoSuperior.style.display= "none"; 
 }
 
 // //Array carrito de compras vacio al que se le agrega lo anterior 
@@ -103,6 +109,8 @@ const carritoCompras = [];
 
 let botonAgregarProducto = document.getElementById("botonAgregarProducto");
 botonAgregarProducto.onclick = agregarProducto;
+//Carrito superior variable definida
+let carritoSuperior= document.querySelector(".contadorCarrito");
 
 function agregarProducto(){
     let confirmacionCarrito = document.getElementById("confirmacionAgregado");
@@ -111,16 +119,18 @@ function agregarProducto(){
     <p style="font-size:2em; height:7vh; color: black; font-weight: bold; text-align: center; margin: 40vh auto; padding: 8vh 1vw; width:50%;">¡Agregamos tu pedido al carrito! </p>`
     document.getElementById("confirmacionAgregado").style.display="block";
     document.querySelector(".contenedorconfirmacion").style.display="block";
+    //Contador en el carrito superior
     let cerrarConfirmacionCarrito = document.getElementById("cerrarConfirmacionCarrito");
     cerrarConfirmacionCarrito.onclick = cerrarConfirmacionCarritoFuncion;
     function cerrarConfirmacionCarritoFuncion(){
         document.getElementById("confirmacionAgregado").style.display="none";
         document.querySelector(".contenedorconfirmacion").style.display="none";
+        carritoSuperior.style.display= "block";   
     }
 }
 
-// document.getElementById("confirmacionAgregado").style.display="none";
-// document.getElementById("contenedorconfirmacion").style.display="none";
+
+
 	
 
 
