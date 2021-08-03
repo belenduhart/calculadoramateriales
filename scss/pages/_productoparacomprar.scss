@@ -109,16 +109,64 @@ main #producto1{
             @media only screen and  (max-width:480px){
                 margin-top: 0vh;
             }
-            .cantidadproductos{
+            #fueraStock{
+                width: 90%;
+                margin-bottom: 3vh;
+                color: red;
+                font-weight: bold;
+                text-align: center;
+            }
+            .cantidad{
+                font-size: 1.3em;
+                font-weight: bold;
+                padding: 1vh 1vw;
+            }
+            #botonAgregar{
+                color:white;
+                background-color: red;
+                border-radius: 10px;
+                width: 9%;
+                height: 6vh;
+                font-size: 1em;
+                margin-top: 0vh;
+                &:hover{
+                    background-color: rgba(255, 0, 0, 0.624);
+                }
+                @media only screen and (max-width:1080px){
+                    font-size: 1em;
+                }
+                @media only screen and(max-width:680px){
+                    width: 58%;
+                }
+            }
+            #contador-0{
                 border-radius: 10px;
                 background-color: white;
                 width: 15%;
                 height: 5vh;
                 color: black;
-                margin: 1vh 4vw;
+                margin: 1vh 1vw;
                 text-align: center;
             }
-            .botoncarro{
+            #botonSacar{
+                color:white;
+                background-color: red;
+                border-radius: 10px;
+                width:9%;
+                height: 6vh;
+                font-size: 1em;
+                margin-top: 0vh;
+                &:hover{
+                    background-color: rgba(255, 0, 0, 0.624);
+                }
+                @media only screen and (max-width:1080px){
+                    font-size: 1em;
+                }
+                @media only screen and(max-width:680px){
+                    width: 58%;
+                }
+            } 
+            #botonAgregarProducto{
                 color:white;
                 background-color: red;
                 border-radius: 10px;
@@ -127,6 +175,7 @@ main #producto1{
                 height: 8vh;
                 font-size: 1.4em;
                 margin-top: 3vh;
+                margin-right: 1vw;
                 &:hover{
                     background-color: rgba(255, 0, 0, 0.624);
                 }
@@ -139,5 +188,25 @@ main #producto1{
              
             }
         }
+    }
+}
+
+.contenedorconfirmacion{
+    display: none;
+    background: rgba(33, 41, 52, .85);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    position: fixed;
+    z-index: 999;
+    #confirmacionAgregado{
+        width: 40%;
+        border-radius: 10px;
+        background-color: whitesmoke;
+        box-shadow: 5px 5px 15px 5px #000000;
+        display: none;
+        margin: auto;
+        height: 30%;
     }
 }
