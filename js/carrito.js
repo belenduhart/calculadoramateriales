@@ -142,6 +142,8 @@ carritoCompras.forEach( i => {
     <input type="submit" name="" value="Eliminar" class="botonEliminar" onclick="eliminarDelCarrito()">`
 });
 var totalAMostrar = innerHTML.totalCarrito;
+//Guardo en el localstorage el array con los productos que se van agregando para que si se cierra la pagina no se vayan
+localStorage.setItem('productos', JSON.stringify(carritoCompras));
 
 
 let subTotal = document.querySelector("#totalCarrito");
