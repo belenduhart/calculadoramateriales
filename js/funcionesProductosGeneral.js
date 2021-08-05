@@ -1,5 +1,4 @@
 //Funciones con Jquery
-
 //Establecer eventos onclick para cada enlace
 //Cemento
 let linkCemento = $(".linkCemento");
@@ -85,4 +84,7 @@ function mostrarPinturaGeneral(){
     $(".pinturaGeneral").fadeIn(300);
     $('#menu-toggle1').prop('checked', false);
 }
+
+
+
 
