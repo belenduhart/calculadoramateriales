@@ -2,71 +2,20 @@
 @import "../sections/headersecundario";
 
 //Pagina que muestra todos los productos de un mismo material
-
+@import "../sections/menuProductos";
 #paginaproductos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: block;
     width: 100%;
     margin-top: 2vh;
-    .lateralizq{
-        display: flex;
-        flex-direction: column;
-        background-color: #52796f7c;
-        border-right: 3px solid #52796F ;
-        div p{
-            font-size: 1.1em;
-            color: black;
-            text-align: left;
-            font-weight: bold;
-        }
-        div{
-            border-bottom: 2px solid rgba(255, 255, 255, 0.35);
-            a {
-                .productotitulo{
-                    text-decoration: none;
-                    color: black;
-                    font-weight: bold;
-                    font-size: 1em;
-                    padding: 1vh 1vw;
-                    background-color: rgba(255, 255, 255, 0.289);
-                    &:hover{
-                        color: rgb(255, 255, 255);
-                        font-weight: bold;
-                    }
-                    @media only screen and (max-width:860px){
-                        font-size: 0.8em;
-                    }
-                }
-            }
-            a{
-                text-decoration: none;
-                color: black;
-                .marca{
-                    font-size: 1em;
-                    margin-left: 3vw;
-                    width: 100%;
-                    &:hover{
-                        color: rgb(255, 255, 255);
-                        font-weight: bold;
-                    }
-                
-                @media only screen and (max-width:860px){
-                    font-size: 0.8em;
-                }
-            }
-                }
-            }
-        }
-        }
-
+    }
     .lateralderecho{
         display: flex;
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
         height: 75vh;
-        width: 70%;
+        width: 75%;
+        margin: auto;
         .titulolateral{
             font-size: 2em;
             font-weight: bold;
@@ -126,4 +75,27 @@
                     }
                 }
         }
+    }
+
+
+    // .cementoGeneral{
+    //     display:none;
+    // }
+    .arenaGeneral{
+        display:none;
+    }
+    .calGeneral{
+        display:none;
+    }
+    .hidrofugoGeneral{
+        display:none;
+    }
+    .ladrilloGeneral{
+        display: none;
+    }
+    .piedraGeneral{
+        display: none;
+    }
+    .pinturaGeneral{
+        display:none;
     }

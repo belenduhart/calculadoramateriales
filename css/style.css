@@ -148,7 +148,7 @@ body {
     width: 96%;
   }
 }
-#menusecundario .menumobile label .botonmenu span {
+#menusecundario .menumobile label .botonmenu .span {
   display: block;
   width: 0vw;
   height: 4px;
@@ -1464,7 +1464,7 @@ body {
     width: 96%;
   }
 }
-#headersecundario #menusecundario .menumobile label .botonmenu span {
+#headersecundario #menusecundario .menumobile label .botonmenu .span {
   display: block;
   width: 0vw;
   height: 4px;
@@ -1774,7 +1774,7 @@ body {
     width: 96%;
   }
 }
-#headersecundario #menusecundario .menumobile label .botonmenu span {
+#headersecundario #menusecundario .menumobile label .botonmenu .span {
   display: block;
   width: 0vw;
   height: 4px;
@@ -1825,29 +1825,127 @@ body {
   }
 }
 
-#paginaproductos {
+.lateralizq {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  width: 100%;
-  margin-top: 2vh;
+  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-#paginaproductos .lateralizq {
+@media only screen and (max-width: 600px) {
+  .lateralizq {
+    flex-wrap: wrap;
+  }
+}
+.lateralizq .buscadorMateriales {
   display: flex;
-  flex-direction: column;
-  background-color: #52796f7c;
-  border-right: 3px solid #52796F;
+  flex-direction: row;
+  align-items: center;
 }
-#paginaproductos .lateralizq div p {
-  font-size: 1.1em;
-  color: black;
-  text-align: left;
+.lateralizq .buscadorMateriales #buscador {
+  border-radius: 10px;
+  height: 50%;
+}
+.lateralizq .buscadorMateriales .botonBuscar {
+  background-color: #172421c9;
   font-weight: bold;
+  color: whitesmoke;
+  font-size: 1em;
+  text-align: center;
+  margin: 1vh auto;
+  padding: 1vh 1vw;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 5px #000000;
+  margin-left: 1vw;
 }
-#paginaproductos .lateralizq div {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.35);
+.lateralizq .buscadorMateriales .botonBuscar:hover {
+  background-color: #17242144;
 }
-#paginaproductos .lateralizq div a .productotitulo {
+
+.menuProductos {
+  z-index: 999;
+  margin-left: 0vw;
+  width: 90%;
+}
+@media only screen and (min-width: 600px) and (max-width: 1300px) {
+  .menuProductos {
+    margin-left: 0vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .menuProductos {
+    margin-left: -3vw;
+    width: 80%;
+  }
+}
+
+label {
+  cursor: pointer;
+}
+label .botonProductos {
+  display: block;
+  width: 100%;
+  margin-left: 0.2vw;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 11px 5px rgba(0, 0, 0, 0.36);
+  background-color: #52796f7c;
+  padding: 1vw 1vh;
+  height: 36%;
+}
+label .span {
+  color: black;
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin: 0vh 0 5vh 0;
+  font-size: 1.4em;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Barlow", sans-serif;
+}
+@media only screen and (max-width: 600px) {
+  label .span {
+    font-size: 1em;
+  }
+}
+
+#menu-toggle1 {
+  display: none;
+}
+
+#desplegarProductos {
+  display: none;
+  text-align: center;
+  padding: 10px 0;
+  list-style: none;
+  width: 26%;
+  margin-top: -1vh;
+  position: absolute;
+  z-index: 100;
+  margin-left: 0.2vw;
+}
+@media only screen and (max-width: 600px) {
+  #desplegarProductos {
+    width: 100%;
+  }
+}
+#desplegarProductos li {
+  background-color: #6f9e93;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 11px 5px rgba(0, 0, 0, 0.36);
+  width: 83%;
+}
+#desplegarProductos li a {
+  display: block;
+  color: black;
+  background-color: #6f9e93;
+  font-family: "Barlow", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  padding: 1vh 1vw;
+  text-decoration: none;
+}
+#desplegarProductos li a .productotitulo {
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -1855,32 +1953,41 @@ body {
   padding: 1vh 1vw;
   background-color: rgba(255, 255, 255, 0.289);
 }
-#paginaproductos .lateralizq div a .productotitulo:hover {
+#desplegarProductos li a .productotitulo:hover {
   color: white;
   font-weight: bold;
 }
-@media only screen and (max-width: 860px) {
-  #paginaproductos .lateralizq div a .productotitulo {
-    font-size: 0.8em;
-  }
-}
-#paginaproductos .lateralizq div a {
-  text-decoration: none;
-  color: black;
-}
-#paginaproductos .lateralizq div a .marca {
+#desplegarProductos li a .marca {
   font-size: 1em;
-  margin-left: 3vw;
+  margin-left: 0vw;
+  text-align: left;
   width: 100%;
 }
-#paginaproductos .lateralizq div a .marca:hover {
+#desplegarProductos li a .marca:hover {
   color: white;
   font-weight: bold;
 }
-@media only screen and (max-width: 860px) {
-  #paginaproductos .lateralizq div a .marca {
-    font-size: 0.8em;
+
+#menu-toggle1:checked + #desplegarProductos {
+  display: block;
+  animation-duration: 1s;
+  animation-name: slidein1;
+}
+@keyframes slidein1 {
+  from {
+    height: 0%;
+    opacity: 0%;
   }
+  to {
+    height: 100%;
+    opacity: 100%;
+  }
+}
+
+#paginaproductos {
+  display: block;
+  width: 100%;
+  margin-top: 2vh;
 }
 
 .lateralderecho {
@@ -1889,7 +1996,8 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   height: 75vh;
-  width: 70%;
+  width: 75%;
+  margin: auto;
 }
 .lateralderecho .titulolateral {
   font-size: 2em;
@@ -1955,6 +2063,30 @@ body {
 }
 .lateralderecho .todaslasmarcas a .botoncomprar:hover {
   background-color: #17242144;
+}
+
+.arenaGeneral {
+  display: none;
+}
+
+.calGeneral {
+  display: none;
+}
+
+.hidrofugoGeneral {
+  display: none;
+}
+
+.ladrilloGeneral {
+  display: none;
+}
+
+.piedraGeneral {
+  display: none;
+}
+
+.pinturaGeneral {
+  display: none;
 }
 
 main #producto1 {

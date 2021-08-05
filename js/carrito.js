@@ -129,6 +129,40 @@ function agregarProducto(){
     }
 }
 
+//CHECK - OUT
+//Agregado de productos a la pagina final del carrito
+// const obtenerCarrito = localStorage.getItem("carritoCompras")
+// const carritoCompras = JSON.parse(obtenerCarrito);
+
+
+// let agregandoConElBoton = document.querySelector("#elementoAComprar");
+// carritoCompras.forEach( p => {
+//     agregandoConElBoton.innerHTML +=
+//     `<div class="elementos">
+//         <img src="${p.img}">
+//         <p class="nombrep"> ${p.nombre}</p>
+//     </div>
+//     <p> ${cantidadIngresada}</p>
+//     <p> $ ${p.precio}</p>
+//     <p>$ ${p.subtotal} </p>
+//     <i class="far fa-trash-alt"></i>
+//     <input type="submit" name="" value="Eliminar" class="botonEliminar" onclick="eliminarDelCarrito()">`
+// });
+
+// let totalCarrito = carritoCompras.reduce((currentTotal, producto) => {
+//     return p.subtotal + currentTotal;
+//   }, 0);
+
+// var totalAMostrar = innerHTML.totalCarrito;
+// let subTotal = document.querySelector("#totalCarrito");
+// subTotal.innerHTML = `<p class="resumencompra">Resumen de la compra</p>
+//                         <p id="subtotal">Subtotal: $ ${totalAMostrar} </p>
+//                         <p id="total"> Total a pagar: $ ${totalAMostrar} </p>
+//                         <input type="submit" name="" value="Comprar" class="botonComprar">`;
+
+
+
+
 
 
 	

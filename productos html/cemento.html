@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Titulo pestaña -->
     <title>Calculadora de materiales de construccion 2021</title>
@@ -47,8 +48,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&display=swap" rel="stylesheet">
     <!-- Link de font-awesome -->
     <script src="https://kit.fontawesome.com/e6eec834c7.js" crossorigin="anonymous"></script>
-    <!-- Link JS -->
+    <!-- Link Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
     <header id="headersecundario">
         <section id="menusecundario">
@@ -56,128 +60,380 @@
                 <ul class="navbarindex">
                     <li class="menu1">
                         <a href="../index.html">
-                            ︁ CALCULADORA  <i class="fas fa-calculator"></i>
+                            ︁ CALCULADORA <i class="fas fa-calculator"></i>
                         </a>
                     </li>
                     <li class="menu1">
                         <a href="../carrito html/carrito.html">
-                            ︁ CARRITO  <i class="fas fa-shopping-cart"></i>
+                            ︁ CARRITO <i class="fas fa-shopping-cart"></i>
                         </a>
                     </li>
                     <li class="menu1">
                         <a href="cemento.html">
-                            MATERIALES  <i class="fas fa-tools"></i>
+                            MATERIALES <i class="fas fa-tools"></i>
                         </a>
                     </li>
                 </ul>
             </div>
-        
+            <nav class="menumobile">
+                <label for="menu-toggle">
+                    <div class="botonmenu">
+                        <span class="fas fa-bars"></span>
+                    </div>
+                </label>
+                <input type="checkbox" id="menu-toggle">
+                <ul id="desplegarmenu">
+                    <li>
+                        <a href="../index.html">
+                            ︁ CALCULADORA <i class="fas fa-calculator"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/carrito.html">
+                            ︁ CARRITO <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cemento.html">
+                            MATERIALES <i class="fas fa-tools"></i>
+                        </a>
+                    </li>
 
-        <nav class="menumobile">
-            <label for="menu-toggle">
-                <div class="botonmenu">
-                    <span class="fas fa-bars"></span>
-                </div>
-            </label>
-            <input type="checkbox" id="menu-toggle">
-            <ul id="desplegarmenu">
-                <li>
-                    <a href="../index.html" >
-                        ︁ CALCULADORA  <i class="fas fa-calculator"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="../carrito html/carrito.html">
-                        ︁ CARRITO  <i class="fas fa-shopping-cart"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="cemento.html">
-                        MATERIALES  <i class="fas fa-tools"></i>
-                    </a>
-                </li>
-
-            </ul>
-        </nav>
-    </section>
+                </ul>
+            </nav>
+        </section>
     </header>
     <main id="paginaproductos">
         <section class="lateralizq">
-            <div>
-                <p>PRODUCTOS</p>
-                <div>
-                    <a href="../productos html/cemento.html"><p class="productotitulo">Cemento</p></a>
-                    <a href="../carrito html/lomanegra.html"><p class="marca">Cemento Loma Negra</p></a>
-                    <a href="../carrito html/avellaneda.html"><p class="marca">Cemento Avellaneda</p></a>
-                    <a href="../carrito html/holcicom.html"><p class="marca">Cemento Holcim</p></a>
-                    <a href="../carrito html/comodoro.html"><p class="marca">Cemento Comodoro</p></a>
-                </div>
-                <div>
-                    <a href="../productos html/arena.html"><p class="productotitulo">Arena</p></a>
-                </div>
-                <div>
-                    <a href="../productos html/cal.html"><p class="productotitulo">Cal</p></a>
-                    <a href="../carrito html/malagueño.html"><p class="marca">Cal Malagueño</p></a>
-                    <a href="../carrito html/santaelena.html"><p class="marca">Cal Santa Elena</p></a>
-                    <a href="../carrito html/elmilagro.html"><p class="marca">Cal El Milagro</p></a>
-                </div>
-                <div>
-                    <a href="../productos html/hidrofugo.html"><p class="productotitulo">Hidrofugo</p></a>
-                    <a href="../carrito html/protex.html"><p class="marca">Hidrofugo Protex</p></a>
-                    <a href="../carrito html/sikasika.html"><p class="marca">Hidrofugo Sika Sika</p></a>
-                    <a href="../carrito html/weber.html"><p class="marca">Hidrofugo Weber</p></a>
-                </div>
-                <div>
-                    <a href="../productos html/ladrillos.html"><p class="productotitulo">Ladrillos</p></a>
-                    <a href="../carrito html/ladrillocomun.html"><p class="marca">Ladrillo comun</p></a>
-                    <a href="../carrito html/ladrillohueco12.html"><p class="marca">Ladrillo ceramico hueco 12x18x33</p></a>
-                    <a href="../carrito html/ladrillohueco8.html"><p class="marca">Ladrillo ceramico hueco 8x18x33</p></a>
-                    <a href="../carrito html/ladrillohueco18.html"><p class="marca">Ladrill ceramico hueco 18x18x33</p></a>
-                    <a href="../carrito html/ladrillon.html"><p class="marca">Ladrillon</p></a>
-                    <a href="../carrito html/bloquevibrado.html"><p class="marca">Bloque de cemento vibrado</p></a>
-                </div>
-                <div>
-                    <a href="../productos html/piedra.html"><p class="productotitulo">Piedra</p></a>
-                </div>
-                <div>
-                <a href="../productos html/pinturaasfaltica.html"><p class="productotitulo">Pintura asfaltica</p></a>
-                <a href="../carrito html/desutol.html"><p class="marca">Dessutol</p></a>
-                <a href="../carrito html/maxhaus.html"><p class="marca">Maxhaus</p></a>
-                <a href="../carrito html/megaflex.html"><p class="marca">Megaflex</p></a>
-                </div>
+            <nav class="menuProductos">
+                <label for="menu-toggle1">
+                    <div class="botonProductos">
+                        <p class="span"> ↓ TODOS LOS PRODUCTOS ↓ </p>
+                    </div>
+                </label>
+                <input type="checkbox" id="menu-toggle1">
+                <ul id="desplegarProductos">
+                    <li>
+                        <a nohref onclick="mostrarCementoGeneral();" class="linkCemento">
+                            <p class="productotitulo">Cemento</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/lomanegra.html">
+                            <p class="marca">Cemento Loma Negra</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/avellaneda.html">
+                            <p class="marca">Cemento Avellaneda</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/holcicom.html">
+                            <p class="marca">Cemento Holcim</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/comodoro.html">
+                            <p class="marca">Cemento Comodoro</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a nohref class="linkArena" onclick="mostrarArenaGeneral(); return false">
+                            <p class="productotitulo">Arena</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a nohref onclick="mostrarCalGeneral();" class="linkCal">
+                            <p class="productotitulo">Cal</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/malagueño.html">
+                            <p class="marca">Cal Malagueño</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/santaelena.html">
+                            <p class="marca">Cal Santa Elena</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/elmilagro.html">
+                            <p class="marca">Cal El Milagro</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a nohref onclick="mostrarHidrofugoGeneral();" class="linkHidrofugo">
+                            <p class="productotitulo">Hidrofugo</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/protex.html">
+                            <p class="marca">Hidrofugo Protex</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/sikasika.html">
+                            <p class="marca">Hidrofugo Sika Sika</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/weber.html">
+                            <p class="marca">Hidrofugo Weber</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a nohref onclick="mostrarLadrilloGeneral();" class="linkLadrillo">
+                            <p class="productotitulo">Ladrillos</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/ladrillocomun.html">
+                            <p class="marca">Ladrillo comun</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/ladrillohueco12.html">
+                            <p class="marca">Ladrillo ceramico hueco 12x18x33</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/ladrillohueco8.html">
+                            <p class="marca">Ladrillo ceramico hueco 8x18x33</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/ladrillohueco18.html">
+                            <p class="marca">Ladrill ceramico hueco 18x18x33</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/ladrillon.html">
+                            <p class="marca">Ladrillon</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/bloquevibrado.html">
+                            <p class="marca">Bloque de cemento vibrado</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a nohref onclick="mostrarPiedraGeneral();" class="linkPiedra">
+                            <p class="productotitulo">Piedra</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a nohref onclick="mostrarPinturaGeneral();" class="linkPintura">
+                            <p class="productotitulo">Pintura asfaltica</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/desutol.html">
+                            <p class="marca">Dessutol</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/maxhaus.html">
+                            <p class="marca">Maxhaus</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../carrito html/megaflex.html">
+                            <p class="marca">Megaflex</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="buscadorMateriales">
+                <input type="text" id="buscador">
+                <input type="button" value="Buscar" class="botonBuscar">
             </div>
         </section>
-        <section class="lateralderecho">
+        <section class="cementoGeneral">
+            <section class="lateralderecho">
                 <p class="titulolateral">CEMENTO</p>
-                <div class="todaslasmarcas"> 
+                <div class="todaslasmarcas">
                     <img src="../imagenes/cementolomanegra.jpg" alt="" class="foto">
                     <p>Cemento Loma Negra <br>$900.-</p>
-                    <a href="../carrito html/lomanegra.html" target="_blank">
-                        <input type="button" value="comprar" class="botoncomprar">
-                       </a>
+                    <a href="../carrito html/lomanegra.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
                 </div>
                 <div class="todaslasmarcas">
-                    <img src="../imagenes/cementoavellaneda.jpg" alt=""  class="foto">
+                    <img src="../imagenes/cementoavellaneda.jpg" alt="" class="foto">
                     <p>Cemento Avellaneda <br> $700.-</p>
-                    <a href="../carrito html/avellaneda.html" target="_blank">
-                        <input type="button" value="comprar" class="botoncomprar">
-                        </a>
+                    <a href="../carrito html/avellaneda.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
                 </div>
                 <div class="todaslasmarcas">
-                    <img src="../imagenes/cementoholcim.jpg" alt=""  class="foto">
+                    <img src="../imagenes/cementoholcim.jpg" alt="" class="foto">
                     <p>Cemento Holcim <br>$650.- </p>
-                    <a href="../carrito html/holcicom.html" target="_blank">
-                        <input type="button" value="comprar" class="botoncomprar">
-                        </a>
+                    <a href="../carrito html/holcicom.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
                 </div>
                 <div class="todaslasmarcas">
-                    <img src="../imagenes/cementocomodoro.png" alt=""  class="foto">
+                    <img src="../imagenes/cementocomodoro.png" alt="" class="foto">
                     <p>Cemento Comodoro <br>$890.-</p>
-                    <a href="../carrito html/comodoro.html" target="_blank">
-                        <input type="button" value="comprar" class="botoncomprar">
-                        </a>
+                    <a href="../carrito html/comodoro.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
                 </div>
+            </section>
+        </section>
+        <section class="arenaGeneral">
+            <section class="lateralderecho">
+                <p class="titulolateral">ARENA</p>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/arena.jpg" alt="" class="foto">
+                    <p>M3 Arena <br>$1950.-</p>
+                    <a href="../carrito html/arenacarro.html">
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+            </section>
+        </section>
+        <section class="calGeneral">
+            <section class="lateralderecho">
+                <p class="titulolateral">CAL</p>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/cal3.jpg" alt="" class="foto">
+                    <p>Cal Malagueño <br>$800.-</p>
+                    <a href="../carrito html/malagueño.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/cal1.jpg" alt="" class="foto">
+                    <p>Cal Santa Elena <br> $900.-</p>
+                    <a href="../carrito html/santaelena.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/cal2.jpg" alt="" class="foto">
+                    <p>Cal El Milagro <br>$970.- </p>
+                    <a href="../carrito html/elmilagro.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+            </section>
+        </section>
+        <section class="hidrofugoGeneral">
+            <section class="lateralderecho">
+                <p class="titulolateral">HIDROFUGO</p>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/hidrofugoprotex.jpg" alt="" class="foto">
+                    <p>Hidrofugo Protex <br>$300.-</p>
+                    <a href="../carrito html/protex.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/hidrofugosika.jpg" alt="" class="foto">
+                    <p>Hidrofugo Sika Sika <br> $400.-</p>
+                    <a href="../carrito html/sikasika.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/hidrofugoweber.jpg" alt="" class="foto">
+                    <p>Hidrofugo Weber <br>$370.- </p>
+                    <a href="../carrito html/weber.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+            </section>
+        </section>
+        <section class="ladrilloGeneral">
+            <section class="lateralderecho">
+                <p class="titulolateral">LADRILLOS</p>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/ladrillocomun.jpg" alt="" class="foto">
+                    <p>Ladrillo comun <br>$30.-</p>
+                    <a href="../carrito html/ladrillocomun.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/hueco12.jpg" alt="" class="foto">
+                    <p>Ladrillo ceramico hueco 12x18x33 <br> $50.-</p>
+                    <a href="../carrito html/ladrillohueco12.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/hueco8.png" alt="" class="foto">
+                    <p>Ladrillo ceramico hueco 8x18x33 <br>$50.- </p>
+                    <a href="../carrito html/ladrillohueco8.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/hueco18.jpg" alt="" class="foto">
+                    <p>Ladrillo ceramico hueco 18x18x33 <br>$50.- </p>
+                    <a href="../carrito html/ladrillohueco18.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/ladrillon.jpg" alt="" class="foto">
+                    <p>Ladrillon <br>$40.- </p>
+                    <a href="../carrito html/ladrillon.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/cementovibrado.jpg" alt="" class="foto">
+                    <p>Bloque de cemento vibrado <br>$55.- </p>
+                    <a href="../carrito html/bloquevibrado.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+            </section>
+        </section>
+        <section class="piedraGeneral">
+            <section class="lateralderecho">
+                <p class="titulolateral">PIEDRA</p>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/piedra.jpg" alt="" class="foto">
+                    <p>M3 Piedra <br>$4000.-</p>
+                    <a href="../carrito html/piedracarro.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+            </section>
+        </section>
+        <section class="pinturaGeneral">
+            <section class="lateralderecho">
+                <p class="titulolateral">PINTURA ASFALTICA</p>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/maxhaus.png" alt="" class="foto">
+                    <p>Pintura asfaltica Maxhaus <br>$780.-</p>
+                    <a href="../carrito html/maxhaus.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/megaflex.jpg" alt="" class="foto">
+                    <p>Pintura asfaltica Megaflex <br> $700.-</p>
+                    <a href="../carrito html/megaflex.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+                <div class="todaslasmarcas">
+                    <img src="../imagenes/dessutol.jpg" alt="" class="foto">
+                    <p>Pintura asfaltica Dessutol <br>$600.- </p>
+                    <a href="../carrito html/desutol.html"  >
+                        <input type="button"  value="Comprar" class="botoncomprar">
+                    </a>
+                </div>
+            </section>
         </section>
     </main>
+    <script defer src="../js/funcionesProductoGeneral.js"></script>
 </body>
+
 </html>

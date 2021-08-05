@@ -1,0 +1,147 @@
+//Menu desplegable Productos
+.lateralizq{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 600px){
+        flex-wrap: wrap;
+    }
+    .buscadorMateriales{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        #buscador{
+            border-radius: 10px;
+            height: 50%;
+        }
+        .botonBuscar{
+            background-color:#172421c9;
+            font-weight: bold;
+            color: whitesmoke;
+            font-size: 1em;
+            text-align: center;
+            margin: 1vh auto;
+            padding: 1vh 1vw;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px 5px #000000;
+            margin-left: 1vw;
+                &:hover{
+                    background-color:#17242144;
+                }
+        }
+    }
+}
+.menuProductos{
+    z-index: 999;
+    margin-left: 0vw;
+    width: 90%;
+    @media only screen and (min-width:600px) and (max-width: 1300px){
+        margin-left: 0vw
+    }
+    @media only screen and (max-width:600px){
+        margin-left: -3vw;
+        width: 80%;
+    }
+    }
+    label{
+        cursor: pointer;
+        .botonProductos{
+            display:block;
+            width: 100%;
+            margin-left: 0.2vw;
+            box-shadow: 0px 10px 13px -7px #000000, 5px 5px 11px 5px rgba(0,0,0,0.36);
+            background-color: #52796f7c;
+            padding: 1vw 1vh;
+            height: 36%;
+           }
+                    .span{
+                        color: black;
+                        display: block;
+                        width: 100%;
+                        height: 4px;
+                        margin: 0vh 0 5vh 0;
+                        font-size: 1.4em;
+                        text-align: center;
+                        font-weight: bold;
+                        font-family: 'Barlow', sans-serif;
+                        @media only screen and (max-width: 600px){
+                            font-size: 1em;
+                        }
+                    }
+        }
+    #menu-toggle1{
+        display: none;
+    }
+        #desplegarProductos{
+            display: none;
+            text-align: center;
+            padding: 10px 0;
+            list-style: none;
+            width: 26%;
+            margin-top: -1vh;
+            position: absolute;
+            z-index: 100;
+            margin-left: 0.2vw;
+            @media only screen and (max-width: 600px){
+                width: 100%;
+            }
+            li{
+                background-color: #6f9e93;
+                box-shadow: 0px 10px 13px -7px #000000, 5px 5px 11px 5px rgba(0,0,0,0.36);
+                width: 83%;
+                a{
+                    display: block;
+                    color: black;
+                    background-color: #6f9e93;
+                    font-family: 'Barlow', sans-serif;
+                    font-size:1em;
+                    font-weight: bold;
+                    text-align: center;
+                    padding: 1vh 1vw;
+                    text-decoration: none;
+                    .productotitulo{
+                        text-decoration: none;
+                        color: black;
+                        font-weight: bold;
+                        font-size: 1em;
+                        padding: 1vh 1vw;
+                        background-color: rgba(255, 255, 255, 0.289);
+                        &:hover{
+                            color: rgb(255, 255, 255);
+                            font-weight: bold;
+                        }
+                    }
+                    .marca{
+                        font-size: 1em;
+                        margin-left: 0vw;
+                        text-align: left;
+                        width: 100%;
+                        &:hover{
+                            color: rgb(255, 255, 255);
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    
+
+#menu-toggle1:checked + #desplegarProductos{
+            display: block;
+            animation-duration: 1s;
+            animation-name: slidein1;
+            @keyframes slidein1{
+                from {
+                    height: 0%;
+                   opacity: 0%;
+                  }
+                  to {
+                    height: 100%;
+                    opacity: 100%;
+                  }
+            }
+            
+}

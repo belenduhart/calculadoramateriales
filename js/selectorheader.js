@@ -1,112 +1,129 @@
+//Funcion con JQuery. 
+//Seleccion de tipo de trabajo
 function mostrar(){
-    getSelectValue = document.getElementById("selecciontrabajo").value;
+    getSelectValue = $("#selecciontrabajo").val();
     if(getSelectValue=="cimientos"){
-      document.getElementById("trabajos").style.display = "none";
-      document.getElementById("sectionCimientos").style.display = "block";
-      document.getElementById("sectionCapavertical").style.display = "none";
-      document.getElementById("sectionCapahorizontal").style.display = "none";
-      document.getElementById("sectionMamposteria").style.display = "none";
-      document.getElementById("sectionRevoqueexterior").style.display = "none";
-      document.getElementById("sectionRevoqueinterior").style.display = "none";
-      document.getElementById("sectionContrapiso").style.display = "none";
-      document.getElementById("sectionCarpeta").style.display = "none";
-      document.getElementById("error").style.display= "none";
-      document.getElementById("errorNumero").style.display= "none";
+        $("#trabajos").slideUp(300, function(){
+            $("#sectionCimientos").slideDown(600);
+        });
+        $("#sectionCapavertical").hide();
+        $("#sectionCapahorizontal").hide();
+        $("#sectionMamposteria").hide();
+        $("#sectionRevoqueexterior").hide();
+        $("#sectionRevoqueinterior").hide();
+        $("#sectionContrapiso").hide();
+        $("#sectionCarpeta").hide();
+        $("#error").hide();
+        $("#errorNumero").hide();
     }else if(getSelectValue=="capavertical"){
-      document.getElementById("trabajos").style.display = "none";
-      document.getElementById("sectionCimientos").style.display = "none";
-      document.getElementById("sectionResultadosCimientos").style.display = "none";
-      document.getElementById("sectionCapavertical").style.display = "block";
-      document.getElementById("sectionCapahorizontal").style.display = "none";
-      document.getElementById("sectionMamposteria").style.display = "none";
-      document.getElementById("sectionRevoqueexterior").style.display = "none";
-      document.getElementById("sectionRevoqueinterior").style.display = "none";
-      document.getElementById("sectionContrapiso").style.display = "none";
-      document.getElementById("sectionCarpeta").style.display = "none";
-      document.getElementById("error").style.display= "none";
+        $("#trabajos").slideUp(300, function(){
+            $("#sectionCapavertical").slideDown(600);
+        });
+        $("#sectionCimientos").hide();
+        $("#sectionCapahorizontal").hide();
+        $("#sectionMamposteria").hide();
+        $("#sectionRevoqueexterior").hide();
+        $("#sectionRevoqueinterior").hide();
+        $("#sectionContrapiso").hide();
+        $("#sectionCarpeta").hide();
+        $("#error").hide();
+        $("#errorNumero").hide();
+        $("#sectionResultadosCimientos").hide();
     }else if(getSelectValue=="capahorizontal"){
-        document.getElementById("trabajos").style.display = "none";
-        document.getElementById("sectionCimientos").style.display = "none";
-        document.getElementById("sectionResultadosCimientos").style.display = "none";
-        document.getElementById("sectionCapavertical").style.display = "none";
-        document.getElementById("sectionCapahorizontal").style.display = "block";
-        document.getElementById("sectionMamposteria").style.display = "none";
-        document.getElementById("sectionRevoqueexterior").style.display = "none";
-        document.getElementById("sectionRevoqueinterior").style.display = "none";
-        document.getElementById("sectionContrapiso").style.display = "none";
-        document.getElementById("sectionCarpeta").style.display = "none";
-        document.getElementById("error").style.display= "none";
+        $("#trabajos").slideUp(300, function(){
+            $("#sectionCapahorizontal").slideDown(600);
+        });
+        $("#sectionCimientos").hide();
+        $("#sectionCapavertical").hide();
+        $("#sectionMamposteria").hide();
+        $("#sectionRevoqueexterior").hide();
+        $("#sectionRevoqueinterior").hide();
+        $("#sectionContrapiso").hide();
+        $("#sectionCarpeta").hide();
+        $("#error").hide();
+        $("#errorNumero").hide();
+        $("#sectionResultadosCimientos").hide();
     }else if(getSelectValue=="mamposteria"){
-        document.getElementById("trabajos").style.display = "none";
-        document.getElementById("sectionCimientos").style.display = "none";
-        document.getElementById("sectionResultadosCimientos").style.display = "none";
-        document.getElementById("sectionCapavertical").style.display = "none";
-        document.getElementById("sectionCapahorizontal").style.display = "none";
-        document.getElementById("sectionMamposteria").style.display = "block";
-        document.getElementById("sectionRevoqueexterior").style.display = "none";
-        document.getElementById("sectionRevoqueinterior").style.display = "none";
-        document.getElementById("sectionContrapiso").style.display = "none";
-        document.getElementById("sectionCarpeta").style.display = "none";
-        document.getElementById("error").style.display= "none";
+        $("#trabajos").slideUp(300, function(){
+            $("#sectionMamposteria").slideDown(600);
+        });
+        $("#sectionCimientos").hide();
+        $("#sectionCapavertical").hide();
+        $("#sectionCapahorizontal").hide();
+        $("#sectionRevoqueexterior").hide();
+        $("#sectionRevoqueinterior").hide();
+        $("#sectionContrapiso").hide();
+        $("#sectionCarpeta").hide();
+        $("#error").hide();
+        $("#errorNumero").hide();
+        $("#sectionResultadosCimientos").hide();
     }else if(getSelectValue=="revoqueexterior"){
-        document.getElementById("trabajos").style.display = "none";
-        document.getElementById("sectionCimientos").style.display = "none";
-        document.getElementById("sectionResultadosCimientos").style.display = "none";
-        document.getElementById("sectionCapavertical").style.display = "none";
-        document.getElementById("sectionCapahorizontal").style.display = "none";
-        document.getElementById("sectionMamposteria").style.display = "none";
-        document.getElementById("sectionRevoqueexterior").style.display = "block";
-        document.getElementById("sectionRevoqueinterior").style.display = "none";
-        document.getElementById("sectionContrapiso").style.display = "none";
-        document.getElementById("sectionCarpeta").style.display = "none";
-        document.getElementById("error").style.display= "none";
+        $("#trabajos").slideUp(300, function(){
+            $("#sectionRevoqueexterior").slideDown(600);
+        });
+        $("#sectionCimientos").hide();
+        $("#sectionCapavertical").hide();
+        $("#sectionCapahorizontal").hide();
+        $("#sectionMamposteria").hide();
+        $("#sectionRevoqueinterior").hide();
+        $("#sectionContrapiso").hide();
+        $("#sectionCarpeta").hide();
+        $("#error").hide();
+        $("#errorNumero").hide();
+        $("#sectionResultadosCimientos").hide();
     }else if(getSelectValue=="revoqueinterior"){
-        document.getElementById("trabajos").style.display = "none";
-        document.getElementById("sectionCimientos").style.display = "none";
-        document.getElementById("sectionResultadosCimientos").style.display = "none";
-        document.getElementById("sectionCapavertical").style.display = "none";
-        document.getElementById("sectionCapahorizontal").style.display = "none";
-        document.getElementById("sectionMamposteria").style.display = "none";
-        document.getElementById("sectionRevoqueexterior").style.display = "none";
-        document.getElementById("sectionRevoqueinterior").style.display = "block";
-        document.getElementById("sectionContrapiso").style.display = "none";
-        document.getElementById("sectionCarpeta").style.display = "none";
-        document.getElementById("error").style.display= "none";
+        $("#trabajos").slideUp(300, function(){
+            $("#sectionRevoqueinterior").slideDown(600);
+        });
+        $("#sectionCimientos").hide();
+        $("#sectionCapavertical").hide();
+        $("#sectionCapahorizontal").hide();
+        $("#sectionRevoqueexterior").hide();
+        $("#sectionMamposteria").hide();
+        $("#sectionContrapiso").hide();
+        $("#sectionCarpeta").hide();
+        $("#error").hide();
+        $("#errorNumero").hide();
+        $("#sectionResultadosCimientos").hide();
     }else if(getSelectValue=="contrapiso"){
-        document.getElementById("trabajos").style.display = "none";
-        document.getElementById("sectionCimientos").style.display = "none";
-        document.getElementById("sectionResultadosCimientos").style.display = "none";
-        document.getElementById("sectionCapavertical").style.display = "none";
-        document.getElementById("sectionCapahorizontal").style.display = "none";
-        document.getElementById("sectionMamposteria").style.display = "none";
-        document.getElementById("sectionRevoqueexterior").style.display = "none";
-        document.getElementById("sectionRevoqueinterior").style.display = "none";
-        document.getElementById("sectionContrapiso").style.display = "block";
-        document.getElementById("sectionCarpeta").style.display = "none";
-        document.getElementById("error").style.display= "none";
+        $("#trabajos").slideUp(300, function(){
+            $("#sectionContrapiso").slideDown(600);
+        });
+        $("#sectionCimientos").hide();
+        $("#sectionCapavertical").hide();
+        $("#sectionCapahorizontal").hide();
+        $("#sectionRevoqueexterior").hide();
+        $("#sectionMamposteria").hide();
+        $("#sectionRevoqueinterior").hide();
+        $("#sectionCarpeta").hide();
+        $("#error").hide();
+        $("#errorNumero").hide();
+        $("#sectionResultadosCimientos").hide();
     }else if(getSelectValue=="carpeta"){
-        document.getElementById("trabajos").style.display = "none";
-        document.getElementById("sectionCimientos").style.display = "none";
-        document.getElementById("sectionResultadosCimientos").style.display = "none";
-        document.getElementById("sectionCapavertical").style.display = "none";
-        document.getElementById("sectionCapahorizontal").style.display = "none";
-        document.getElementById("sectionMamposteria").style.display = "none";
-        document.getElementById("sectionRevoqueexterior").style.display = "none";
-        document.getElementById("sectionRevoqueinterior").style.display = "none";
-        document.getElementById("sectionContrapiso").style.display = "none";
-        document.getElementById("sectionCarpeta").style.display = "block";
-        document.getElementById("error").style.display= "none";
+        $("#trabajos").slideUp(300, function(){
+            $("#sectionCarpeta").slideDown(600);
+        });
+        $("#sectionCimientos").hide();
+        $("#sectionCapavertical").hide();
+        $("#sectionCapahorizontal").hide();
+        $("#sectionRevoqueexterior").hide();
+        $("#sectionMamposteria").hide();
+        $("#sectionRevoqueinterior").hide();
+        $("#sectionContrapiso").hide();
+        $("#error").hide();
+        $("#errorNumero").hide();
+        $("#sectionResultadosCimientos").hide();
     }else if(getSelectValue=="0"){
-        document.getElementById("trabajos").style.display = "block";
-        document.getElementById("sectionCimientos").style.display = "none";
-        document.getElementById("sectionResultadosCimientos").style.display = "none";
-        document.getElementById("sectionCapavertical").style.display = "none";
-        document.getElementById("sectionCapahorizontal").style.display = "none";
-        document.getElementById("sectionMamposteria").style.display = "none";
-        document.getElementById("sectionRevoqueexterior").style.display = "none";
-        document.getElementById("sectionRevoqueinterior").style.display = "none";
-        document.getElementById("sectionContrapiso").style.display = "none";
-        document.getElementById("sectionCarpeta").style.display = "none";
-        document.getElementById("error").style.display= "none";
+        $("#trabajos").slideDown(600);
+        $("#sectionCimientos").hide();
+        $("#sectionCapavertical").hide();
+        $("#sectionCapahorizontal").hide();
+        $("#sectionRevoqueexterior").hide();
+        $("#sectionMamposteria").hide();
+        $("#sectionRevoqueinterior").hide();
+        $("#sectionCarpeta").hide();
+        $("#error").hide();
+        $("#errorNumero").hide();
+        $("#sectionResultadosCimientos").hide();
     }
   }
