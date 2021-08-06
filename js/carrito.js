@@ -1,27 +1,5 @@
 //Carrito de compras
-//Array con productos disponibles para la venta
-const listadoProductos = [ {nombre: "ARENA", precio: 1950, id:0, stock: 10, img:"../../imagenes/arena.jpg",} ,
-{nombre: "PIEDRA", precio: 4000, id:"piedracarro", stock: 10000, img:"../imagenes/piedra.jpg",} ,
-{nombre: "CEMENTO LOMA NEGRA", precio: 900, id:"lomanegra", stock: 10000, img:"../imagenes/cementolomanegra.jpg",} ,
-{nombre: "CEMENTO AVELLANEDA", precio: 700, id:"avellaneda",  stock: 10000, img:"../imagenes/cementoavellaneda.jpg",} ,
-{nombre: "CEMENTO HOLCIM", precio: 650, id:"holcim" , stock: 10000, img:"../imagenes/cementoholcim.jpg",} ,
-{nombre: "CEMENTO COMODORO", precio: 890, id:"comodoro" , stock: 10000, img:"../imagenes/cementocomodoro.png",} ,
-{nombre: "CAL MALAGUEÑO", precio: 800, id:"malaguenio" , stock: 10000, img:"../imagenes/cal3.jpg",} ,
-{nombre: "CAL SANTA ELENA", precio: 900, id:"santaelena" , stock: 10000, img: "../imagenes/cal1.jpg", } ,
-{nombre: "CAL EL MILAGRO", precio: 970, id:"elmilagro" , stock: 10000, img: "../imagenes/cal2.jpg",} ,
-{nombre: "HIDROFUGO PROTEX", precio: 300, id:"protex" , stock: 10000, img: "../imagenes/hidrofugoprotex.jpg",} ,
-{nombre: "HIDROFUGO SIKA", precio: 400, id:"sika" , stock: 10000, img: "../imagenes/hidrofugosika.jpg", } ,
-{nombre: "HIDROFUGO WEBER", precio: 370, id:"weber" , stock: 10000, img: "../imagenes/hidrofugoweber.jpg",} ,
-{nombre: "LADRILLO COMUN", precio: 30, id:"ladrillocomun" , stock: 10000,img: "../imagenes/ladrillocomun.jpg",} ,
-{nombre: "LADRILLON", precio: 40, id:"ladrillon" , stock: 10000, img: "../imagenes/ladrillon.jpg",} ,
-{nombre: "BLOQUE VIBRADO", precio: 55, id:"bloquevibrado" , stock: 10000, img: "../imagenes/cementovibrado.jpg",} ,
-{nombre: "LADRILLO HUECO 8", precio: 50, id:"ladrillohueco8" , stock: 10000, img: "../imagenes/hueco8.jpg",} ,
-{nombre: "LADRILLO HUECO 12", precio: 50, id:"ladrillohueco12" , stock: 10000, img: "../imagenes/hueco12.jpg",} ,
-{nombre: "LADRILLO HUECO 18", precio: 50, id:"ladrillohueco18" , stock: 10000, img: "../imagenes/hueco18.jpg",} ,
-{nombre: "PINTURA ASFALTICA MAXHAUS", precio: 780, id:"maxhaus" , stock: 10000, img: "../imagenes/maxhaus.jpg",} ,
-{nombre: "PINTURA ASFALTICA MEGAFLEX", precio: 700, id:"megaflex" , stock: 10000, img: "../imagenes/megaflex.jpg",} ,
-{nombre: "PINTURA ASFALTICA DESSUTOL", precio: 600, id:"dessutol" , stock: 10000, img: "../imagenes/dessutol.jpg",} ,
-]
+
 
 // //Ordeno la lista de productos por precio (luego sirve para el sort)
 // let listadoProductosOrdenado= listadoProductos.sort((a, b) => {
@@ -159,13 +137,5 @@ function agregarProducto(){
 //                         <p id="subtotal">Subtotal: $ ${totalAMostrar} </p>
 //                         <p id="total"> Total a pagar: $ ${totalAMostrar} </p>
 //                         <input type="submit" name="" value="Comprar" class="botonComprar">`;
-
-
-
-
-
-
-	
-
 
 

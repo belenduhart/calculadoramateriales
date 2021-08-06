@@ -2009,7 +2009,18 @@ label .span {
   height: 7vh;
   background-color: rgba(245, 245, 245, 0.316);
 }
-.lateralderecho .todaslasmarcas {
+
+#resultadobusqueda {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 75vh;
+  width: 75%;
+  margin: auto;
+}
+
+.todaslasmarcas {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2023,34 +2034,34 @@ label .span {
   box-shadow: 5px 5px 15px 5px #000000;
 }
 @media only screen and (min-width: 516px) and (max-width: 750px) {
-  .lateralderecho .todaslasmarcas {
+  .todaslasmarcas {
     width: 35%;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 516px) {
-  .lateralderecho .todaslasmarcas {
+  .todaslasmarcas {
     width: 55%;
   }
 }
 @media only screen and (max-width: 480px) {
-  .lateralderecho .todaslasmarcas {
+  .todaslasmarcas {
     width: 85%;
   }
 }
-.lateralderecho .todaslasmarcas .foto {
+.todaslasmarcas .foto {
   width: 39%;
   height: 55%;
 }
-.lateralderecho .todaslasmarcas p {
+.todaslasmarcas p {
   font-size: 1.2em;
   padding: 1vh 1vw;
   text-align: center;
 }
-.lateralderecho .todaslasmarcas a {
+.todaslasmarcas a {
   text-decoration: none;
   color: black;
 }
-.lateralderecho .todaslasmarcas a .botoncomprar {
+.todaslasmarcas a .botoncomprar {
   background-color: #172421c9;
   font-weight: bold;
   color: whitesmoke;
@@ -2061,7 +2072,7 @@ label .span {
   border-radius: 10px;
   box-shadow: 5px 5px 15px 5px #000000;
 }
-.lateralderecho .todaslasmarcas a .botoncomprar:hover {
+.todaslasmarcas a .botoncomprar:hover {
   background-color: #17242144;
 }
 

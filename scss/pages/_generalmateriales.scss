@@ -26,55 +26,64 @@
             height: 7vh;
             background-color: rgba(245, 245, 245, 0.316);
         }
-        .todaslasmarcas{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: nowrap;
-            background-color: white;
-            margin: 2vh 2vw;
-            width: 25%;
-            height: 35vh;
+    }
+    #resultadobusqueda{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 75vh;
+        width: 75%;
+        margin: auto;
+    }
+    .todaslasmarcas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        background-color: white;
+        margin: 2vh 2vw;
+        width: 25%;
+        height: 35vh;
+        padding: 1vh 1vw;
+        box-shadow: 5px 5px 15px 5px #000000;
+    @media only screen and (min-width:516px) and (max-width:750px){
+        width: 35%;
+    }
+    @media only screen and (min-width:480px) and (max-width:516px){
+        width: 55%;
+    }
+    @media only screen and (max-width:480px){
+        width: 85%;
+    }
+        .foto{
+            width: 39%;
+            height: 55%;
+        }
+        p{
+            font-size: 1.2em;
             padding: 1vh 1vw;
-            box-shadow: 5px 5px 15px 5px #000000;
-        @media only screen and (min-width:516px) and (max-width:750px){
-            width: 35%;
+            text-align: center;
         }
-        @media only screen and (min-width:480px) and (max-width:516px){
-            width: 55%;
-        }
-        @media only screen and (max-width:480px){
-            width: 85%;
-        }
-            .foto{
-                width: 39%;
-                height: 55%;
-            }
-            p{
-                font-size: 1.2em;
-                padding: 1vh 1vw;
-                text-align: center;
-            }
-                a{
-                    text-decoration: none;
-                    color: black;
-                    .botoncomprar{
-                        background-color:#172421c9;
-                        font-weight: bold;
-                        color: whitesmoke;
-                        font-size: 1em;
-                        text-align: center;
-                        margin: 1vh auto;
-                        padding: 1vh 1vw;
-                        border-radius: 10px;
-                        box-shadow: 5px 5px 15px 5px #000000;
-                        &:hover{
-                            background-color:#17242144;
-                        }
+            a{
+                text-decoration: none;
+                color: black;
+                .botoncomprar{
+                    background-color:#172421c9;
+                    font-weight: bold;
+                    color: whitesmoke;
+                    font-size: 1em;
+                    text-align: center;
+                    margin: 1vh auto;
+                    padding: 1vh 1vw;
+                    border-radius: 10px;
+                    box-shadow: 5px 5px 15px 5px #000000;
+                    &:hover{
+                        background-color:#17242144;
                     }
                 }
-        }
+            }
     }
 
 

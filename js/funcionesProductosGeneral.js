@@ -83,8 +83,58 @@ function mostrarPinturaGeneral(){
     $(".hidrofugoGeneral").hide();
     $(".pinturaGeneral").fadeIn(300);
     $('#menu-toggle1').prop('checked', false);
+    $("#resultadobusqueda").fadeOut(100);
 }
 
+//Funcion para el buscador
+//Al hacer click en buscar se lanza la funcion
+$(".botonBuscar").on("click", mostrarBusqueda());
+function mostrarBusqueda() {
+    let busqueda = $("#buscador").val();
+    // si esta vacio no hace nada
+	if (busqueda == "") {
+		console.log(listadoProductos); //mostrar todos los productos	
+	} else {
+    //Si se completo se busca en el listado de productos los cuales coinciden
+	let productoBuscado = listadoProductos.filter( p => p.nombre.indexOf(busqueda.toUpperCase()) > -1);
+    console.log(productoBuscado);
+    //Mostrar los productos buscados en el DOM
+    let resultadoBusqueda = document.querySelector(".resultadobusqueda");
+    //Escondo los que estan por defecto
+    $(".cementoGeneral").hide();
+    $(".arenaGeneral").hide();
+    $(".calGeneral").hide();
+    $(".piedraGeneral").hide();
+    $(".ladrilloGeneral").hide();
+    $(".hidrofugoGeneral").hide();
+    $(".pinturaGeneral").hide();
+    //Agrego id al div que los va a contener
+    $(".resultadobusqueda").attr("id", "resultadobusqueda")
+    $("#resultadobusqueda").fadeIn(500);
+    //Imprimo en el DOM cada uno
+   productoBuscado.forEach( p => { resultadoBusqueda.innerHTML +=
+    `<div class="todaslasmarcas">
+        <img src=" ${p.img}" alt="" class="foto">
+        <p> ${p.nombre}<br>$ ${p.precio}.- </p>
+        <a href="../carrito html/${p.value}.html"  >
+            <input type="button"  value="Comprar" class="botoncomprar">
+        </a>
+    </div>`
+	})
+}
+}
+
+//Para que no se vayan sumando los resultados de la busqueda
+$("#buscador").on("click", ocultarResultado());
+function ocultarResultado(){
+    $("#resultadobusqueda").fadeOut(500);
+    $("#buscador").val("");
+}
+//Borro resultados anteriores
+$("#buscador").on("change", borrarResultado());
+function borrarResultado(){
+    $("#resultadobusqueda").empty();
+}
 
 
 

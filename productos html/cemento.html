@@ -245,35 +245,36 @@
                 </ul>
             </nav>
             <div class="buscadorMateriales">
-                <input type="text" id="buscador">
-                <input type="button" value="Buscar" class="botonBuscar">
+                <input type="text" id="buscador" onchange="borrarResultado()" onclick="ocultarResultado()" >
+                <input type="button" value="Buscar" class="botonBuscar" onclick="mostrarBusqueda()">
             </div>
         </section>
+        <div class="resultadobusqueda"></div>
         <section class="cementoGeneral">
             <section class="lateralderecho">
                 <p class="titulolateral">CEMENTO</p>
-                <div class="todaslasmarcas">
+                <div class="todaslasmarcas" id="CEMENTO LOMA NEGRA">
                     <img src="../imagenes/cementolomanegra.jpg" alt="" class="foto">
                     <p>Cemento Loma Negra <br>$900.-</p>
                     <a href="../carrito html/lomanegra.html"  >
                         <input type="button"  value="Comprar" class="botoncomprar">
                     </a>
                 </div>
-                <div class="todaslasmarcas">
+                <div class="todaslasmarcas" id="CEMENTO AVELLANEDA">
                     <img src="../imagenes/cementoavellaneda.jpg" alt="" class="foto">
                     <p>Cemento Avellaneda <br> $700.-</p>
                     <a href="../carrito html/avellaneda.html"  >
                         <input type="button"  value="Comprar" class="botoncomprar">
                     </a>
                 </div>
-                <div class="todaslasmarcas">
+                <div class="todaslasmarcas" id="CEMENTO HOLCIM">
                     <img src="../imagenes/cementoholcim.jpg" alt="" class="foto">
                     <p>Cemento Holcim <br>$650.- </p>
                     <a href="../carrito html/holcicom.html"  >
                         <input type="button"  value="Comprar" class="botoncomprar">
                     </a>
                 </div>
-                <div class="todaslasmarcas">
+                <div class="todaslasmarcas" id="CEMENTO COMODORO">
                     <img src="../imagenes/cementocomodoro.png" alt="" class="foto">
                     <p>Cemento Comodoro <br>$890.-</p>
                     <a href="../carrito html/comodoro.html"  >
@@ -433,6 +434,7 @@
         </section>
     </main>
     <script defer src="../js/funcionesProductosGeneral.js"></script>
+    <script src="../js/objetos.js"></script>
 </body>
 
 </html>
