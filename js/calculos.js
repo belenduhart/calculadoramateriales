@@ -92,42 +92,42 @@ function seleccionParedUsuarioCimientos (){
 function checkearCompatibilidad(){
     if (ladrilloCimientos0.checked && (paredCimientos0.checked || paredCimientos2.checked)){
         document.getElementById("sectionResultadosCimientos").style.display = "none";
-        error.innerHTML =  `<p style="background-color: white; font-weight:bold; width: 30%; padding:1vw 1vh; margin:45vh auto; text-align:center; color:red; font-size: 1.5em; background-color:white;">Solo se pueden construir paredes de 15cm y 30cm con los ladrillos comunes </p>
+        error.innerHTML =  `<p style="border-radius: 10px; background-color: white; font-weight:bold; width: 30%; padding:1vw 1vh; margin:45vh auto; text-align:center; color:red; font-size: 1.5em; background-color:white;">Solo se pueden construir paredes de 15cm y 30cm con los ladrillos comunes </p>
         <input type="button" value="Volver" id="goBackCimientos" 
         onclick="goBackCimientos(); return false" >  `
         botonBackTrue();
         document.getElementById("error").style.display= "block";
     }else if (ladrilloCimientos1.checked &&  (paredCimientos1.checked == false)){
         document.getElementById("sectionResultadosCimientos").style.display = "none";
-        error.innerHTML =  `<p style="background-color: white; font-weight:bold; width: 30%; padding:1vw 1vh; margin:45vh auto; text-align:center; color:red; font-size: 1.5em; background-color:white;">Solo se pueden construir paredes de 15cm con los ladrillos huecos de 8cm </p>
+        error.innerHTML =  `<p style=" border-radius: 10px; background-color: white; font-weight:bold; width: 30%; padding:1vw 1vh; margin:45vh auto; text-align:center; color:red; font-size: 1.5em; background-color:white;">Solo se pueden construir paredes de 15cm con los ladrillos huecos de 8cm </p>
         <input type="button" value="Volver" id="goBackCimientos" 
         onclick="goBackCimientos(); return false" >`
         botonBackTrue();
         document.getElementById("error").style.display= "block";
     }else if (ladrilloCimientos2.checked &&  (paredCimientos2.checked == false)){
         document.getElementById("sectionResultadosCimientos").style.display = "none";
-        error.innerHTML =  `<p style="background-color: white; font-weight:bold; width: 30%; padding:1vw 1vh; margin:45vh auto; text-align:center; color:red; font-size: 1.5em; background-color:white;">Solo se pueden construir paredes de 20cm con los ladrillos huecos de 12cm </p>
+        error.innerHTML =  `<p style=" border-radius: 10px; background-color: white; font-weight:bold; width: 30%; padding:1vw 1vh; margin:45vh auto; text-align:center; color:red; font-size: 1.5em; background-color:white;">Solo se pueden construir paredes de 20cm con los ladrillos huecos de 12cm </p>
         <input type="button" value="Volver" id="goBackCimientos" 
         onclick="goBackCimientos(); return false" >`
         botonBackTrue();
         document.getElementById("error").style.display= "block";
     }else if (ladrilloCimientos3.checked && (paredCimientos1.checked || paredCimientos3.checked)){
         document.getElementById("sectionResultadosCimientos").style.display = "none";
-        error.innerHTML =  `<p style="background-color: white; font-weight:bold; width: 30%; padding:1vw 1vh; margin:45vh auto; text-align:center; color:red; font-size: 1.5em; background-color:white;">Solo se pueden construir paredes de 10cm y 20cm con los ladrillos huecos de 18cm </p>
+        error.innerHTML =  `<p style=" border-radius: 10px; background-color: white; font-weight:bold; width: 30%; padding:1vw 1vh; margin:45vh auto; text-align:center; color:red; font-size: 1.5em; background-color:white;">Solo se pueden construir paredes de 10cm y 20cm con los ladrillos huecos de 18cm </p>
         <input type="button" value="Volver" id="goBackCimientos" 
         onclick="goBackCimientos(); return false" > `
         botonBackTrue();
         document.getElementById("error").style.display= "block";
     }else if (ladrilloCimientos4.checked &&  (paredCimientos1.checked == false)){
         document.getElementById("sectionResultadosCimientos").style.display = "none";
-        error.innerHTML =  `<p style="background-color: white; font-weight:bold; width: 30%; padding:1vw 1vh; margin:45vh auto; text-align:center; color:red; font-size: 1.5em; background-color:white;">Solo se pueden construir paredes de 15cm con los ladrillones </p>
+        error.innerHTML =  `<p style=" border-radius: 10px; background-color: white; font-weight:bold; width: 30%; padding:1vw 1vh; margin:45vh auto; text-align:center; color:red; font-size: 1.5em; background-color:white;">Solo se pueden construir paredes de 15cm con los ladrillones </p>
         <input type="button" value="Volver" id="goBackCimientos" 
         onclick="goBackCimientos(); return false" >`
         botonBackTrue();
         document.getElementById("error").style.display= "block";
     }else if (ladrilloCimientos5.checked &&  (paredCimientos2.checked == false)){
         document.getElementById("sectionResultadosCimientos").style.display = "none";
-        error.innerHTML =  ` <p style="background-color: white; font-weight:bold; width: 30%; padding:1vw 1vh; margin:45vh auto; text-align:center; color:red; font-size: 1.5em; background-color:white;">Solo se pueden construir paredes de 20cm con los bloques vibrados</p> 
+        error.innerHTML =  ` <p style=" border-radius: 10px; background-color: white; font-weight:bold; width: 30%; padding:1vw 1vh; margin:45vh auto; text-align:center; color:red; font-size: 1.5em; background-color:white;">Solo se pueden construir paredes de 20cm con los bloques vibrados</p> 
         <input type="button" value="Volver" id="goBackCimientos" 
         onclick="goBackCimientos(); return false" >`
         botonBackTrue();
@@ -234,7 +234,7 @@ function checkNumber(evt){
         let errorNumero = document.getElementById("errorNumero");
         errorNumero.innerHTML = `  <input type="button" value="X" id="cerrarErrorNumero" 
         onclick="cerrarErrorNumero(); return false" style="position:absolute; top:51%; left:72%; padding: 1vh 1vw; font-size:1.2em; color:red ">
-        <p style="font-size:2em; height:7vh; color: red; background-color: white; font-weight: bold; text-align: center; margin: 50vh auto; padding: 1vh 1vw; width:50%;">INGRESAR VALOR NUMERICO VALIDO </p>`
+        <p style=" border-radius: 10px; font-size:2em; height:7vh; color: red; background-color: white; font-weight: bold; text-align: center; margin: 50vh auto; padding: 1vh 1vw; width:50%;">INGRESAR VALOR NUMERICO VALIDO </p>`
         document.getElementById("errorNumero").style.display= "block";
        clickcerrarErrorNumero();
       return false;      

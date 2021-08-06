@@ -36,7 +36,8 @@
             position:absolute;
             top:60%;
             left: 43%;
-            width: 15%;       
+            width: 15%;   
+            border-radius: 10px;    
             &:hover{
                 opacity: 90%;
                 background-color: #455964;
@@ -53,6 +54,7 @@
     display: flex;
     position: fixed;
     z-index: 999;
+    
 }
 
 
