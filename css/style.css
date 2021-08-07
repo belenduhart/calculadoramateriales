@@ -2262,7 +2262,7 @@ main #producto1 .parteB .agregaralcarro #botonAgregar:hover {
     width: 58%;
   }
 }
-main #producto1 .parteB .agregaralcarro #contador-0 {
+main #producto1 .parteB .agregaralcarro .contador {
   border-radius: 10px;
   background-color: white;
   width: 15%;

@@ -9,21 +9,24 @@
 // console.log(listadoProductosOrdenado);
 
 //Agregando productos nuevos
-
-
+// //Array carrito de compras vacio al que se le agrega lo anterior 
+let carritoCompras = [];
+if (localStorage.getItem("carritoCompras")){
+    carritoCompras = JSON.parse(localStorage.getItem("carritoCompras"))
+}
 //Saber la cantidad de unidades del producto que quiere el usuario
 //Boton +
-function botonAgregarFuncion(id){
-    let contador = document.getElementById("contador-"+id);
+function botonAgregarFuncion(){
+    let idProducto = document.querySelector(".idProducto").value;
+    let contador = document.querySelector(".contador");
     let cantidad = contador.value;
-    const productoSeleccionado = listadoProductos.filter((p)=> p.id == id);
+    const productoSeleccionado = listadoProductos.filter((p)=> p.id == idProducto);
 
     if (cantidad < productoSeleccionado[0].stock){
         cantidad++;
     }else{
         let fueraStock = document.querySelector("#fueraStock");
         fueraStock.innerHTML= `No contamos con más stock de ese producto <br>`;
-        // alert("No contamos con más stock de " + productoSeleccionado);
     }
     contador.value = cantidad;
     //Genero nuevo producto añadido
@@ -34,26 +37,34 @@ function botonAgregarFuncion(id){
 	 	cantidad: cantidad,
         subtotal: cantidad * productoSeleccionado[0].precio,
     }
-      //Agrego al array de carrito los productos añadidos
-    let carritoTemporal = carritoCompras.filter((p)=> p.id != id);
+    //Agrego al array de carrito los productos añadidos
+    let carritoTemporal = carritoCompras.filter((p)=> p.id != idProducto);
     carritoTemporal.push(productoAniadido);
     console.log(carritoTemporal);
-    carritoTemporal = carritoCompras;
+    console.log(carritoCompras );
+    carritoCompras = carritoTemporal;
+//    carritoCompras =  carritoTemporal;
     //Guardar en localStorage
-    localStorage.setItem("carritoTemporal", JSON.stringify(carritoCompras));
+    localStorage.setItem("carritoCompras", JSON.stringify(carritoCompras));
     //Carrito superior se agrega la cantidad
-    carritoSuperior.innerHTML = ` ${cantidad} `;
+    let cantidadTotal = 0;
+    carritoCompras.forEach((p) => {
+        cantidadCada1 = p.cantidad;
+        cantidadTotal += cantidadCada1
+        console.log(cantidadTotal);
+    })
+    carritoSuperior.innerHTML = ` ${cantidadTotal} `;
     carritoSuperior.style.display= "none"; 
  } 
 
 
 
 //Boton -
-function botonSacarFuncion(id){
-    let contador = document.getElementById("contador-"+id);
+function botonSacarFuncion(){
+    let idProducto = document.querySelector(".idProducto").value;
+    let contador = document.querySelector(".contador");
     let cantidad = contador.value;
-    const productoSeleccionado = listadoProductos.filter((p)=> p.id == id);
-    
+    const productoSeleccionado = listadoProductos.filter((p)=> p.id == idProducto); 
     if (cantidad != 0){
         cantidad--
         let fueraStock = document.querySelector("#fueraStock");
@@ -71,22 +82,31 @@ function botonSacarFuncion(id){
         subtotal: cantidad * productoSeleccionado[0].precio
     }
     //Agrego al array de carrito los productos añadidos
-    let carritoTemporal = carritoCompras.filter((p)=> p.id != id);
+    let carritoTemporal = carritoCompras.filter((p)=> p.id != idProducto);
     carritoTemporal.push(productoAniadido);
     console.log(carritoTemporal);
-    carritoTemporal = carritoCompras;
+    console.log(carritoCompras );
+    carritoCompras = carritoTemporal
+//    carritoCompras =  carritoTemporal;
     //Guardar en localStorage
-    localStorage.setItem("carritoTemporal", JSON.stringify(carritoCompras));
+    localStorage.setItem("carritoCompras", JSON.stringify(carritoCompras));
     //Carrito superior se agrega la cantidad
-    carritoSuperior.innerHTML = ` ${cantidad} `;
+    //Obtengo el total de productos
+    let cantidadTotal = 0;
+    carritoCompras.forEach((p) => {
+        cantidadCada1 = p.cantidad;
+        cantidadTotal += cantidadCada1
+        console.log(cantidadTotal);
+    })
+    carritoSuperior.innerHTML = ` ${cantidadTotal} `;
     carritoSuperior.style.display= "none"; 
 }
 
-// //Array carrito de compras vacio al que se le agrega lo anterior 
-const carritoCompras = [];
+//Carrito Superior
 
 let botonAgregarProducto = document.getElementById("botonAgregarProducto");
 botonAgregarProducto.onclick = agregarProducto;
+
 //Carrito superior variable definida
 let carritoSuperior= document.querySelector(".contadorCarrito");
 

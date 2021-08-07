@@ -120,7 +120,9 @@
                 </div>
                 <div class="parteB">
                     <div class="tituloproducto">
-                        <h1>Cemento Comodoro.
+                        <input type="text" class="idProducto" value="5" style="display:none">
+                        <h1>
+                            Cemento Comodoro.
                             
                         </h1>
                     </div>
@@ -131,9 +133,9 @@
                         <div id="fueraStock"></div>
                         <!-- Al hacer click sobre el boton se agrega el elemento al carro de compras, y se suma 1 al total del i del encabezado -->
                         <p class="cantidad">Cantidad:</p>
-                        <button id="botonAgregar" onclick="botonAgregarFuncion(0)">+</button>
-                        <input type="text" id="contador-0" value="0">
-                        <button id="botonSacar" onclick="botonSacarFuncion(0)">-</button>
+                        <button id="botonAgregar" onclick="botonAgregarFuncion()">+</button>
+                        <input type="text" id="contador-5" value="0" class="contador">
+                        <button id="botonSacar" onclick="botonSacarFuncion()">-</button>
                         <input type="button" value="Agregar al carrito" id="botonAgregarProducto" onclick="agregarProducto();">
                         <div class="contenedorconfirmacion" >
                             <div id="confirmacionAgregado"></div>
