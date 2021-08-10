@@ -9,7 +9,7 @@ document.querySelector(".divdecidireliminar").style.display="none";
 const obtenerCarrito = localStorage.getItem("carritoCompras")
 const carritoCompras1 = JSON.parse(obtenerCarrito);
 console.log(carritoCompras1);
-var botonEliminarEnProducto;
+let botonEliminarEnProducto;
 let agregandoConElBoton = document.querySelector("#elementoAComprar");
 if (carritoCompras1.length != 0){
     document.querySelector(".vacioCarrito").style.display="none";
@@ -26,6 +26,8 @@ if (carritoCompras1.length != 0){
         <p style="text-align:right; margin-right:6vw;" >$ ${p.subtotal} </p>
         <button value="${p.id}"  class="botonEliminar" onclick="botonEliminarFuncion()" ><i class="far fa-trash-alt"></i> Eliminar</button></div>`
     });
+    botonEliminarEnProducto = parseInt(document.querySelector(".botonEliminar").value);
+    console.log(botonEliminarEnProducto);
 }
   
 //Mostrar el subtotal y el total
@@ -51,22 +53,22 @@ document.querySelector(".divdecidireliminar").style.display="none";
 
 function botonEliminarFuncion(){
     document.querySelector(".divdecidireliminar").style.display="block";
+    
 }
 //Cerrar el cartel
 function cerrarEliminar(){
     document.querySelector(".divdecidireliminar").style.display="none";
+    
 }
 
 //Boton continuar para confirmar eliminacion
 function continuarEliminar(){
-    // let productoAEliminar= carritoCompras1.filter((p)=> p.id == (document.querySelector(".botonEliminar").id));
-    carritoFinal= carritoCompras1.filter((p) => p.id !== (document.querySelector(".botonEliminar").value));
-    console.log((document.querySelector(".botonEliminar").value));
-    console.log(carritoFinal);
-    // if (botonEliminarEnProducto > -1) {
-    //     carritoCompras1.splice(productoAEliminar, 1);
-    // }
-
+   let carritoFinal= carritoCompras1.filter((p)=> p.id !== botonEliminarEnProducto);
+    // carritoFinal= carritoCompras1.filter((p) => p.id !== (document.querySelector(".botonEliminar").value));
+    // console.log((document.querySelector(".botonEliminar").value));
+    // let carritoComprasFinal =carritoCompras1.splice(productoAEliminar);
+    console.log(carritoFinal); 
+    
     document.querySelector(".divdecidireliminar").style.display="none";
 }
 
