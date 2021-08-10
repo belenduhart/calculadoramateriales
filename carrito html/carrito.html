@@ -48,6 +48,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&display=swap" rel="stylesheet">
     <!-- Link de font-awesome -->
     <script src="https://kit.fontawesome.com/e6eec834c7.js" crossorigin="anonymous"></script>
+    <!-- Link Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header id="headerindex">
@@ -92,6 +94,14 @@
     </nav>
 </section>
 <section class="sectionproductos">
+    <div class="divdecidireliminar"> 
+         <p>
+             <input class="closeEliminar" type="button" value="X" onclick="cerrarEliminar()">
+             <br>
+             Para eliminar el producto del carrito, haga click en continuar:
+            <input class="decidirEliminar" type="button" value="Continuar" onclick="continuarEliminar()">
+        </p> 
+    </div>
     <div class="contenedorproductos">
         <div class="descripciones">
             <p>Producto</p>
@@ -99,8 +109,9 @@
             <p>Cantidad</p>
             <p>Subtotal</p>
         </div>
-        <div class="div2">
+        <!-- <div class="div2"> -->
         <div id="elementoAComprar" >
+            <p class="vacioCarrito" style="font-size:2em; text-align:center; color:red; font-weight:bold"> No hay productos en el carrito de compras! </p>
             <!-- <div>
                 <img src="../imagenes/cal1.jpg" alt="">
                 <p class="nombrep"> ${p.nombre}</p>
@@ -111,7 +122,7 @@
             <i class="far fa-trash-alt"></i> 
             <input type="submit" name="" value="Eliminar" class="botonEliminar" onclick="eliminarDelCarrito()" return=false> -->
         </div> 
-    </div>
+    <!-- </div> -->
 </div>
     <div class="div1">
         <div id="totalCarrito">
@@ -124,6 +135,7 @@
 </section>
     <!-- Link JS -->
     <script defer src="../js/carrito.js"></script>
+    <script src="../js/checkout.js"></script>
 </body>
 
 </html>

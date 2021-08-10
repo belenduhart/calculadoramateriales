@@ -21,7 +21,6 @@ function botonAgregarFuncion(){
     let contador = document.querySelector(".contador");
     let cantidad = contador.value;
     const productoSeleccionado = listadoProductos.filter((p)=> p.id == idProducto);
-
     if (cantidad < productoSeleccionado[0].stock){
         cantidad++;
     }else{
@@ -34,14 +33,14 @@ function botonAgregarFuncion(){
 		id: productoSeleccionado[0].id,
 		nombre: productoSeleccionado[0].nombre,
 	 	precio: productoSeleccionado[0].precio,
+        img: productoSeleccionado[0].img,
 	 	cantidad: cantidad,
         subtotal: cantidad * productoSeleccionado[0].precio,
     }
     //Agrego al array de carrito los productos añadidos
-    let carritoTemporal = carritoCompras.filter((p)=> p.id != idProducto);
+let carritoTemporal = carritoCompras.filter((p)=> p.id != idProducto);
     carritoTemporal.push(productoAniadido);
-    console.log(carritoTemporal);
-    console.log(carritoCompras );
+    console.log(carritoCompras);
     carritoCompras = carritoTemporal;
 //    carritoCompras =  carritoTemporal;
     //Guardar en localStorage
@@ -54,9 +53,8 @@ function botonAgregarFuncion(){
         console.log(cantidadTotal);
     })
     carritoSuperior.innerHTML = ` ${cantidadTotal} `;
-    carritoSuperior.style.display= "none"; 
+    carritoSuperior.style.display= "none";
  } 
-
 
 
 //Boton -
@@ -78,6 +76,7 @@ function botonSacarFuncion(){
 		id: productoSeleccionado[0].id,
 		nombre: productoSeleccionado[0].nombre,
 	 	precio: productoSeleccionado[0].precio,
+        img: productoSeleccionado[0].img,
 	 	cantidad: cantidad,
         subtotal: cantidad * productoSeleccionado[0].precio
     }
@@ -86,8 +85,8 @@ function botonSacarFuncion(){
     carritoTemporal.push(productoAniadido);
     console.log(carritoTemporal);
     console.log(carritoCompras );
-    carritoCompras = carritoTemporal
-//    carritoCompras =  carritoTemporal;
+    window.carritoCompras = carritoTemporal;
+    console.log(carritoCompras );
     //Guardar en localStorage
     localStorage.setItem("carritoCompras", JSON.stringify(carritoCompras));
     //Carrito superior se agrega la cantidad
@@ -99,7 +98,7 @@ function botonSacarFuncion(){
         console.log(cantidadTotal);
     })
     carritoSuperior.innerHTML = ` ${cantidadTotal} `;
-    carritoSuperior.style.display= "none"; 
+    carritoSuperior.style.display= "none";
 }
 
 //Carrito Superior
@@ -127,35 +126,5 @@ function agregarProducto(){
     }
 }
 
-//CHECK - OUT
-//Agregado de productos a la pagina final del carrito
-// const obtenerCarrito = localStorage.getItem("carritoCompras")
-// const carritoCompras = JSON.parse(obtenerCarrito);
-
-
-// let agregandoConElBoton = document.querySelector("#elementoAComprar");
-// carritoCompras.forEach( p => {
-//     agregandoConElBoton.innerHTML +=
-//     `<div class="elementos">
-//         <img src="${p.img}">
-//         <p class="nombrep"> ${p.nombre}</p>
-//     </div>
-//     <p> ${cantidadIngresada}</p>
-//     <p> $ ${p.precio}</p>
-//     <p>$ ${p.subtotal} </p>
-//     <i class="far fa-trash-alt"></i>
-//     <input type="submit" name="" value="Eliminar" class="botonEliminar" onclick="eliminarDelCarrito()">`
-// });
-
-// let totalCarrito = carritoCompras.reduce((currentTotal, producto) => {
-//     return p.subtotal + currentTotal;
-//   }, 0);
-
-// var totalAMostrar = innerHTML.totalCarrito;
-// let subTotal = document.querySelector("#totalCarrito");
-// subTotal.innerHTML = `<p class="resumencompra">Resumen de la compra</p>
-//                         <p id="subtotal">Subtotal: $ ${totalAMostrar} </p>
-//                         <p id="total"> Total a pagar: $ ${totalAMostrar} </p>
-//                         <input type="submit" name="" value="Comprar" class="botonComprar">`;
 
 
