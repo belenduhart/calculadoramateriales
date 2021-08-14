@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Titulo pestaña -->
-    <title>Calculadora de materiales de construccion 2021</title>
+    <title>Finalizar Compra</title>
     <meta name="description"
         content="Calculadora de materiales de construccion online, para todo tipo de trabajos en obras.">
     <meta name="keywords" content="materiales, construccion, obra, calculadora, trabajos, ladrillos, cimientos, paredes, capa aisladora, mamposteria,
@@ -49,7 +48,12 @@
     <!-- Link de font-awesome -->
     <script src="https://kit.fontawesome.com/e6eec834c7.js" crossorigin="anonymous"></script>
     <!-- Link Jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <!-- API google maps -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBlciihUww7WESrd4MIEs5Hfm79waI95n4"></script>
+    
 </head>
 <body>
     <header id="headerindex">
@@ -57,39 +61,89 @@
             <i class="fas fa-hand-holding-usd"></i> PAGAR <i class="far fa-credit-card"></i>
         </div>
     </header>
-<section id="menusecundario">
-    <div class="contenedornavbarindex">
-        <ul class="navbarindex">
-            <li class="menu1">
-                <a href="../index.html">
-                    ︁ CALCULADORA <i class="fas fa-calculator"></i>
-                </a>
-            </li>
-            <li class="menu1">
-                <a href="../productos html/cemento.html">
-                    MATERIALES <i class="fas fa-tools"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <nav class="menumobile">
-        <label for="menu-toggle">
-            <div class="botonmenu">
-                <span class="fas fa-bars"></span>
+    <section id="menusecundario">
+        <div class="contenedornavbarindex">
+            <ul class="navbarindex">
+                <li class="menu1">
+                    <a href="../index.html">
+                        ︁ CALCULADORA <i class="fas fa-calculator"></i>
+                    </a>
+                </li>
+                <li class="menu1">
+                    <a href="../productos html/cemento.html">
+                        MATERIALES <i class="fas fa-tools"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav class="menumobile">
+            <label for="menu-toggle">
+                <div class="botonmenu">
+                    <span class="fas fa-bars"></span>
+                </div>
+            </label>
+            <input type="checkbox" id="menu-toggle">
+            <ul id="desplegarmenu">
+                <li>
+                    <a href="../index.html">
+                        ︁ CALCULADORA <i class="fas fa-calculator"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="../productos html/cemento.html">
+                        MATERIALES <i class="fas fa-tools"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="finalPago">
+        <div class="datosPago">
+            <input id="comprador" type="button" value="① Datos comprador 🠻" class="tusDatos" onclick="mostrarComprador()">
+            <form  class="datosComprador">
+                <p> *Nombre:  <input type="text" name="" id="nombre" required></p>
+                <p>*Apellido:  <input type="text" name="" id="apellido" ></p> <br>
+                <p> *Celular: <input type="text" name="" id="celular"  onchange="celularCompleto()" onkeydown="return celularNumero(event)"> </p>
+                <p>*E-mail: <input type="text" name="" id="email"></p>
+            </form>
+            <input id="envio" type="button" value="② Datos para el envio 🠻" class="tusDatos" onclick="mostrarEnvio()">
+            <div class="datosEnvio">
+                <p> *Direccion:  <input type="text"  id="direccion" placeholder="Escribe tu direccion..." style="width: 60%;"></p> <br>
+                <p>*Código postal:  <input type="text" name="" id="codigoPostal"></p> <br>
+                <p> Observaciones: <input type="text" name="" id="observaciones" class="input1"> </p>
             </div>
-        </label>
-        <input type="checkbox" id="menu-toggle">
-        <ul id="desplegarmenu">
-            <li>
-                <a href="index.html">
-                    ︁ CALCULADORA <i class="fas fa-calculator"></i>
-                </a>
-            </li>
-            <li>
-                <a href="../productos html/cemento.html">
-                    MATERIALES <i class="fas fa-tools"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</section>
+            <input id="pago" type="button" value="③ Seleccionar método de pago 🠻" class="tusDatos" onclick="mostrarTarjeta()">
+            <div class="datosTarjeta">
+                <p> Seleccione el tipo de tarjeta con la que realizará el pago:</p>
+                <div>
+                <button id="tarjetaDeCredito" ><img src="../imagenes/credito.jpg" alt=""  onclick="mostrarCredito()"> Crédito</button>
+                <button id="tarjetaDeDebito"  ><img src="../imagenes/debito.jpg" alt="" onclick="mostrarDebito()"> Débito</button>
+                <div class="mostrarCredito">
+                </div>
+                <div class="mostrarDebito">
+                </div>
+                <div class="datosObligatorios"></div>
+            </div>
+            </div>
+        </div>
+        <div class="totalPago">
+            <p class="txtPpal">Resumen de la compra</p>
+            <input type="button" class="botonVerProductos" value="Ver productos">
+            <div class="efectoHover">
+            </div>
+            <p class="txtPpal">Total a pagar:</p>
+            <p class="tap"> </p>
+        </div>
+    </section>
+    <p style="font-size: 1em; font-weight: bold; margin-top: 0.5vh; text-align: center;">*Datos obligatorios</p>
+
+    <!-- Linkeo con JS -->
+    <script src="../js/pagar.js"></script>
+    <script src="../js/objetos.js"></script>
+    <script src="../js/checkout.js"></script>
+    <!-- Linkeo api google -->
+    <script src="../js/apigoogle.js"></script>
+</body>
+
+</html>

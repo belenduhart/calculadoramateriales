@@ -166,7 +166,7 @@ body {
   width: 100%;
   margin-top: -1vh;
   position: absolute;
-  z-index: 100;
+  z-index: 100000;
 }
 #menusecundario .menumobile #desplegarmenu li {
   border: 1px solid white;
@@ -1483,7 +1483,7 @@ body {
   width: 100%;
   margin-top: -1vh;
   position: absolute;
-  z-index: 100;
+  z-index: 100000;
 }
 #headersecundario #menusecundario .menumobile #desplegarmenu li {
   border: 1px solid white;
@@ -1793,7 +1793,7 @@ body {
   width: 100%;
   margin-top: -1vh;
   position: absolute;
-  z-index: 100;
+  z-index: 100000;
 }
 #headersecundario #menusecundario .menumobile #desplegarmenu li {
   border: 1px solid white;
@@ -2516,6 +2516,295 @@ main #producto1 .parteB .agregaralcarro #botonAgregarProducto:hover {
   color: black;
   text-align: left;
   margin: 0vh auto;
+}
+
+.finalPago {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+@media only screen and (max-width: 780px) {
+  .finalPago {
+    flex-wrap: wrap;
+  }
+}
+.finalPago .totalPago {
+  width: 30%;
+  margin: 3vh auto;
+  padding: 1vh 1vw;
+}
+@media only screen and (max-width: 780px) {
+  .finalPago .totalPago {
+    width: 90%;
+    order: -1;
+  }
+}
+.finalPago .totalPago .txtPpal {
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  font-size: 1.2em;
+  width: 97%;
+  padding: 1vh 0vw;
+  background-color: rgba(245, 245, 245, 0.412);
+}
+.finalPago .totalPago .botonVerProductos {
+  background-color: #172421c9;
+  font-weight: bold;
+  color: whitesmoke;
+  font-size: 1em;
+  text-align: center;
+  margin: 2% 0%;
+  padding: 1vh 1vw;
+  border-radius: 10px;
+  width: 97%;
+}
+.finalPago .totalPago .botonVerProductos:hover {
+  background-color: #17242144;
+}
+.finalPago .totalPago .botonVerProductos:hover ~ .efectoHover {
+  display: block;
+  z-index: 99999;
+}
+.finalPago .totalPago .efectoHover {
+  display: none;
+}
+.finalPago .totalPago .efectoHover .resumenProductos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1vh 0vw;
+}
+@media only screen and (max-width: 1050px) {
+  .finalPago .totalPago .efectoHover .resumenProductos {
+    flex-wrap: wrap;
+    width: 90%;
+  }
+}
+.finalPago .totalPago .tap {
+  text-align: center;
+  padding: 1vh 1vw;
+  font-size: 1.3em;
+  color: red;
+  font-weight: bold;
+}
+.finalPago .datosPago {
+  width: 50%;
+  margin: 2vh auto;
+}
+@media only screen and (max-width: 780px) {
+  .finalPago .datosPago {
+    width: 90%;
+  }
+}
+.finalPago .datosPago .tusDatos {
+  width: 100%;
+  font-weight: bold;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.254);
+  font-size: 2em;
+  border: 1px solid black;
+}
+@media only screen and (max-width: 1000px) {
+  .finalPago .datosPago .tusDatos {
+    font-size: 1em;
+  }
+}
+.finalPago .datosPago .datosComprador {
+  margin: 0vh auto;
+  display: none;
+  margin-bottom: 3vh;
+}
+.finalPago .datosPago .datosComprador p {
+  margin: 3vh 1vw;
+  text-align: center;
+  font-weight: bold;
+  display: inline;
+}
+@media only screen and (max-width: 600px) {
+  .finalPago .datosPago .datosComprador p {
+    font-size: 1em;
+  }
+}
+.finalPago .datosPago .datosComprador p input {
+  margin-top: 3%;
+  height: 4vh;
+  border-radius: 10px;
+  text-align: center;
+}
+@media only screen and (max-width: 1000px) {
+  .finalPago .datosPago .datosComprador p input {
+    width: 80%;
+    margin-top: 1%;
+    height: 3vh;
+    border-radius: 10px;
+    text-align: center;
+    width: 91%;
+    font-size: 1em;
+  }
+}
+.finalPago .datosPago .datosEnvio {
+  margin: 0vh auto;
+  display: none;
+  margin-bottom: 3vh;
+}
+.finalPago .datosPago .datosEnvio p {
+  margin: 3vh 1vw;
+  text-align: center;
+  font-weight: bold;
+  display: inline;
+}
+@media only screen and (max-width: 600px) {
+  .finalPago .datosPago .datosEnvio p {
+    font-size: 1em;
+  }
+}
+.finalPago .datosPago .datosEnvio p input {
+  margin-top: 3%;
+  height: 4vh;
+  border-radius: 10px;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .finalPago .datosPago .datosEnvio p input {
+    width: 80%;
+  }
+}
+.finalPago .datosPago .datosEnvio p .input1 {
+  margin-top: 3%;
+  width: 60%;
+  height: 10vh;
+  border-radius: 10px;
+  text-align: center;
+}
+@media only screen and (max-width: 600px) {
+  .finalPago .datosPago .datosEnvio p .input1 {
+    width: 80%;
+  }
+}
+.finalPago .datosPago .datosTarjeta {
+  margin: 2vh auto;
+  display: none;
+}
+.finalPago .datosPago .datosTarjeta p {
+  text-align: center;
+  font-weight: bold;
+}
+.finalPago .datosPago .datosTarjeta div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.finalPago .datosPago .datosTarjeta div button {
+  width: 9vw;
+  height: 10vh;
+  margin: 2vh auto;
+  border: none;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 1000px) {
+  .finalPago .datosPago .datosTarjeta div button {
+    width: 18%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .finalPago .datosPago .datosTarjeta div button {
+    width: 35%;
+  }
+}
+.finalPago .datosPago .datosTarjeta div button img {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px -2px #000000;
+  width: 9vw;
+  height: 10vh;
+  border: 2px solid black;
+}
+@media only screen and (max-width: 1000px) {
+  .finalPago .datosPago .datosTarjeta div button img {
+    width: 100%;
+  }
+}
+.finalPago .datosPago .datosTarjeta .mostrarCredito {
+  width: 100%;
+  margin: 5vh 5%;
+  display: none;
+}
+.finalPago .datosPago .datosTarjeta .mostrarCredito .cuotastxt {
+  text-align: left;
+}
+.finalPago .datosPago .datosTarjeta #cuotas {
+  width: 60%;
+  border-radius: 10px;
+  height: 4vh;
+}
+.finalPago .datosPago .datosTarjeta #cuotas option {
+  color: black;
+}
+.finalPago .datosPago .datosTarjeta .titular {
+  text-align: left;
+  margin-top: 1vh;
+  width: 100%;
+}
+.finalPago .datosPago .datosTarjeta .titular input {
+  border-radius: 10px;
+  height: 4vh;
+  width: 80%;
+  text-align: center;
+}
+.finalPago .datosPago .datosTarjeta .nroCredito {
+  text-align: left;
+  margin-top: 1vh;
+  width: 100%;
+}
+.finalPago .datosPago .datosTarjeta .nroCredito input {
+  border-radius: 10px;
+  height: 4vh;
+  width: 80%;
+  text-align: center;
+}
+.finalPago .datosPago .datosTarjeta .vencimientoCredito {
+  text-align: left;
+  margin-top: 1vh;
+}
+.finalPago .datosPago .datosTarjeta .vencimientoCredito input {
+  border-radius: 10px;
+  height: 4vh;
+  width: 40%;
+  text-align: center;
+}
+.finalPago .datosPago .datosTarjeta .codigoCredito {
+  text-align: left;
+  margin-top: 1vh;
+  width: 45%;
+}
+.finalPago .datosPago .datosTarjeta .codigoCredito input {
+  border-radius: 10px;
+  height: 4vh;
+  width: 20%;
+  text-align: center;
+}
+.finalPago .datosPago .datosTarjeta .finCompra {
+  padding: 1vh 1vw;
+  border-radius: 10px;
+  margin: 2vh 35%;
+  margin-top: 5vh;
+  background-color: #ff000094;
+  color: white;
+  font-weight: bold;
+}
+.finalPago .datosPago .datosTarjeta .mostrarDebito {
+  width: 100%;
+  margin: 5vh 5%;
+  display: none;
+}
+.finalPago .datosPago .datosTarjeta .mostrarDebito .descuentotxt {
+  text-align: center;
+  margin: 1vh auto;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,264 @@
+.finalPago{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    @media only screen and (max-width:780px){
+        flex-wrap: wrap;
+    }
+    .totalPago{
+        width: 30%;
+        margin: 3vh auto;
+        padding: 1vh 1vw;
+        @media only screen and (max-width:780px){
+            width: 90%;
+            order: -1;
+        }
+        .txtPpal{
+            font-weight: bold;
+            color: black;
+            text-align: center;
+            font-size: 1.2em;
+            width: 97%;
+            padding: 1vh 0vw;
+            background-color: rgba(245, 245, 245, 0.412);
+        }
+        .botonVerProductos{
+            background-color: #172421c9;
+            font-weight: bold;
+            color: whitesmoke;
+            font-size: 1em;
+            text-align: center;
+            margin: 2% 0%;
+            padding: 1vh 1vw;
+            border-radius: 10px;
+            width: 97%;
+            &:hover{
+                background-color:#17242144;
+            }
+            &:hover  ~ .efectoHover{
+                display: block;
+                z-index: 99999;
+            }
+        }
+        .efectoHover{
+            display: none;
+
+        .resumenProductos{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            padding: 1vh 0vw;
+            @media only screen and (max-width:1050px){
+                flex-wrap: wrap;
+                width: 90%;
+            }
+        }
+    }
+        .tap{
+            text-align: center;
+            padding: 1vh 1vw;
+            font-size: 1.3em;
+            color: red;
+            font-weight: bold;
+        }
+    }
+    .datosPago{
+        width: 50%;
+        margin: 2vh auto;
+        @media only screen and (max-width:780px){
+            width: 90%;
+        }
+        .tusDatos{
+            width: 100%;
+            font-weight: bold;
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.254);
+            font-size: 2em;
+            border: 1px solid black;
+            // box-shadow: 5px 5px 15px -2px #000000;
+            @media only screen and (max-width:1000px){
+                font-size: 1em;
+            }
+        }
+        .datosComprador{
+            margin: 0vh auto;
+            display: none;
+            margin-bottom: 3vh;
+            p{
+                margin: 3vh 1vw;
+                text-align: center;
+                font-weight: bold;
+                display: inline;
+                @media only screen and (max-width:600px){
+                    font-size: 1em;
+                }
+                input{
+                    margin-top: 3%;
+                    height: 4vh;
+                    border-radius: 10px;
+                    text-align: center;
+                    @media only screen and (max-width:1000px){
+                        width: 80%;
+                        margin-top: 1%;
+                        height: 3vh;
+                        border-radius: 10px;
+                        text-align: center;
+                        width: 91%;
+                        font-size: 1em;
+                    } 
+                }
+            }   
+        }
+        .datosEnvio{
+            margin: 0vh auto;
+            display: none;
+            margin-bottom: 3vh;
+            p{
+                margin: 3vh 1vw;
+                text-align: center;
+                font-weight: bold;
+                display: inline;
+                @media only screen and (max-width:600px){
+                    font-size: 1em;
+                }
+                input{
+                    margin-top: 3%;
+                    height: 4vh;
+                    border-radius: 10px;
+                    text-align: center;
+                    @media only screen and (max-width:600px){
+                        width: 80%;
+                    } 
+                }
+                .input1{
+                    margin-top: 3%;
+                    width: 60%;
+                    height: 10vh;
+                    border-radius: 10px;
+                    text-align: center;
+                    @media only screen and (max-width:600px){
+                        width: 80%;
+                    } 
+                }
+            }   
+        }
+        .datosTarjeta{
+            margin: 2vh auto;
+            display: none;
+            p{
+                text-align: center;
+                font-weight: bold;
+            }
+            div{
+                display:flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                button{
+                width: 9vw;
+                height: 10vh;
+                margin: 2vh auto;
+                border: none;
+                border-radius: 10px;
+                @media only screen and (max-width:1000px){
+                    width: 18%;
+                }
+                @media only screen and (max-width:1000px){
+                    width: 35%;
+                }
+                    img{
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 15px -2px #000000;
+                        width: 9vw;
+                        height: 10vh;
+                        border: 2px solid black;
+                        @media only screen and (max-width:1000px){
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .mostrarCredito{
+                width: 100%;
+                margin: 5vh 5%;
+                display: none;
+                .cuotastxt{
+                    text-align: left;
+                }
+            }
+                #cuotas{
+                    width: 60%;
+                    border-radius: 10px;
+                    height: 4vh;
+                    option{
+                        color: black;
+                    }
+                }
+                .titular{
+                    text-align: left;
+                    margin-top: 1vh;
+                    width: 100%;
+                    input{
+                        border-radius: 10px;
+                        height: 4vh;
+                        width: 80%;
+                        text-align: center;
+                    }
+                }
+                .nroCredito{
+                    text-align: left;
+                    margin-top: 1vh;
+                    width: 100%;
+                    input{
+                        border-radius: 10px;
+                        height: 4vh;
+                        width: 80%;
+                        text-align: center;
+                    }
+                }
+                .vencimientoCredito{
+                    text-align: left;
+                    margin-top: 1vh;
+                    input{
+                        border-radius: 10px;
+                        height: 4vh;
+                        width:40%;
+                        text-align: center;
+                    }
+                }
+                .codigoCredito{
+                    text-align: left;
+                    margin-top: 1vh;
+                    width: 45%;
+                    input{
+                        border-radius: 10px;
+                        height: 4vh;
+                        width:20%;
+                        text-align: center;
+                    }
+                }
+                .finCompra{
+                    padding: 1vh 1vw;
+                    border-radius: 10px;
+                    margin: 2vh 35%;
+                    margin-top: 5vh;
+                    background-color: #ff000094;
+                    color: white;
+                    font-weight: bold;
+                }
+            .mostrarDebito{
+                width: 100%;
+                margin: 5vh 5%;
+                display: none;
+                .descuentotxt{
+                    text-align: center;
+                    margin: 1vh auto;
+                }
+            }
+        }
+    }
+}
