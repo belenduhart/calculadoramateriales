@@ -97,15 +97,15 @@
             </ul>
         </nav>
     </section>
-
+    <p style="font-size: 1em; font-weight: bold; margin-top: 2vh; text-align: left;">*Datos obligatorios</p>
     <section class="finalPago">
         <div class="datosPago">
             <input id="comprador" type="button" value="① Datos comprador 🠻" class="tusDatos" onclick="mostrarComprador()">
             <form  class="datosComprador">
                 <p> *Nombre:  <input type="text" name="" id="nombre" required></p>
                 <p>*Apellido:  <input type="text" name="" id="apellido" ></p> <br>
-                <p> *Celular: <input type="text" name="" id="celular"  onchange="celularCompleto()" onkeydown="return celularNumero(event)"> </p>
-                <p>*E-mail: <input type="text" name="" id="email"></p>
+                <p> *Celular: <input type="text" name="" id="celular"  onchange="celularCompleto()" onkeydown="return validarNumeros(event)"><p id='celularinvalido' style="color:red"></p> </p>
+                <p>*E-mail: <input type="text" name="" id="email" onkeyup="validarEmail(this)"> <p id='emailinvalido' style="color:red"></p></p>
             </form>
             <input id="envio" type="button" value="② Datos para el envio 🠻" class="tusDatos" onclick="mostrarEnvio()">
             <div class="datosEnvio">
@@ -136,7 +136,7 @@
             <p class="tap"> </p>
         </div>
     </section>
-    <p style="font-size: 1em; font-weight: bold; margin-top: 0.5vh; text-align: center;">*Datos obligatorios</p>
+
 
     <!-- Linkeo con JS -->
     <script src="../js/pagar.js"></script>
