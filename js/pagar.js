@@ -112,88 +112,89 @@ function mostrarTarjeta(){
         datosTarjeta.style.display="block";
 }
 
+//Mostrar tarjetas
 //Credito
 let tarjetaCredito = document.querySelector(".mostrarCredito");
-let tarjetaDebito = document.querySelector(".mostrarDebito");
 function mostrarCredito(){
     tarjetaCredito.style.display="block";
     tarjetaDebito.style.display="none";
     tarjetaCredito.innerHTML=`
-    <p> TARJETA DE CREDITO </p> <br>
-    <p class="cuotastxt">Nro. cuotas:</p> 
-    <select name="cuotas" id="cuotas">
-        <option value="${totalCredito}">1 cuota de $${totalCredito} sin interes</option>
-        <option value="${Math.round(totalCredito/3)}">3 cuotas de $${Math.round(totalCredito/3)} sin interes</option>
-        <option value="${Math.round(totalCredito/6)}">6 cuotas de $${Math.round(totalCredito/6)} sin interes</option>
-    </select> 
-    <p class="titular"> *Titular:  <input type="text" name="" id="titularCredito"></p> <br>
-    <p class="nroCredito"> *Nro tarjeta:  <input type="text" name="" id="nroCredito" onkeydown="return validarNumeros(event)" onchange="creditoCorrecto()"> <p id='creditoInvalida' style="color:red"></p></p><br>
-    <p class="vencimientoCredito"> *Vencimiento:
-    <input type="text" name="" placeholder="mes /mm/" id="vencimientomesCredito">
-    <input type="text" name="" placeholder="año /aaaa/" id="vencimientoanioCredito" onchange="verificarVencimientoCredito()">
-    <p class='tarjetaVencida' style="color:red"></p> </p> 
-    <p class="codigoCredito"> *Código seguridad:  <input type="text" name="" id="codigoCredito" onkeydown="return validarNumeros(event)" maxlength="3"></p> 
-    <input type="button" value="Finalizar compra" class="finCompra" onclick="checkDatosObligatorios()"> `;
+            <p> TARJETA DE CREDITO </p> <br>
+            <p class="cuotastxt">Nro. cuotas:</p> 
+            <select name="cuotas" id="cuotas">
+                <option value="${totalCredito}">1 cuota de $${totalCredito} sin interes</option>
+                <option value="${Math.round(totalCredito/3)}">3 cuotas de $${Math.round(totalCredito/3)} sin interes</option>
+                <option value="${Math.round(totalCredito/6)}">6 cuotas de $${Math.round(totalCredito/6)} sin interes</option>
+            </select> 
+            <p class="titular"> *Titular:  <input type="text" name="" id="titularCredito"></p> <br>
+            <p class="nroCredito"> *Nro tarjeta: 
+            <input type="text" name="" id="nroCredito"  onkeydown="return validarNumeros(event)" onchange="creditoCorrecto()">
+            <p id='debitoInvalida' style="color:red"></p></p><br>
+            <p class="vencimientoCredito"> *Vencimiento:
+            <input type="text" name="" placeholder="mes /mm/" id="vencimientomesCredito"  onchange="verificarVencimientoCredito()">
+            <input type="text" name="" placeholder="año /aaaa/" id="vencimientoanioCredito" onchange="verificarVencimientoCredito()">
+            <p class='tarjetaVencida' style="color:red"></p> </p> 
+            <p class="codigoCredito"> *Código seguridad:
+            <input type="text" name="" id="codigoCredito" onkeydown="return validarNumeros(event)" maxlength="3"></p> 
+            <input type="button" value="Finalizar compra" class="finCompra" onclick="checkDatosObligatorios()"> `;
 }
 
-//Número tarjeta correcto
-function creditoCorrecto(){
-    let numeroCredito = document.querySelector("#nroCredito").value;
-    let creditoCadena = numeroCredito.length;
-
-        if (creditoCadena < 16){
-            document.querySelector("#nroCredito").value ="";
-            document.getElementById("creditoInvalida").innerHTML = "*Tarjeta invalida";
-        }else{
-            document.getElementById("creditoInvalida").innerHTML = "";
-        }
-}
-
-
-//Debito
+//Debito 
+let tarjetaDebito = document.querySelector(".mostrarDebito");
 function mostrarDebito(){
     tarjetaCredito.style.display="none";
     tarjetaDebito.style.display="block";
     tarjetaDebito.innerHTML=`
-    <p> TARJETA DE DEBITO </p> 
-    <p class="descuentotxt">¡20% de descuento pagando con tarjeta de débito!</p>
-                    <p class="descuentotxt" style="color:red;"> El total de la compra con tarjeta de débito es: $ ${totalDebito}</p> <br>
-                    <p class="titular">*Titular:  <input type="text" name="" id="titularDebito"></p>
-                    <p class="nroCredito">*Nro tarjeta:<input type="text" name="" id="nroDebito" onkeydown="return validarNumeros(event)" onchange="debitoCorrecto()"> <p id='debitoInvalida' style="color:red"></p></p>
-                    <p class="vencimientoCredito">*Vencimiento:
-                    <input type="text" name="" placeholder="mes /mm/" id="vencimientomesDebito">
-                    <input type="text" name="" placeholder="año /aaaa/" id="vencimientoanioDebito" onchange="verificarVencimientoDebito()">
-                    <p class='tarjetaVencida' style="color:red"></p></p>
-                    <p class="codigoCredito">*Código seguridad:  <input type="text" name="" id="codigoDebito" maxlength="3" onkeydown="return validarNumeros(event)"></p>
-                    <input type="button" value="Finalizar compra" class="finCompra" onclick="checkDatosObligatorios()"> `;
+            <p> TARJETA DE DEBITO </p> 
+            <p class="descuentotxt">¡20% de descuento pagando con tarjeta de débito!</p>
+            <p class="descuentotxt" style="color:red;"> El total de la compra con tarjeta de débito es: $ ${totalDebito}</p> <br>
+            <p class="titular">*Titular:  <input type="text" name="" id="titularDebito"></p>
+            <p class="nroCredito">*Nro tarjeta:
+            <input type="text" name="" id="nroDebito"  onkeydown="return validarNumeros(event)" onchange="debitoCorrecto()">
+            <p id='debitoInvalida' style="color:red"></p></p>
+            <p class="vencimientoCredito">*Vencimiento:
+            <input type="text" name="" placeholder="mes /mm/" id="vencimientomesDebito" onchange="verificarVencimientoDebito()">
+            <input type="text" name="" placeholder="año /aaaa/" id="vencimientoanioDebito" onchange="verificarVencimientoDebito()">
+            <p class='tarjetaVencida' style="color:red"></p></p>
+            <p class="codigoCredito">*Código seguridad:
+            <input type="text" name="" id="codigoDebito" maxlength="3" onkeydown="return validarNumeros(event)"></p>
+            <input type="button" value="Finalizar compra" class="finCompra" onclick="checkDatosObligatorios()"> `;
 }
 
-function debitoCorrecto(){
-    let numeroDebito = document.querySelector("#nroDebito").value;
-    let numeroCredito = document.querySelector("#nroCredito").value;
-    let debitoCadena = numeroDebito.length;
-    let creditoCadena = numeroCredito.length;
-        if (debitoCadena < 16 ){
-            document.querySelector("#nroDebito").value ="";
-            document.getElementById("debitoInvalida").innerHTML = "*Tarjeta invalida";
-        }else{
-            document.getElementById("debitoInvalida").innerHTML = "";
-        }
+//Verificacion datos
 
-        if (creditoCadena < 16){
-            document.querySelector("#nroCredito").value ="";
-            document.getElementById("creditoInvalida").innerHTML = "*Tarjeta invalida";
-        }else{
-            document.getElementById("creditoInvalida").innerHTML = "";
-        }
+//Número tarjeta correcto, minimo 16 caracteres de longitud
+
+let numeroDebito;
+let debitoCadena;
+let numeroCredito;
+let creditoCadena;
+function debitoCorrecto(){
+    numeroDebito =document.querySelector("#nroDebito").value;
+    debitoCadena = numeroDebito.length;
+    if (debitoCadena < 16){
+        document.querySelector("#debitoInvalida").innerHTML= "*Tarjeta inválida, ingrese mínimo 16 caracteres"
     }
+}
+function creditoCorrecto(){
+    numeroCredito = document.querySelector("#nroCredito").value;
+    creditoCadena = numeroCredito.length;
+    if (creditoCadena < 16){
+        document.querySelector("#debitoInvalida").innerHTML= "Tarjeta inválida, ingrese mínimo 16 caracteres"
+    }
+}
+
+
+
+
+
 //Fecha vencimiento
 const fecha = new Date();
 const mes = fecha.getMonth() + 1;
 const anio = fecha.getFullYear();
-const hoy = "" + mes + anio ;
+console.log(mes);
+console.log(anio);
 console.log(fecha);
-console.log(hoy);
 //Debito
 function verificarVencimientoDebito(){
     let vencimientomesDebito = document.querySelector("#vencimientomesDebito").value;
@@ -213,21 +214,27 @@ function verificarVencimientoDebito(){
     }
 }
 //Credito
+
 function verificarVencimientoCredito(){
-    let vencimientomesCredito = document.querySelector("#vencimientomesCredito").value;
-    let vencimientoanioCredito = document.querySelector("#vencimientoanioCredito").value;
-    if((vencimientomesCredito > mes) && (vencimientoanioCredito >= anio)) {
-        document.querySelector(".tarjetaVencida").innerHTML="";
-    } else if((vencimientomesCredito < mes) && (vencimientoanioCredito > anio)){
-        document.querySelector(".tarjetaVencida").innerHTML="";
-    }else if((vencimientomesCredito == mes) && (vencimientoanioCredito == anio)){
-        document.querySelector(".tarjetaVencida").innerHTML="";
-    }else if((vencimientomesCredito < mes) && (vencimientoanioCredito == anio)) {
-        document.querySelector(".tarjetaVencida").innerHTML="Tarjeta vencida";
-    } else if (vencimientomesCredito > 12){
-        document.querySelector(".tarjetaVencida").innerHTML="Fecha invalida";
-    } else if (vencimientoanioCredito < anio){
-        document.querySelector(".tarjetaVencida").innerHTML="Tarjeta vencida";
-    }
+    let vencimientomesCredito = parseInt(document.querySelector("#vencimientomesCredito").value);
+    let vencimientoanioCredito = parseInt(document.querySelector("#vencimientoanioCredito").value);
+        while (vencimientoanioCredito !== 0){  
+            if((vencimientomesCredito > mes) && (vencimientoanioCredito >= anio)){
+                document.querySelector(".tarjetaVencida").innerHTML="";
+            } else if((vencimientomesCredito < mes) && (vencimientoanioCredito > anio)){
+                document.querySelector(".tarjetaVencida").innerHTML="";
+            }else if((vencimientomesCredito == mes) && (vencimientoanioCredito == anio)){
+                document.querySelector(".tarjetaVencida").innerHTML="";
+            }else if((vencimientomesCredito < mes) && (vencimientoanioCredito === anio)) {
+                document.querySelector(".tarjetaVencida").innerHTML="Tarjeta vencida";
+            } else if (vencimientomesCredito > 12){
+                document.querySelector(".tarjetaVencida").innerHTML="Fecha invalida";
+            } else if (vencimientoanioCredito < anio){
+                document.querySelector(".tarjetaVencida").innerHTML="Tarjeta vencida";
+            }
+                console.log(vencimientoanioCredito);
+                console.log(vencimientomesCredito);
+                vencimientoanioCredito= 0;
+        }
 }
 
