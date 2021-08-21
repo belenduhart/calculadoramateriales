@@ -2,7 +2,19 @@
 #sectionResultadosCimientos{
     display: none;
 }
-#resultadocimientos{
+#sectionResultadosCapaVertical{
+    display: none;
+}
+#sectionResultadosCapaHorizontal{
+    display: none;
+}
+#sectionResultadosRevoqueExterior{
+    display:none;
+}
+#sectionResultadosRevoqueInterior{
+    display:none;
+}
+.resultados{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

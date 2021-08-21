@@ -22,7 +22,7 @@ function botonAgregarFuncion(){
     let contador = document.querySelector(".contador");
     let cantidad = contador.value;
 
-    const productoSeleccionado = listadoProductos.filter((p)=> p.id == idProducto);
+    let productoSeleccionado = listadoProductos.filter((p)=> p.id == idProducto);
 
     if (cantidad < productoSeleccionado[0].stock){
         cantidad++;
@@ -69,7 +69,7 @@ function botonSacarFuncion(){
     let idProducto = document.querySelector(".idProducto").value;
     let contador = document.querySelector(".contador");
     let cantidad = contador.value;
-    const productoSeleccionado = listadoProductos.filter((p)=> p.id == idProducto); 
+   let productoSeleccionado = listadoProductos.filter((p)=> p.id == idProducto); 
 
     if (cantidad != 0){
         cantidad--
@@ -94,9 +94,8 @@ function botonSacarFuncion(){
     let carritoTemporal = carritoCompras.filter((p)=> p.id != idProducto);
     carritoTemporal.push(productoAniadido);
     console.log(carritoTemporal);
-    console.log(carritoCompras );
-    window.carritoCompras = carritoTemporal;
-    console.log(carritoCompras );
+    carritoCompras = carritoTemporal;
+    console.log(carritoCompras);
 
     //Guardar en localStorage
     localStorage.setItem("carritoCompras", JSON.stringify(carritoCompras));

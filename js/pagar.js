@@ -4,7 +4,8 @@ obtenerCarrito = localStorage.getItem("carritoCompras")
 carritoCompras1 = JSON.parse(obtenerCarrito);
 console.log(carritoCompras1);
 
-//Hago el resumen de productos para cada uno
+//RESUMEN COMPRA
+//Enumero cada producto
 let resumenProducto = document.querySelector(".efectoHover");
 carritoCompras1.forEach( p => {
     resumenProducto.innerHTML += `<div class="resumenProductos">
@@ -29,28 +30,8 @@ let totalDebito= Math.round(totalAPagar-((20*totalAPagar)/100));
 console.log(totalDebito);
 let totalCredito = totalAPagar;
 
-//Formulario para llenar con los datos
-//Datos obligatorios *
-let nombre = document.querySelector("#nombre").value;
-let apellido = document.querySelector("#apellido").value;
-let celular = document.querySelector("#celular").value;
-let email = document.querySelector("#email").value;
-let direccionEnvio = document.querySelector("#direccion").value;
-let codigoPostal = document.querySelector("#codigoPostal").value;
-// let titularCredito = document.querySelector("#titularCredito").value;
-// let titularDebito = document.querySelector("#titularDebito").value;
-// let codigoDebito = document.querySelector("#codigoDebito").value;
-// let codigoCredito = document.querySelector("#codigoCredito").value;
-
-function checkDatosObligatorios(){
-    if ((nombre || apellido || celular || email || direccionEnvio || codigoPostal) === ""  ){
-        document.querySelector(".datosObligatorios").innerHTML =
-        `<p style="color:red; margin-left:13%; margin-top: 0.5%; font-weight:bold; font-size: 1.2em; width:30vw;"> *Completar todos los datos obligatorios* </p> `;
-    } else {
-        document.querySelector(".datosObligatorios").innerHTML = ``;
-    }
-}
-//Datos comprador
+//Formulario para llenar con los datos y pagar
+//Datos del comprador
 let datosComprador= document.querySelector(".datosComprador");
 function mostrarComprador(){
     datosEnvio.style.display="none";
@@ -58,7 +39,8 @@ function mostrarComprador(){
     datosTarjeta.style.display="none";
 }
 
-//Celular
+//CELULAR
+//verificar nro celular solo escriba nros
 function validarNumeros(evt){
     var code = (evt.which) ? evt.which : evt.keyCode;
     if(code==8) { //backspace
@@ -70,7 +52,7 @@ function validarNumeros(evt){
     }
 }
 
-//Numero de telefono completo
+//Verificar numero de telefono este completo
 function celularCompleto(){
 let numeroCelular = document.querySelector("#celular").value;
 let cadenaCelular = numeroCelular.length;
@@ -83,7 +65,7 @@ let cadenaCelular = numeroCelular.length;
       }
 }
 
-//Checkear email
+//Checkear email sea correcto
 function validarEmail(elemento){
     var texto = document.getElementById(elemento.id).value;
     var regex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -92,12 +74,12 @@ function validarEmail(elemento){
     } else {
       document.getElementById("emailinvalido").innerHTML = "";
     }
-  
-  }
+}
 
 
-//Datos Envio
+//Datos para Envio a domicilio
 let datosEnvio= document.querySelector(".datosEnvio");
+//Mostrar form para datos envio
 function mostrarEnvio(){
         datosEnvio.style.display="block";
         datosComprador.style.display="none";
@@ -128,8 +110,8 @@ function mostrarCredito(){
             </select> 
             <p class="titular"> *Titular:  <input type="text" name="" id="titularCredito"></p> <br>
             <p class="nroCredito"> *Nro tarjeta: 
-            <input type="text" name="" id="nroCredito"  onkeydown="return validarNumeros(event)" onchange="creditoCorrecto()">
-            <p id='debitoInvalida' style="color:red"></p></p><br>
+            <input type="text" name="" id="nroCredito"  onkeydown="return validarNumeros(event)" onchange="return creditoCorrecto()">
+            <p id='creditoInvalida' style="color:red"></p></p><br>
             <p class="vencimientoCredito"> *Vencimiento:
             <input type="text" name="" placeholder="mes /mm/" id="vencimientomesCredito"  onchange="verificarVencimientoCredito()">
             <input type="text" name="" placeholder="año /aaaa/" id="vencimientoanioCredito" onchange="verificarVencimientoCredito()">
@@ -150,7 +132,7 @@ function mostrarDebito(){
             <p class="descuentotxt" style="color:red;"> El total de la compra con tarjeta de débito es: $ ${totalDebito}</p> <br>
             <p class="titular">*Titular:  <input type="text" name="" id="titularDebito"></p>
             <p class="nroCredito">*Nro tarjeta:
-            <input type="text" name="" id="nroDebito"  onkeydown="return validarNumeros(event)" onchange="debitoCorrecto()">
+            <input type="text" name="" id="nroDebito"  onkeydown="return validarNumeros(event)" onchange="return debitoCorrecto()">
             <p id='debitoInvalida' style="color:red"></p></p>
             <p class="vencimientoCredito">*Vencimiento:
             <input type="text" name="" placeholder="mes /mm/" id="vencimientomesDebito" onchange="verificarVencimientoDebito()">
@@ -161,40 +143,45 @@ function mostrarDebito(){
             <input type="button" value="Finalizar compra" class="finCompra" onclick="checkDatosObligatorios()"> `;
 }
 
-//Verificacion datos
+//Verificacion datos tarjetas
 
 //Número tarjeta correcto, minimo 16 caracteres de longitud
-
 let numeroDebito;
 let debitoCadena;
 let numeroCredito;
 let creditoCadena;
+
+//Nro tarjeta debito
 function debitoCorrecto(){
     numeroDebito =document.querySelector("#nroDebito").value;
     debitoCadena = numeroDebito.length;
     if (debitoCadena < 16){
         document.querySelector("#debitoInvalida").innerHTML= "*Tarjeta inválida, ingrese mínimo 16 caracteres"
+    }else {
+        document.querySelector("#debitoInvalida").innerHTML= " ";
     }
 }
+
+//Nro tarjeta credito
 function creditoCorrecto(){
     numeroCredito = document.querySelector("#nroCredito").value;
     creditoCadena = numeroCredito.length;
     if (creditoCadena < 16){
-        document.querySelector("#debitoInvalida").innerHTML= "Tarjeta inválida, ingrese mínimo 16 caracteres"
+        document.querySelector("#creditoInvalida").innerHTML= "*Tarjeta inválida, ingrese mínimo 16 caracteres"
+    }else {
+        document.querySelector("#creditoInvalida").innerHTML= " ";
     }
 }
 
-
-
-
-
 //Fecha vencimiento
+//Fecha actual
 const fecha = new Date();
 const mes = fecha.getMonth() + 1;
 const anio = fecha.getFullYear();
 console.log(mes);
 console.log(anio);
 console.log(fecha);
+
 //Debito
 function verificarVencimientoDebito(){
     let vencimientomesDebito = document.querySelector("#vencimientomesDebito").value;
@@ -213,8 +200,8 @@ function verificarVencimientoDebito(){
         document.querySelector(".tarjetaVencida").innerHTML="Tarjeta vencida";
     }
 }
-//Credito
 
+//Credito
 function verificarVencimientoCredito(){
     let vencimientomesCredito = parseInt(document.querySelector("#vencimientomesCredito").value);
     let vencimientoanioCredito = parseInt(document.querySelector("#vencimientoanioCredito").value);
@@ -236,5 +223,105 @@ function verificarVencimientoCredito(){
                 console.log(vencimientomesCredito);
                 vencimientoanioCredito= 0;
         }
+}
+
+//Finalizar compra
+let listadoCompradores= [];
+//Datos recolectados de cada usuario
+class nuevoComprador {
+    constructor(nombre, apellido, celular, email, direccion, CP, compraRealizada, numeroOrden){
+        this.nombre = nombre,
+        this.apellido = apellido,
+        this.celular = celular,
+        this.email = email,
+        this.direccion = direccion,
+        this.CP = CP,
+        this.compraRealizada = compraRealizada,
+        this.numeroOrden= numeroOrden
+    }
+}
+
+//Datos obligatorios *
+let datosObligatorios;
+let numeroOrden;
+function checkDatosObligatorios(){
+    let nombre = document.querySelector("#nombre").value;
+    let apellido = document.querySelector("#apellido").value;
+    let celular = document.querySelector("#celular").value;
+    let email = document.querySelector("#email").value;
+    let direccionEnvio = document.querySelector("#direccion").value;
+    let codigoPostal = document.querySelector("#codigoPostal").value;
+    if ((nombre && apellido && celular && email && direccionEnvio && codigoPostal) !== ""  ){
+        document.querySelector(".datosObligatorios").innerHTML = ``;
+        datosObligatorios = true;
+        finalizarCompra();
+        console.log(datosObligatorios);
+        numeroOrden = Math.floor((Math.random() * (10000- 1000 + 1)) + 1000);
+        console.log(numeroOrden);
+        //Crear nuevo usuario
+        const nuevoComprador1 = new nuevoComprador(nombre, apellido, celular, email, direccionEnvio, codigoPostal, carritoCompras1, numeroOrden);
+        //Agrego a la lista de compradores
+        listadoCompradores.push(nuevoComprador1);
+        localStorage.setItem("listadoCompradores", JSON.stringify(listadoCompradores));
+        console.log(listadoCompradores);
+    } else {
+        document.querySelector(".datosObligatorios").innerHTML =
+        `<p style="color:red; margin-left:13%; margin-top: 0.5%; font-weight:bold; font-size: 1.2em; width:30vw;"> *Completar todos los datos obligatorios* </p> `;
+        datosObligatorios = false;
+        console.log(datosObligatorios);
+    }
+}
+
+//Proceso pago
+function finalizarCompra(){
+    if (datosObligatorios === true){
+        //Barra progreso proceso de pago
+        datosTarjeta.style.display="none";
+        document.querySelector(".barraProgreso").innerHTML=
+        ` <div class="container">
+            <div class="bar">
+                <svg>
+                    <circle cx="50%" cy="50%" r="50%"></circle>
+                </svg>
+                <h1 class="number">0%</h1>
+            </div>
+        </div>
+        <h2> Procesando el pago...</h2>`;
+        const num = document.querySelector(".number");
+        let counter = 0;
+        setInterval(() => {
+  if (counter == 100) {
+    clearInterval();
+  } else {
+    counter += 1;
+    num.textContent = counter + "%";
+  }
+        }, 35);
+        setTimeout(function(){ pagoExitoso(); }, 4000);
+    }else{
+        document.querySelector(".barraProgreso").innerHTML= ``;
+    }
+}
+
+//Mostrar cartel de Compra finalizada
+function pagoExitoso(){
+    document.querySelector(".barraProgreso").innerHTML= ``;
+    document.querySelector(".datosObli").style.display="none";
+    document.querySelector(".datosPago").style.display="none";
+    document.querySelector(".totalPago").style.display="none";
+    document.querySelector(".finalPago").innerHTML = ` <div style="border: 2px solid red; height:43vh; width:70%; margin: 11vh auto; background-color: white; border-radius:10px"> 
+    <p style="width:100%; margin-top:2vh; text-align:center; font-size: 2.5em; color:red"> CONFIRMACION COMPRA </p> <br>
+    <p style="width:100%; text-align:center; font-size: 1.2em; color:red"> Nro.confirmacion compra: ${numeroOrden} </p> <br>
+    <p style=" font-weight:bold; margin-top:2vh; color:black; text-align:center; font-size: 1.5em"> ¡Gracias por confiar en nosotros!</p> <br>
+    <p style=" font-weight:bold; margin-top:2vh; font-size:1.5em; color:black; text-align:center"> Recuerda que el envío a domicilio puede tardar entre 2 a 5 días hábiles.</p> <br>
+    <p style="font-weight:bold; font-size:1em; color:red; text-align:center"> *Debido a la situacion actual del país por el COVID-19, y por cuestiones de seguridad del personal, 
+    las entregas pueden tener demoras. </p> <br>
+    <a href="../index.html" style="margin: 0vh 76%"><input type="button" value="Volver a calculadora" style="margin: 1vh auto; width: 25%; height: 15%; border-radius: 10px;"></a>
+    </div> 
+    `;
+    carritoCompras1 = [];
+    carritoCompras = carritoCompras1;
+    localStorage.setItem("carritoCompras", JSON.stringify(carritoCompras));
+    console.log(carritoCompras);
 }
 

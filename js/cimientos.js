@@ -1,11 +1,9 @@
 //CIMIENTOS
 //1eroA elegir tipo de trabajo
-// var trabajoSeleccionado = prompt("Elegir el tipo de trabajo a realizar: CIMIENTOS, MAMPOSTERIA, CAPA HORIZONTAL, CAPA VERTICAL, REVOQUE INTERIOR, REVOQUE EXTERIOR, CONTRAPISO, CARPETA");
 getSelectValue = document.getElementById("selecciontrabajo").value;
 if(getSelectValue=="cimientos"){
     procesoTotalCimientos()
 }
-
 
 //2do materiales usados para cimientos
 class Cimientos {
@@ -16,7 +14,6 @@ class Cimientos {
         this.totalLadrilloCimientos = totalLadrilloCimientos;
     }
     resultadocalculosCimientos(){
-        // alert("Usted necesita comprar " + this.totalCementoCimientos + "kg de cemento, " + this.totalCalCimientos + "kg de Cal " + this.totalArenaCimientos + "m3 de Arena y " + this.totalLadrilloCimientos + " unidades de ladrillos.");
         //Mostrar en html cuantos kg de cemento necesita
         let mostrarCementoCimientos= document.getElementById("mostrarCementoCimientos");
         mostrarCementoCimientos.innerHTML =` ${this.totalCementoCimientos} kg`;
@@ -33,9 +30,7 @@ class Cimientos {
 }
 
 //3ero lista de las variables que hay en el trabajo seleccionado, con su respectivo valor.
-// const arrayLadrillos =["COMUN" , "LADRILLON", "HUECO8", "HUECO12", "HUECO18", "VIBRADO" ];
 const arrayLadrillosCimientos = ["LadrilloComun", "LadrilloHueco8", "LadrilloHueco12", "LadrilloHueco18", "Ladrillon", "LadrilloVibrado"];
-//const arrayPared = [10, 15, 20, 30];
 const arrayParedCimientos =["10", "15", "20", "30"];
 
 //4to pedir que el usuario seleccione cada variable y asignarle su valor con metodo find
@@ -48,7 +43,6 @@ let ladrilloCimientos3 = document.getElementById("ladrilloCimientos3");
 let ladrilloCimientos4 = document.getElementById("ladrilloCimientos4");
 let ladrilloCimientos5 = document.getElementById("ladrilloCimientos5");
 function seleccionLadrilloUsuarioCimientos(){
-    // let ladrilloUsuarioCimientos = prompt("¿Con que tipo de ladrillo quiere realizar el trabajo? Ladrillo comun, Ladrillon, Ladrillo Hueco8, Ladrillo Hueco12, Ladrillo Hueco18 o Bloque Vibrado");
     if ((ladrilloCimientos0).checked){
         ladrilloUsuarioCimientos = ladrilloCimientos0.value;
     }else if (ladrilloCimientos1.checked){
@@ -74,7 +68,6 @@ let paredCimientos1= document.getElementById("paredCimientos1");
 let paredCimientos2= document.getElementById("paredCimientos2");
 let paredCimientos3= document.getElementById("paredCimientos3");
 function seleccionParedUsuarioCimientos (){
-    // let paredUsuarioCimientos = parseInt(prompt("¿Cual será el ancho de la pared a construir en cm? 10 , 15, 20, 30"));
     if(paredCimientos0.checked){
         paredUsuarioCimientos= paredCimientos0.value;
     }else if(paredCimientos1.checked){
@@ -219,7 +212,6 @@ function valorMaterialParaCalculoCimientos (){
 //6to pedir metros a construir
 let metros ;
 function pedirMetrosCimientos(){
-    // metros = parseInt(prompt("Ingresar cantidad de metros cuadrados a construir"));
     metros= parseInt(document.querySelector("#metrosCimientos").value);
 }
 //Checkear que sean números los ingresados
@@ -231,25 +223,8 @@ function checkNumber(evt){
     } else if(code>=48 && code<=57) { //es numero
       return true;
     } else{ //otros
-        let errorNumero = document.getElementById("errorNumero");
-        errorNumero.innerHTML = `  <input type="button" value="X" id="cerrarErrorNumero" 
-        onclick="cerrarErrorNumero(); return false" style="position:absolute; top:51%; left:72%; padding: 1vh 1vw; font-size:1.2em; color:red ">
-        <p style=" border-radius: 10px; font-size:2em; height:7vh; color: red; background-color: white; font-weight: bold; text-align: center; margin: 50vh auto; padding: 1vh 1vw; width:50%;">INGRESAR VALOR NUMERICO VALIDO </p>`
-        document.getElementById("errorNumero").style.display= "block";
-       clickcerrarErrorNumero();
       return false;      
     }
-}
-//Funcion boton para cerrar el error
-function clickcerrarErrorNumero(){
-    let  botonCerrarErrorNumero= document.getElementById("cerrarErrorNumero");
-    botonCerrarErrorNumero.onclick = cerrarErrorNumero;
-        function cerrarErrorNumero(){
-            document.getElementById("errorNumero").style.display= "none";
-        }
-        if (botonCerrarErrorNumero == true){
-            procesoTotalCimientos()
-        }
 }
 
 //7mo calcular cantidad de material

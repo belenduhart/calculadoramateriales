@@ -49,10 +49,10 @@
     <script src="https://kit.fontawesome.com/e6eec834c7.js" crossorigin="anonymous"></script>
     <!-- Link Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <!-- API google maps -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBlciihUww7WESrd4MIEs5Hfm79waI95n4"></script>
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- API google maps -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBlciihUww7WESrd4MIEs5Hfm79waI95n4"></script>
     
 </head>
 <body>
@@ -97,7 +97,7 @@
             </ul>
         </nav>
     </section>
-    <p style="font-size: 1em; font-weight: bold; margin-top: 2vh; text-align: left;">*Datos obligatorios</p>
+    <p class="datosObli" style="font-size: 1em; font-weight: bold; margin-top: 2vh; text-align: left;">*Datos obligatorios</p>
     <section class="finalPago">
         <div class="datosPago">
             <input id="comprador" type="button" value="① Datos comprador 🠻" class="tusDatos" onclick="mostrarComprador()">
@@ -136,12 +136,13 @@
             <p class="tap"> </p>
         </div>
     </section>
+    <section class="barraProgreso">
+    </section>
 
 
     <!-- Linkeo con JS -->
     <script src="../js/pagar.js"></script>
     <script src="../js/objetos.js"></script>
-    <script src="../js/checkout.js"></script>
     <!-- Linkeo api google -->
     <script src="../js/apigoogle.js"></script>
 </body>
