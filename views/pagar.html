@@ -1,0 +1,49 @@
+
+    <p class="datosObli" style="font-size: 1em; font-weight: bold; margin-top: 2vh; text-align: left;">*Datos obligatorios</p>
+    <section class="finalPago">
+        <div class="datosPago">
+            <input id="comprador" type="button" value="① Datos comprador 🠻" class="tusDatos" onclick="mostrarComprador()">
+            <form  class="datosComprador">
+                <p> *Nombre:  <input type="text" name="" id="nombre" required></p>
+                <p>*Apellido:  <input type="text" name="" id="apellido" ></p> <br>
+                <p> *Celular: <input type="text" name="" id="celular"  onchange="celularCompleto()" onkeydown="return validarNumeros(event)"><p id='celularinvalido' style="color:red"></p> </p>
+                <p>*E-mail: <input type="text" name="" id="email" onkeyup="validarEmail(this)"> <p id='emailinvalido' style="color:red"></p></p>
+            </form>
+            <input id="envio" type="button" value="② Datos para el envio 🠻" class="tusDatos" onclick="mostrarEnvio()">
+            <div class="datosEnvio">
+                <p> *Direccion:  <input type="text"  id="direccion" placeholder="Escribe tu direccion..." style="width: 60%;"></p> <br>
+                <p>*Código postal:  <input type="text" name="" id="codigoPostal"></p> <br>
+                <p> Observaciones: <input type="text" name="" id="observaciones" class="input1"> </p>
+            </div>
+            <input id="pago" type="button" value="③ Seleccionar método de pago 🠻" class="tusDatos" onclick="mostrarTarjeta()">
+            <div class="datosTarjeta">
+                <p> Seleccione el tipo de tarjeta con la que realizará el pago:</p>
+                <div>
+                <button id="tarjetaDeCredito" ><img src="../imagenes/credito.jpg" alt=""  onclick="mostrarCredito()"> Crédito</button>
+                <button id="tarjetaDeDebito"  ><img src="../imagenes/debito.jpg" alt="" onclick="mostrarDebito()"> Débito</button>
+                <div class="mostrarCredito">
+                </div>
+                <div class="mostrarDebito">
+                </div>
+                <div class="datosObligatorios"></div>
+            </div>
+            </div>
+        </div>
+        <div class="totalPago">
+            <p class="txtPpal">Resumen de la compra</p>
+            <input type="button" class="botonVerProductos" value="Ver productos">
+            <div class="efectoHover">
+            </div>
+            <p class="txtPpal">Total a pagar:</p>
+            <p class="tap"> </p>
+        </div>
+    </section>
+    <section class="barraProgreso">
+    </section>
+
+
+    <!-- Linkeo con JS -->
+    <script src="../js/pagar.js"></script>
+    <script src="../js/objetos.js"></script>
+    <!-- Linkeo api google -->
+    <script src="../js/apigoogle.js"></script>

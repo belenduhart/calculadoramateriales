@@ -262,6 +262,90 @@
             }
         }
     }
+    .pagoExitoso{
+        border: 2px solid red;
+        height:43vh; width:70%; 
+        margin: 11vh auto; 
+        background-color: white; 
+        border-radius:10px;
+        @media only screen and (max-width:680px){
+        height: 47vh;
+        width: 90%;
+        margin: 5vh auto;
+        }
+        .pe0{
+            width:100%; 
+            margin-top:2vh; 
+            text-align:center; 
+            font-size: 2.5em; 
+            color:red;
+            @media only screen and (max-width:680px){
+                font-size: 1em;
+            }
+        }
+        .pe1{
+            width:100%; 
+            text-align:center; 
+            font-size: 1.2em; 
+            color:red;
+            @media only screen and (max-width:680px){
+                font-size: 1em;
+            }
+        }
+        .pe2{
+            font-weight:bold; 
+            margin-top:2vh; 
+            color:black; 
+            text-align:center; 
+            font-size: 1.5em;
+            @media only screen and (max-width:680px){
+                font-size: 1em;
+            }
+        }
+        .pe3{
+            font-weight:bold; 
+            margin-top:2vh; 
+            font-size:1.5em; 
+            color:black; 
+            text-align:center;
+            @media only screen and (max-width:680px){
+                font-size: 1em;
+            }
+        }
+        .pe4{
+            font-weight:bold;
+            font-size:1em; 
+            color:red; 
+            text-align:center;
+            @media only screen and (max-width:680px){
+                font-size: 1em;
+            }
+        }
+        p{
+            @media only screen and (max-width:680px){
+                font-size: 1em;
+            }
+        }
+        a{
+            margin: 0vh 76%;
+            @media only screen and (max-width:680px){
+                margin: 0 30%;
+            }
+            input{
+                margin: 1vh auto; 
+                width: 25%; 
+                height: 15%; 
+                border-radius: 10px;
+                @media only screen and (max-width:680px){
+                margin: 0;
+                width: 48%;
+                height: 15%;
+                }
+            }
+        }
+    }
 }
 
 @import "../partials/barraprogreso";
+
+//Confirmacion pago

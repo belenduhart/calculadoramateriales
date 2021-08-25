@@ -4,6 +4,9 @@
     display: flex; 
     flex-direction: row;
     flex-wrap: nowrap;
+    @media only screen and (max-width: 800px) {
+        flex-direction: column;
+    }
     .divdecidireliminar{
         display: none;
         background: rgba(33, 41, 52, .85);
@@ -53,12 +56,19 @@
         align-items: center;
         border-right: 1px solid black;
         margin-top: 4vh;
+        @media only screen and (max-width: 800px) {
+            border-right: 0;
+            width: 100%;
+        }
         .descripciones{
             display: flex;
             display: row;
             justify-content: space-around;
             align-items: center;
             border-bottom: 1px solid black;
+            @media only screen and (max-width: 480px) {
+                display: none;
+            }
             p{
                 font-size: 1.1em;
                 font-weight: bold;
@@ -74,7 +84,9 @@
             justify-content: space-around;
             margin-top: 2vh;
             width: 90%;
-            
+            @media only screen and (max-width:480px){
+                width: 100%;
+            }
             p{
                 font-size: 1.1em;
                 color: black;
@@ -98,12 +110,18 @@
         flex-direction: column;
         align-items: center;
         margin: 10% auto;
+        @media only screen and (max-width: 680px) {
+            margin: 3% auto;
+        }
          #totalCarrito{
             border: 2px black solid;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            @media only screen and (max-width:680px){
+                width: 100%;
+            }
             .resumencompra{
                 font-size: 2em;
                 color: black;
@@ -111,12 +129,18 @@
                 text-align: center;
                 padding: 1vw 1vh;
                 border-bottom: 1px solid black;
+                @media only screen and (max-width: 680px) {
+                    font-size: 1em;
+                }
             }
             #subtotal{
                 font-size: 1.3em;
                 color: black;
                 text-align: left;
                 padding: 1vh 1vw;
+                @media only screen and (max-width: 680px) {
+                    font-size: 1em;
+                }
             }
             #total{
                 font-size: 1.4em;
@@ -127,6 +151,9 @@
                 text-align: left;
                 width: 92%;
                 margin:1vh 0vw 0vh 0vw;
+                @media only screen and (max-width: 680px) {
+                    font-size: 1em;
+                }
             }
         }
         .botonComprar{
@@ -158,11 +185,24 @@
         height: 10vh;
         border-radius: 10px;
         margin: 0vh auto;
+        @media only screen and (max-width: 480px) {
+            height: 4vh;
+        }
         }
         .nombrep{
             font-size: 1.1em;
             color: black;
             text-align: left;
             margin:0vh auto;
+        }
+    }
+
+    .vacioCarrito{
+        font-size: 2em;
+        text-align: center;
+        color: red;
+        font-weight: bold;
+        @media only screen and (max-width: 480px) {
+            font-size: 1em;
         }
     }

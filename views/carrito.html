@@ -1,0 +1,27 @@
+<section class="sectionproductos">
+    <div class="divdecidireliminar" style="display: none;"> 
+         <p>
+             <input class="closeEliminar" type="button" value="X" onclick="cerrarEliminar()">
+             <br>
+             Para eliminar el producto del carrito, haga click en continuar:
+            <input class="decidirEliminar" type="button" value="Continuar" onclick="continuarEliminar()">
+        </p> 
+    </div>
+    <div class="contenedorproductos">
+        <div class="descripciones">
+            <p>Producto</p>
+            <p>Precio</p> 
+            <p>Cantidad</p>
+            <p>Subtotal</p>
+        </div>
+        <div id="elementoAComprar" >
+            <div class="vacioCarrito"> No hay productos en el carrito de compras! </div>
+        </div> 
+</div>
+    <div class="div1">
+        <div id="totalCarrito">
+    </div>
+</section>
+    <!-- Link JS -->
+    <script defer src="../js/carrito.js"></script>
+    <script src="../js/checkout.js"></script>

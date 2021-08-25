@@ -51,17 +51,15 @@ main #producto1{
             font-weight: bold;
             @media only screen and (min-width:480px) and (max-width:1080px){
                 font-size: 1em;
+                margin: 0vh auto;
             }
             .descriptitulo{
                 font-size: 1em;
                 font-weight: bold;
-                text-align: left;
-                // margin:2vh 0vw 0vh -11vw;
+                // text-align: left;
             }
             p{
                 font-size: 0.8em;
-                // text-align: left;
-                // margin:2vh 0vw 0vh -10vw;
             }
         }
     }
@@ -135,8 +133,8 @@ main #producto1{
                 @media only screen and (max-width:1080px){
                     font-size: 1em;
                 }
-                @media only screen and(max-width:680px){
-                    width: 58%;
+                @media only screen and (max-width: 680px) {
+                    width: 13%;
                 }
             }
             .contador{
@@ -162,8 +160,8 @@ main #producto1{
                 @media only screen and (max-width:1080px){
                     font-size: 1em;
                 }
-                @media only screen and(max-width:680px){
-                    width: 58%;
+                @media only screen and (max-width: 680px) {
+                    width: 13%;
                 }
             } 
             #botonAgregarProducto{
@@ -208,6 +206,37 @@ main #producto1{
         display: none;
         margin: auto;
         height: 30%;
+        @media only screen and(max-width:680px){
+          height: 25%;  
+        }
+        input{
+            border-radius: 10px;
+            position: absolute;
+            top: 42%;
+            left: 66%;
+            padding: 1vh 1vw;
+            font-size: 1.2em;
+            color: red;
+            @media only screen and(max-width:680px){
+            top: 42%;
+            left: 60%;
+            padding: 1vh 2vw;
+            font-size: 1em;
+            }
+        }
+        p{
+            font-size: 2em;
+            height: 7vh;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+            margin: 40vh auto;
+            padding: 8vh 1vw;
+            width: 50%;
+            @media only screen and(max-width:680px){
+                font-size: 1em;
+            }
+        }
     }
 
 } 
@@ -224,4 +253,10 @@ main #producto1{
     font-weight: bold;
     top: 2%;
     right: 2%;
+    @media only screen and(max-width:680px){
+        width: 9%;
+        font-size: 0.8em;
+        top: 11%;
+        right: 35%;
     }
+}

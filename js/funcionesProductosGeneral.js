@@ -93,7 +93,7 @@ function mostrarBusqueda() {
     let busqueda = $("#buscador").val();
     // si esta vacio no hace nada
 	if (busqueda == "") {
-		console.log(listadoProductos); //mostrar todos los productos	
+		console.log("0000"); //mostrar todos los productos	
 	} else {
     //Si se completo se busca en el listado de productos los cuales coinciden
 	let productoBuscado = listadoProductos.filter( p => p.nombre.indexOf(busqueda.toUpperCase()) > -1);
@@ -116,7 +116,7 @@ function mostrarBusqueda() {
     `<div class="todaslasmarcas">
         <img src=" ${p.img}" alt="" class="foto">
         <p> ${p.nombre}<br>$ ${p.precio}.- </p>
-        <a href="../carrito html/${p.value}.html"  >
+        <a href="#/${p.value}"  >
             <input type="button"  value="Comprar" class="botoncomprar">
         </a>
     </div>`

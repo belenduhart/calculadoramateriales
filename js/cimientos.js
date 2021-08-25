@@ -1,4 +1,4 @@
-//CIMIENTOS
+//CIMIENT0S
 //1eroA elegir tipo de trabajo
 getSelectValue = document.getElementById("selecciontrabajo").value;
 if(getSelectValue=="cimientos"){

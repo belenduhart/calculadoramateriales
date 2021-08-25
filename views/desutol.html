@@ -1,0 +1,39 @@
+        <main>
+            <section id="producto1">
+                <div class="parteA">
+                    <div class="imagenproducto">
+                        <img src="../imagenes/dessutol.jpg" alt="Foto lata pintura asfaltica marca Dessutol x 1 litro">
+                    </div>
+                    <div class="descripcionproducto">
+                        <p class="descriptitulo">Descripcion del producto</p>
+                        <p> Pintura asfaltica Dessutol x 1L</p>
+                    </div>
+                </div>
+                <div class="parteB">
+                    <div class="tituloproducto">
+                        <input type="text" class="idProducto" value="20" style="display:none">
+                        <h1>
+                            Dessutol 1L.
+                        </h1>
+                    </div>
+                    <div class="precioproducto">
+                        $600.- <p> incluye +IVA <br> Precio Regular</p>
+                    </div>
+                    <div class="agregaralcarro">
+                        <div id="fueraStock"></div>
+                        <!-- Al hacer click sobre el boton se agrega el elemento al carro de compras, y se suma 1 al total del i del encabezado -->
+                        <p class="cantidad">Cantidad:</p>
+                        <button id="botonAgregar" onclick="botonAgregarFuncion()">+</button>
+                        <input type="text" id="contador-20" value="0" class="contador">
+                        <button id="botonSacar" onclick="botonSacarFuncion()">-</button>
+                        <input type="button" value="Agregar al carrito" id="botonAgregarProducto" onclick="agregarProducto();">
+                        <div class="contenedorconfirmacion" >
+                            <div id="confirmacionAgregado"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+            <!-- Link JS -->
+    <script defer src="../js/carrito.js"></script> 
+    <script src="../js/objetos.js"></script>

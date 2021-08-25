@@ -57,7 +57,7 @@ if(totalAPagar != 0){
     subTotal.innerHTML = `<p class="resumencompra">Resumen de la compra</p>
                         <p id="subtotal">Subtotal: $ ${totalAPagar}. </p>
                         <p id="total"> Total a pagar: $ ${totalAPagar}.- </p>
-                        <a href="pagar.html">
+                        <a href="#/pagar">
                         <input type="button" name="" value="Pagar" class="botonComprar"></a>`;
 }
 

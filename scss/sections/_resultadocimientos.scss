@@ -14,11 +14,18 @@
 #sectionResultadosRevoqueInterior{
     display:none;
 }
+#sectionResultadosContrapiso{
+    display: none;
+}
+#sectionResultadosCarpeta{
+    display: none;
+}
+
 .resultados{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
     justify-content: center;
     align-items: center;
     margin: 3vh auto;

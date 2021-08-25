@@ -309,14 +309,15 @@ function pagoExitoso(){
     document.querySelector(".datosObli").style.display="none";
     document.querySelector(".datosPago").style.display="none";
     document.querySelector(".totalPago").style.display="none";
-    document.querySelector(".finalPago").innerHTML = ` <div style="border: 2px solid red; height:43vh; width:70%; margin: 11vh auto; background-color: white; border-radius:10px"> 
-    <p style="width:100%; margin-top:2vh; text-align:center; font-size: 2.5em; color:red"> CONFIRMACION COMPRA </p> <br>
-    <p style="width:100%; text-align:center; font-size: 1.2em; color:red"> Nro.confirmacion compra: ${numeroOrden} </p> <br>
-    <p style=" font-weight:bold; margin-top:2vh; color:black; text-align:center; font-size: 1.5em"> ¡Gracias por confiar en nosotros!</p> <br>
-    <p style=" font-weight:bold; margin-top:2vh; font-size:1.5em; color:black; text-align:center"> Recuerda que el envío a domicilio puede tardar entre 2 a 5 días hábiles.</p> <br>
-    <p style="font-weight:bold; font-size:1em; color:red; text-align:center"> *Debido a la situacion actual del país por el COVID-19, y por cuestiones de seguridad del personal, 
+    document.querySelector(".finalPago").innerHTML = ` <div class="pagoExitoso"> 
+    <p class="pe0"> CONFIRMACION COMPRA </p> <br>
+    <p class="pe1" > Nro.confirmacion compra: ${numeroOrden} </p> <br>
+    <p class="pe2"> ¡Gracias por confiar en nosotros!</p> <br>
+    <p class="pe3"> Recuerda que el envío a domicilio puede tardar entre 2 a 5 días hábiles.</p> <br>
+    <p class="pe4"> *Debido a la situacion actual del país por el COVID-19, y por cuestiones de seguridad del personal, 
     las entregas pueden tener demoras. </p> <br>
-    <a href="../index.html" style="margin: 0vh 76%"><input type="button" value="Volver a calculadora" style="margin: 1vh auto; width: 25%; height: 15%; border-radius: 10px;"></a>
+    <a href="../index.html">
+    <input type="button" value="Volver a calculadora"></a>
     </div> 
     `;
     carritoCompras1 = [];

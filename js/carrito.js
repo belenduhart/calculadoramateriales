@@ -100,6 +100,7 @@ function botonSacarFuncion(){
     //Guardar en localStorage
     localStorage.setItem("carritoCompras", JSON.stringify(carritoCompras));
 
+
     //Carrito superior se agrega la cantidad
     //Obtengo el total de productos
     let cantidadTotal = 0;
@@ -122,19 +123,23 @@ let carritoSuperior= document.querySelector(".contadorCarrito");
 function agregarProducto(){
     let confirmacionCarrito = document.getElementById("confirmacionAgregado");
     confirmacionCarrito.innerHTML= `  <input type="button" value="X" id="cerrarConfirmacionCarrito" 
-    onclick="cerrarconfirmacionCarritoFuncion(); return false" style="border-radius:10px; position:absolute; top:42%; left:66%; padding: 1vh 1vw; font-size:1.2em; color:red ">
-    <p style="font-size:2em; height:7vh; color: black; font-weight: bold; text-align: center; margin: 40vh auto; padding: 8vh 1vw; width:50%;">¡Agregamos tu pedido al carrito! </p>`
-    
+    onclick="cerrarconfirmacionCarritoFuncion(); return false">
+    <p >¡Agregamos tu pedido al carrito! </p>`
     document.getElementById("confirmacionAgregado").style.display="block";
     document.querySelector(".contenedorconfirmacion").style.display="block";
-    
+
     //Contador en el carrito superior
     let cerrarConfirmacionCarrito = document.getElementById("cerrarConfirmacionCarrito");
     cerrarConfirmacionCarrito.onclick = cerrarConfirmacionCarritoFuncion;
     function cerrarConfirmacionCarritoFuncion(){
         document.getElementById("confirmacionAgregado").style.display="none";
         document.querySelector(".contenedorconfirmacion").style.display="none";
-        carritoSuperior.style.display= "block";   
+        // carritoSuperior.style.display= "block";   
+        let carro = routes[2];
+        carro.location.reload();
+        $.get("./views/carrito.html", function (data) {
+            $("#app").html(data);
+        });
     }
 }
 
