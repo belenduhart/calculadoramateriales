@@ -1,4 +1,4 @@
-//Pagina de pago
+    //Pagina de pago
 //Obtengo el carrito de compras
 obtenerCarrito = localStorage.getItem("carritoCompras")
 carritoCompras1 = JSON.parse(obtenerCarrito);
@@ -316,7 +316,7 @@ function pagoExitoso(){
     <p class="pe3"> Recuerda que el envío a domicilio puede tardar entre 2 a 5 días hábiles.</p> <br>
     <p class="pe4"> *Debido a la situacion actual del país por el COVID-19, y por cuestiones de seguridad del personal, 
     las entregas pueden tener demoras. </p> <br>
-    <a href="../index.html">
+    <a href="#/">
     <input type="button" value="Volver a calculadora"></a>
     </div> 
     `;

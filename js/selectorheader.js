@@ -140,3 +140,5 @@ function mostrar(){
         $("#sectionResultadosCarpeta").hide();
     }
   }
+
+

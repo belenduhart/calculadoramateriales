@@ -169,16 +169,6 @@ body {
 }
 #menusecundario .contenedornavbarindex {
   width: 100%;
-  animation-duration: 3.5s;
-  animation-name: slidein;
-}
-@keyframes slidein {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
-  }
 }
 @media only screen and (max-width: 780px) {
   #menusecundario .contenedornavbarindex {
@@ -1215,16 +1205,6 @@ body {
 }
 #headersecundario #menusecundario .contenedornavbarindex {
   width: 100%;
-  animation-duration: 3.5s;
-  animation-name: slidein;
-}
-@keyframes slidein {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
-  }
 }
 @media only screen and (max-width: 780px) {
   #headersecundario #menusecundario .contenedornavbarindex {
@@ -1549,16 +1529,6 @@ body {
 }
 #headersecundario #menusecundario .contenedornavbarindex {
   width: 100%;
-  animation-duration: 3.5s;
-  animation-name: slidein;
-}
-@keyframes slidein {
-  from {
-    opacity: 0%;
-  }
-  to {
-    opacity: 100%;
-  }
 }
 @media only screen and (max-width: 780px) {
   #headersecundario #menusecundario .contenedornavbarindex {

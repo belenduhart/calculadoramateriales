@@ -134,12 +134,10 @@ function agregarProducto(){
     function cerrarConfirmacionCarritoFuncion(){
         document.getElementById("confirmacionAgregado").style.display="none";
         document.querySelector(".contenedorconfirmacion").style.display="none";
-        // carritoSuperior.style.display= "block";   
-        let carro = routes[2];
-        carro.location.reload();
-        $.get("./views/carrito.html", function (data) {
-            $("#app").html(data);
-        });
+        // $.get("./views/carrito.html", function () {
+        //     location.reload();
+        // });
+        window.location.reload();
     }
 }
 
