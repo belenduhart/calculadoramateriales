@@ -114,7 +114,7 @@ agregandoConElBoton = document.querySelector("#elementoAComprar");
     <p id="subtotal">Subtotal: $ ${totalAPagar}. </p>
     <p id="total"> Total a pagar: $ ${totalAPagar}.- </p>
     <a href="#/pagar">
-    <input type="button" name="" value="Pagar" class="botonComprar" onclick="mostrarPagar()"></a>`;
+    <input type="button" name="" value="Pagar" class="botonComprar" ></a>`;
     }
     //Pongo == nombre al carrito de Compras
    // carritoCompras = carritoCompras1;

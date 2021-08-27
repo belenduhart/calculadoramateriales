@@ -1,8 +1,8 @@
     //Pagina de pago
-//Obtengo el carrito de compras
-obtenerCarrito = localStorage.getItem("carritoCompras")
-carritoCompras1 = JSON.parse(obtenerCarrito);
-console.log(carritoCompras1);
+// //Obtengo el carrito de compras
+// obtenerCarrito = localStorage.getItem("carritoCompras")
+// carritoCompras1 = JSON.parse(obtenerCarrito);
+// console.log(carritoCompras1);
 
 //RESUMEN COMPRA
 //Enumero cada producto

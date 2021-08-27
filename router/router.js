@@ -84,6 +84,10 @@ const router = () =>{
             });
             break;
         case routes[4].action: //pagina para pagar
+        //Obtengo el carrito de compras
+            obtenerCarrito = localStorage.getItem("carritoCompras")
+            carritoCompras1 = JSON.parse(obtenerCarrito);
+            console.log(carritoCompras1);
             $.get("./views/pagar.html", function (data) {
                 $("#app").html(data);
                 isFileLoaded("pagar.js");
