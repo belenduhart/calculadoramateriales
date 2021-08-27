@@ -1,5 +1,7 @@
 //Carrito de compras
-
+function belen(){
+    console.log("belen");
+}
 // //Ordeno la lista de productos por precio (luego sirve para el sort)
 // let listadoProductosOrdenado= listadoProductos.sort((a, b) => {
 //     return a.precio - b.precio
@@ -114,8 +116,12 @@ function botonSacarFuncion(){
 }
 
 //Carrito Superior
-let botonAgregarProducto = document.getElementById("botonAgregarProducto");
-botonAgregarProducto.onclick = agregarProducto;
+let botonAgregarProducto;
+if (botonAgregarProducto){
+    botonAgregarProducto = document.getElementById("botonAgregarProducto");
+if (botonAgregarProducto !== "null"){
+    botonAgregarProducto.onclick = agregarProducto;}
+}
 
 //Carrito superior variable definida
 let carritoSuperior= document.querySelector(".contadorCarrito");
@@ -134,12 +140,68 @@ function agregarProducto(){
     function cerrarConfirmacionCarritoFuncion(){
         document.getElementById("confirmacionAgregado").style.display="none";
         document.querySelector(".contenedorconfirmacion").style.display="none";
-        // $.get("./views/carrito.html", function () {
-        //     location.reload();
-        // });
-        window.location.reload();
     }
 }
+
+
+
+
+
+
+//Dibujar al DOM cada producto que se agrego al carrito
+//Funcion para dibujar el carrito
+document.querySelector("#totalCarrito").style.display="none";
+document.querySelector(".divdecidireliminar").style.display="none";
+
+
+function pintarCarritoEnDom(){
+let carritoCompras1 =  JSON.parse(localStorage.getItem("carritoCompras"));
+console.log(carritoCompras1);
+
+let totalAPagar = 0;
+let agregandoConElBoton = document.querySelector("#elementoAComprar");
+        if (carritoCompras1.length != 0){
+        document.querySelector(".vacioCarrito").innerHTML= "";
+        document.querySelector("#totalCarrito").style.display="none";
+        
+        //Dibujo el carro
+        carritoCompras1.forEach( p => {
+            agregandoConElBoton.innerHTML +=
+            `<div style="display:flex; flex-direction:row; width:100% ; margin-top:3vh;align-items: center;" >
+            <div class="elementos" style="margin-left:0vw; width:10%;">
+                <img src="${p.img}">
+                <p class="nombrep" style="text-align:left"> ${p.nombre}</p>
+            </div>
+            <p style="text-align:left ; margin-left:13vw"> $ ${p.precio}</p>
+            <p style="text-align:right"> ${p.cantidad}</p>
+            <p style="text-align:right; margin-right:6vw;" >$ ${p.subtotal} </p>
+            <button value="${p.id}"  class="botonEliminar" onclick="botonEliminarFuncion(${p.id})" ><i class="far fa-trash-alt"></i> Eliminar</button></div>`
+        });
+
+        //Mostrar el subtotal y el total
+        carritoCompras1.forEach((p) => {
+        totalCada1 = p.subtotal;
+        //Suma todos los subtotales
+        totalAPagar += totalCada1;
+        console.log(totalAPagar);
+        })
+
+        let subTotal = document.querySelector("#totalCarrito");
+            if(totalAPagar != 0){
+                document.querySelector("#totalCarrito").style.display="block";
+                subTotal.innerHTML = `<p class="resumencompra">Resumen de la compra</p>
+                            <p id="subtotal">Subtotal: $ ${totalAPagar}. </p>
+                            <p id="total"> Total a pagar: $ ${totalAPagar}.- </p>
+                            <a href="#/pagar">
+                            <input type="button" name="" value="Pagar" class="botonComprar"  onclick="mostrarPagar()"></a>`;
+            }
+
+    }else{
+        document.querySelector(".vacioCarrito").innerHTML= "No hay productos en el carrito de compras!";
+    }
+}
+
+
 
 
 

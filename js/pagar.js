@@ -76,7 +76,6 @@ function validarEmail(elemento){
     }
 }
 
-
 //Datos para Envio a domicilio
 let datosEnvio= document.querySelector(".datosEnvio");
 //Mostrar form para datos envio
