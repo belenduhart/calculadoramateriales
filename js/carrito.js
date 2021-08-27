@@ -1,5 +1,7 @@
 //Carrito de compras
-
+function belen(){
+    console.log("probando")
+}
 //Agregando productos nuevos
 //Array carrito de compras vacio al que se le agrega lo anterior 
 let carritoCompras = [];
@@ -184,6 +186,3 @@ let totalAPagar = 0;
         document.querySelector(".vacioCarrito").innerHTML= "No hay productos en el carrito de compras!";
     }
 }
-
-
-
