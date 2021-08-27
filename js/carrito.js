@@ -1,13 +1,4 @@
 //Carrito de compras
-function belen(){
-    console.log("belen");
-}
-// //Ordeno la lista de productos por precio (luego sirve para el sort)
-// let listadoProductosOrdenado= listadoProductos.sort((a, b) => {
-//     return a.precio - b.precio
-//         });
-// ;
-// console.log(listadoProductosOrdenado);
 
 //Agregando productos nuevos
 //Array carrito de compras vacio al que se le agrega lo anterior 
@@ -143,29 +134,22 @@ function agregarProducto(){
     }
 }
 
-
-
-
-
-
 //Dibujar al DOM cada producto que se agrego al carrito
 //Funcion para dibujar el carrito
 document.querySelector("#totalCarrito").style.display="none";
 document.querySelector(".divdecidireliminar").style.display="none";
 
-
 function pintarCarritoEnDom(){
-let carritoCompras1 =  JSON.parse(localStorage.getItem("carritoCompras"));
-console.log(carritoCompras1);
-
-let totalAPagar = 0;
+let carritoCompras =  JSON.parse(localStorage.getItem("carritoCompras"));
+console.log(carritoCompras);
 let agregandoConElBoton = document.querySelector("#elementoAComprar");
-        if (carritoCompras1.length != 0){
+let totalAPagar = 0;
+        if (carritoCompras.length != 0){
         document.querySelector(".vacioCarrito").innerHTML= "";
         document.querySelector("#totalCarrito").style.display="none";
         
         //Dibujo el carro
-        carritoCompras1.forEach( p => {
+        carritoCompras.forEach( p => {
             agregandoConElBoton.innerHTML +=
             `<div style="display:flex; flex-direction:row; width:100% ; margin-top:3vh;align-items: center;" >
             <div class="elementos" style="margin-left:0vw; width:10%;">
@@ -179,7 +163,7 @@ let agregandoConElBoton = document.querySelector("#elementoAComprar");
         });
 
         //Mostrar el subtotal y el total
-        carritoCompras1.forEach((p) => {
+        carritoCompras.forEach((p) => {
         totalCada1 = p.subtotal;
         //Suma todos los subtotales
         totalAPagar += totalCada1;
@@ -200,8 +184,6 @@ let agregandoConElBoton = document.querySelector("#elementoAComprar");
         document.querySelector(".vacioCarrito").innerHTML= "No hay productos en el carrito de compras!";
     }
 }
-
-
 
 
 

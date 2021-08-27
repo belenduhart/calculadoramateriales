@@ -2,7 +2,7 @@
 let urlParams = new URLSearchParams(window.location.search);
 let myParam = urlParams.get('id');
 const routes = [
-    { path: "", action: "index"}, //agregar isloaded=false y guardar en localstorage
+    { path: "", action: "index"}, 
     { path: "/", action: "index"},
     { path: "/carrito", action: "carrito"},
     { path: "/cemento", action: "cemento"},
@@ -52,7 +52,6 @@ const router = () =>{
                 isFileLoaded("revoqueexterior.js");
                 isFileLoaded("revoqueinterior.js");
             });
-
             break;
         case routes[1].action: //index calculadora
             $.get("./views/index.html", function (data) {
