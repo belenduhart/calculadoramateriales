@@ -56,7 +56,7 @@ function botonAgregarFuncion(){
         console.log(cantidadTotal);
     })
     carritoSuperior.innerHTML = ` ${cantidadTotal} `;
-    carritoSuperior.style.display= "none";
+    // carritoSuperior.style.display= "none";
  } 
 
 //Boton -
@@ -105,7 +105,7 @@ function botonSacarFuncion(){
         console.log(cantidadTotal);
     })
     carritoSuperior.innerHTML = ` ${cantidadTotal} `;
-    carritoSuperior.style.display= "none";
+    // carritoSuperior.style.display= "none";
 }
 
 //Carrito Superior
@@ -138,8 +138,13 @@ function agregarProducto(){
 
 //Dibujar al DOM cada producto que se agrego al carrito
 //Funcion para dibujar el carrito
-document.querySelector("#totalCarrito").style.display="none";
-document.querySelector(".divdecidireliminar").style.display="none";
+if (document.querySelector("#totalCarrito")){
+    document.querySelector("#totalCarrito").style.display="none";
+}
+if (document.querySelector(".divdecidireliminar")){
+    document.querySelector(".divdecidireliminar").style.display="none";
+}
+
 
 function pintarCarritoEnDom(){
 let carritoCompras =  JSON.parse(localStorage.getItem("carritoCompras"));
