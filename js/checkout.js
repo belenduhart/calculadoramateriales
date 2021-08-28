@@ -1,63 +1,5 @@
 //Check-Out
 
-//Agregado de productos a la pagina final del carrito
-//Esconder div el total y pop-up de eliminar
-// document.querySelector("#totalCarrito").style.display="none";
-// document.querySelector(".divdecidireliminar").style.display="none";
-
-//Obtengo el array de carrito desde json/localStorage
-// let obtenerCarrito = localStorage.getItem("carritoCompras")
-// let carritoCompras1 = JSON.parse(obtenerCarrito);
-// console.log(carritoCompras1);
-
-// //Dibujar al DOM cada producto que se agrego al carrito
-// var botonEliminarEnProducto;
-// let id;
-// let totalAPagar = 0;
-// let agregandoConElBoton = document.querySelector("#elementoAComprar");
-// //Funcion para dibujar el carrito
-// function pintarCarritoEnDom(carritoCompras1){
-//         if (carritoCompras1.length != 0){
-//         document.querySelector(".vacioCarrito").innerHTML= "";
-//         document.querySelector("#totalCarrito").style.display="none";
-        
-//         //Dibujo el carro
-//         carritoCompras1.forEach( p => {
-//             agregandoConElBoton.innerHTML +=
-//             `<div style="display:flex; flex-direction:row; width:100% ; margin-top:3vh;align-items: center;" >
-//             <div class="elementos" style="margin-left:0vw; width:10%;">
-//                 <img src="${p.img}">
-//                 <p class="nombrep" style="text-align:left"> ${p.nombre}</p>
-//             </div>
-//             <p style="text-align:left ; margin-left:13vw"> $ ${p.precio}</p>
-//             <p style="text-align:right"> ${p.cantidad}</p>
-//             <p style="text-align:right; margin-right:6vw;" >$ ${p.subtotal} </p>
-//             <button value="${p.id}"  class="botonEliminar" onclick="botonEliminarFuncion(${p.id})" ><i class="far fa-trash-alt"></i> Eliminar</button></div>`
-//         });
-
-//         //Mostrar el subtotal y el total
-//         carritoCompras1.forEach((p) => {
-//         totalCada1 = p.subtotal;
-//         //Suma todos los subtotales
-//         totalAPagar += totalCada1;
-//         console.log(totalAPagar);
-//         })
-
-//         let subTotal = document.querySelector("#totalCarrito");
-//             if(totalAPagar != 0){
-//                 document.querySelector("#totalCarrito").style.display="block";
-//                 subTotal.innerHTML = `<p class="resumencompra">Resumen de la compra</p>
-//                             <p id="subtotal">Subtotal: $ ${totalAPagar}. </p>
-//                             <p id="total"> Total a pagar: $ ${totalAPagar}.- </p>
-//                             <a href="#/pagar">
-//                             <input type="button" name="" value="Pagar" class="botonComprar"  onclick="mostrarPagar()"></a>`;
-//             }
-
-//     }else{
-//         document.querySelector(".vacioCarrito").innerHTML= "No hay productos en el carrito de compras!";
-//     }
-// }
-
 //En cada producto el boton de eliminar obtiene su id
 var botonEliminarEnProducto;
 let id;
@@ -114,7 +56,7 @@ agregandoConElBoton = document.querySelector("#elementoAComprar");
     <p id="subtotal">Subtotal: $ ${totalAPagar}. </p>
     <p id="total"> Total a pagar: $ ${totalAPagar}.- </p>
     <a href="#/pagar">
-    <input type="button" name="" value="Pagar" class="botonComprar" ></a>`;
+    <input type="button" name="" value="Pagar" class="botonComprar" onclick="recargarPag()" ></a>`;
     }
     //Pongo == nombre al carrito de Compras
    // carritoCompras = carritoCompras1;
@@ -128,4 +70,11 @@ agregandoConElBoton = document.querySelector("#elementoAComprar");
         document.querySelector(".vacioCarrito").innerHTML= "No hay productos en el carrito de compras!";
         document.querySelector("#totalCarrito").style.display="none";
     }
+}
+
+
+function recargarPag(){
+    $.get("./views/pagar.html", function (data) {
+        location.reload();
+    })
 }

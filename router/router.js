@@ -267,4 +267,3 @@ const router = () =>{
     localStorage.setItem("files_loaded", JSON.stringify(files_loaded));
     console.log(files_loaded)
 }
-

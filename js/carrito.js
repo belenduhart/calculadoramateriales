@@ -179,7 +179,7 @@ let totalAPagar = 0;
                             <p id="subtotal">Subtotal: $ ${totalAPagar}. </p>
                             <p id="total"> Total a pagar: $ ${totalAPagar}.- </p>
                             <a href="#/pagar">
-                            <input type="button" name="" value="Pagar" class="botonComprar"  ></a>`;
+                            <input type="button" name="" value="Pagar" class="botonComprar" onclick="recargarPag()"  ></a>`;
             }
 
     }else{
