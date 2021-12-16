@@ -1,0 +1,15 @@
+footer{
+    width: 100%;
+    border-top: 2px solid black;
+    margin-top: 2vh;
+    background-color: rgba(245, 245, 245, 0.398);
+    position: relative;
+    bottom: 100%;
+    p{
+        text-align: center;
+        font-weight: bold;
+        color:black;
+        font-size: 1em;
+        margin:2vh auto;
+    }
+}
